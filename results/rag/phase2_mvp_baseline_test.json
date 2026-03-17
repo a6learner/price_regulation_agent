@@ -1,0 +1,257 @@
+[
+  {
+    "case_id": "eval_001",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "价格欺诈",
+      "confidence": 0.95,
+      "reasoning": "根据《禁止价格欺诈行为规定》和《价格法》的相关规定，经营者在商品详情页标注'原价899元，限时特惠价299元'，但经查该商品自上架以来从未以899元的价格成交过，也无法提供近期以899元销售的交易凭证，表明该'原价'为虚构价格，属于价格欺诈行为。此外，《淘宝价格管理规则》第六条也要求经营者在促销活动中需遵守价格真实性原则，避免误导消费者。本案中，经营者虚构原价，构成价格欺诈，违反了相关法律法规。",
+      "legal_basis": "《中华人民共和国价格法》第十四条、《禁止价格欺诈行为规定》第八条、《淘宝价格管理规则》第六条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "虚构原价",
+      "platform": "淘宝",
+      "scenario": "限时折扣",
+      "complexity": "simple"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 46
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 199
+      }
+    },
+    "retrieval_info": {
+      "laws_count": 2,
+      "cases_count": 2
+    },
+    "performance": {
+      "response_time": 8.68,
+      "input_tokens": 976,
+      "output_tokens": 204
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"价格欺诈\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据《禁止价格欺诈行为规定》和《价格法》的相关规定，经营者在商品详情页标注'原价899元，限时特惠价299元'，但经查该商品自上架以来从未以899元的价格成交过，也无法提供近期以899元销售的交易凭证，表明该'原价'为虚构价格，属于价格欺诈行为。此外，《淘宝价格管理规则》第六条也要求经营者在促销活动中需遵守价格真实性原则，避免误导消费者。本案中，经营者虚构原价，构成价格欺诈，违反了相关法律法规。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十四条、《禁止价格欺诈行为规定》第八条、《淘宝价格管理规则》第六条\"\n}\n```"
+  },
+  {
+    "case_id": "eval_002",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "价格欺诈",
+      "confidence": 0.95,
+      "reasoning": "根据《禁止价格欺诈行为规定》第六条第（三）项，经营者在促销活动中，若标注的被比较价格（日常价）与实际价格不符，且无法证明该价格真实有依据，则构成价格欺诈。本案中，经营者标注的日常价为498元，但实际日常价仅为288-310元，明显存在虚假或误导性价格标注，且未提供真实依据证明日常价498元的存在。此外，《淘宝价格管理规则》第四条也要求经营者需遵守《明码标价和禁止价格欺诈规定》等相关法律法规，不得误导消费者。因此，该行为构成价格欺诈。",
+      "legal_basis": "《禁止价格欺诈行为规定》第六条第（三）项；《淘宝价格管理规则》第四条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "虚假折扣",
+      "platform": "京东",
+      "scenario": "大促活动",
+      "complexity": "simple"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 1,
+        "has_specific_article": true,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 34
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 1.0,
+        "reasoning_length": 218
+      }
+    },
+    "retrieval_info": {
+      "laws_count": 2,
+      "cases_count": 2
+    },
+    "performance": {
+      "response_time": 8.17,
+      "input_tokens": 963,
+      "output_tokens": 212
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"价格欺诈\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据《禁止价格欺诈行为规定》第六条第（三）项，经营者在促销活动中，若标注的被比较价格（日常价）与实际价格不符，且无法证明该价格真实有依据，则构成价格欺诈。本案中，经营者标注的日常价为498元，但实际日常价仅为288-310元，明显存在虚假或误导性价格标注，且未提供真实依据证明日常价498元的存在。此外，《淘宝价格管理规则》第四条也要求经营者需遵守《明码标价和禁止价格欺诈规定》等相关法律法规，不得误导消费者。因此，该行为构成价格欺诈。\",\n  \"legal_basis\": \"《禁止价格欺诈行为规定》第六条第（三）项；《淘宝价格管理规则》第四条\"\n}\n```"
+  },
+  {
+    "case_id": "eval_003",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "价格欺诈",
+      "confidence": 0.95,
+      "reasoning": "该经营者在商品首页标注'限时9.9元包邮'，但实际成交价为19.9-29.9元，且优惠条件苛刻且未在首页明示，构成价格欺诈。根据《禁止价格欺诈行为规定》第十八条，经营者不得通过虚假折价、减价或者价格比较等方式销售商品。同时，该行为违反了《互联网平台价格行为规则》第十八条第三项，即通过虚假折价、减价或者价格比较等方式销售商品或者提供服务。此外，案例1和案例2中也存在类似价格误导的情况，导致消费者产生误解，进一步支持该行为的违规性。",
+      "legal_basis": "《禁止价格欺诈行为规定》第十八条第三项；《互联网平台价格行为规则》第十八条第三项；案例1和案例2"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "价格误导",
+      "platform": "拼多多",
+      "scenario": "拼团优惠",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 48
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 1.0,
+        "reasoning_length": 216
+      }
+    },
+    "retrieval_info": {
+      "laws_count": 2,
+      "cases_count": 2
+    },
+    "performance": {
+      "response_time": 8.04,
+      "input_tokens": 1042,
+      "output_tokens": 217
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"价格欺诈\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"该经营者在商品首页标注'限时9.9元包邮'，但实际成交价为19.9-29.9元，且优惠条件苛刻且未在首页明示，构成价格欺诈。根据《禁止价格欺诈行为规定》第十八条，经营者不得通过虚假折价、减价或者价格比较等方式销售商品。同时，该行为违反了《互联网平台价格行为规则》第十八条第三项，即通过虚假折价、减价或者价格比较等方式销售商品或者提供服务。此外，案例1和案例2中也存在类似价格误导的情况，导致消费者产生误解，进一步支持该行为的违规性。\",\n  \"legal_basis\": \"《禁止价格欺诈行为规定》第十八条第三项；《互联网平台价格行为规则》第十八条第三项；案例1和案例2\"\n}\n```"
+  },
+  {
+    "case_id": "eval_004",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "虚构原价",
+      "confidence": 0.95,
+      "reasoning": "该经营者在商品页面标注'原价1280元，团购价188元'，但经调查发现该套餐自上架以来从未以1280元销售过，且套餐内包含的服务项目若单独计价合计仅为680元左右。根据《禁止价格欺诈行为规定》和《淘宝价格管理规则》第四条，不得在未销售过的商品上使用'原售价、成交价、折、新品折'等类似概念，误导消费者认为该商品有成交记录或存在价格差异。本案中，经营者虚构原价1280元，且未提供任何实际成交记录，存在明显的误导消费者行为，构成价格欺诈。",
+      "legal_basis": "《禁止价格欺诈行为规定》第六条；《淘宝价格管理规则》第四条；案例1：虚构原价的处罚逻辑"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "虚构原价",
+      "platform": "美团",
+      "scenario": "团购优惠",
+      "complexity": "simple"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 1,
+        "has_specific_article": true,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 43
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 218
+      }
+    },
+    "retrieval_info": {
+      "laws_count": 2,
+      "cases_count": 2
+    },
+    "performance": {
+      "response_time": 8.58,
+      "input_tokens": 971,
+      "output_tokens": 224
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"虚构原价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"该经营者在商品页面标注'原价1280元，团购价188元'，但经调查发现该套餐自上架以来从未以1280元销售过，且套餐内包含的服务项目若单独计价合计仅为680元左右。根据《禁止价格欺诈行为规定》和《淘宝价格管理规则》第四条，不得在未销售过的商品上使用'原售价、成交价、折、新品折'等类似概念，误导消费者认为该商品有成交记录或存在价格差异。本案中，经营者虚构原价1280元，且未提供任何实际成交记录，存在明显的误导消费者行为，构成价格欺诈。\",\n  \"legal_basis\": \"《禁止价格欺诈行为规定》第六条；《淘宝价格管理规则》第四条；案例1：虚构原价的处罚逻辑\"\n}\n```"
+  },
+  {
+    "case_id": "eval_005",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "价格欺诈",
+      "confidence": 0.95,
+      "reasoning": "该经营者在直播中反复强调'今天最后100件，限时5折，过时恢复原价798元'，但经查该商品在过去30天内一直以398元左右的价格销售，从未以798元成交。同时，主播连续7天在直播中使用相同话术，声称'今天最后100件'，但实际销售量远超700件，说明其声称的'限时限量'并不属实。该行为构成虚假宣传和价格欺诈，违反了《价格法》和《禁止价格欺诈行为规定》的相关规定。",
+      "legal_basis": "《中华人民共和国价格法》第十四条、《禁止价格欺诈行为规定》第七条、第八条，以及《浙江省电子商务条例》第三十条。"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "虚假折扣",
+      "platform": "抖音",
+      "scenario": "直播带货",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 55
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 182
+      }
+    },
+    "retrieval_info": {
+      "laws_count": 2,
+      "cases_count": 2
+    },
+    "performance": {
+      "response_time": 8.47,
+      "input_tokens": 926,
+      "output_tokens": 208
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"价格欺诈\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"该经营者在直播中反复强调'今天最后100件，限时5折，过时恢复原价798元'，但经查该商品在过去30天内一直以398元左右的价格销售，从未以798元成交。同时，主播连续7天在直播中使用相同话术，声称'今天最后100件'，但实际销售量远超700件，说明其声称的'限时限量'并不属实。该行为构成虚假宣传和价格欺诈，违反了《价格法》和《禁止价格欺诈行为规定》的相关规定。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十四条、《禁止价格欺诈行为规定》第七条、第八条，以及《浙江省电子商务条例》第三十条。\"\n}\n```"
+  }
+]

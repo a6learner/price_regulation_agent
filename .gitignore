@@ -1,0 +1,43 @@
+# Python虚拟环境
+.venv/
+venv/
+env/
+ENV/
+
+# Python缓存文件
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# API密钥配置（真实配置不上传）
+configs/model_config.yaml
+
+# 数据文件（大文件选择性上传）
+data/cases/*.pdf
+data/rag/chroma_db/
+
+# IDE配置
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 日志文件
+*.log
+
+# 临时文件
+*.tmp
+*.bak
+nul
+
+# 训练输出文件（大文件）
+src/sft/train_output.zip
+*.zip

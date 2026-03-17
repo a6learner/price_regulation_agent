@@ -1,0 +1,57 @@
+# 讯飞星辰MaaS平台模型配置
+# 使用说明：将此文件复制为 model_config.yaml 并填写你的API密钥
+
+# API配置
+api:
+  base_url: "https://maas-api.cn-huabei-1.xf-yun.com/v2"  # 根据文档调整
+  api_key: "YOUR_API_KEY_HERE"  # 在此填写你的API Key（从 https://www.xfyun.cn/ 获取）
+  timeout: 60  # 请求超时时间（秒）
+  retry_times: 3  # 重试次数
+  retry_delay: 1  # 重试延迟（秒）
+
+# 模型配置
+# lora_id: 微调模型的resourceId，从模型服务卡片获取，默认"0"表示使用基础模型
+models:
+  qwen:
+    model_id: "xopqwen35397b"
+    name: "Qwen3.5-397B-A17B"
+    max_tokens: 2048
+    temperature: 0.7
+    top_p: 0.9
+    lora_id: "0"  # 基础模型
+
+  minimax:
+    model_id: "xminimaxm25"
+    name: "MiniMax-M2.5"
+    max_tokens: 2048
+    temperature: 0.7
+    top_p: 0.9
+    lora_id: "0"  # 基础模型
+
+  qwen-8b-sft:
+    model_id: "xop3qwen8b"
+    name: "Qwen3-8B-sft"
+    max_tokens: 2048
+    temperature: 0.7
+    top_p: 0.9
+    lora_id: "YOUR_FINE_TUNED_MODEL_RESOURCE_ID"  # 微调模型请替换为实际的resourceId
+
+  qwen-8b:
+    model_id: "xop3qwen8b"
+    name: "Qwen3-8B"
+    max_tokens: 2048
+    temperature: 0.7
+    top_p: 0.9
+    lora_id: "0"  # 基础模型
+
+# 评估配置
+evaluation:
+  batch_size: 10  # 每批次评估的案例数
+  save_interval: 10  # 每N个案例保存一次中间结果
+  request_interval: 0.5  # 请求间隔（秒），避免API限流
+
+# 输出配置
+output:
+  results_dir: "results/baseline"
+  save_details: true  # 是否保存详细结果
+  save_errors: true  # 是否保存错误日志

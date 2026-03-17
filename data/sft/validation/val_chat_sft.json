@@ -1,0 +1,16 @@
+  [{
+    "messages": [
+      {
+        "role": "system",
+        "content": "系统提示词（选填）"
+      },
+      {
+        "role": "user",
+        "content": "人类指令"
+      },
+      {
+        "role": "assistant",
+        "content": "模型回答"
+      }
+    ]
+  }]

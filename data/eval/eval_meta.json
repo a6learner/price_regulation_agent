@@ -1,0 +1,46 @@
+{
+  "dataset_name": "电商价格合规评估数据集",
+  "version": "1.0",
+  "created_date": "2026-03-10",
+  "total_count": 104,
+  "distribution": {
+    "violation": 63,
+    "compliant": 41
+  },
+  "violation_ratio": "60.6%",
+  "violation_types": {
+    "虚构原价": 22,
+    "价格误导": 18,
+    "虚假折扣": 17,
+    "要素缺失": 5,
+    "其他": 1
+  },
+  "platforms": {
+    "淘宝": 20,
+    "京东": 19,
+    "拼多多": 16,
+    "美团": 14,
+    "天猫": 13,
+    "抖音": 13,
+    "其他": 9
+  },
+  "complexity": {
+    "simple": 51,
+    "medium": 40,
+    "complex": 13
+  },
+  "files": {
+    "main_dataset": "eval_100.jsonl",
+    "metadata": "eval_meta.json",
+    "report": "eval_meta.md"
+  },
+  "data_sources": [
+    "eval_base.jsonl",
+    "eval_compliant_batch1.jsonl",
+    "eval_compliant_batch2.jsonl",
+    "eval_compliant_batch3.jsonl",
+    "eval_violation_batch2.jsonl",
+    "eval_violation_batch3.jsonl",
+    "eval_supplement.jsonl"
+  ]
+}
