@@ -34,9 +34,6 @@
 
 ![Analysis Result Placeholder](docs/images/image-20260419193310334.png)
 
-### 评测结果对比
-
-![Evaluation Comparison Placeholder](docs/images/eval-comparison-placeholder.png)
 
 ## Tech Routes
 
@@ -82,11 +79,6 @@ price_regulation_agent/
 - 结果可视化和前端体验提升
 - 数据与实验复现流程完善
 
-## Notes
-
-- `configs/model_config.yaml` 为本地敏感配置，不应提交
-- `models/` 为本地模型目录，默认不提交
-- `data/` 与 `results/` 可能包含大文件，推送前请确认变更范围
 
 ## License
 
