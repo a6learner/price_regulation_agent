@@ -23,15 +23,16 @@
 
 ## Snapshot
 
-> 推送前可将截图放到 `docs/images/`，并替换下面占位图。
+
 
 ### Web 工作台
 
-![Web Dashboard Placeholder](docs/images/web-dashboard-placeholder.png)
+![Web Dashboard Placeholder](docs/images/首页.png)
+![Web Dashboard Placeholder](docs/images/对话页.png)
 
 ### 分析结果与法律依据
 
-![Analysis Result Placeholder](docs/images/analysis-result-placeholder.png)
+![Analysis Result Placeholder](docs/images/image-20260419193310334.png)
 
 ### 评测结果对比
 
