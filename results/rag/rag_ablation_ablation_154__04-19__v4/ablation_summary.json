@@ -1,0 +1,40 @@
+{
+  "variants": {
+    "bm25_only": {
+      "accuracy": 0.8766,
+      "f1_score": 0.9319,
+      "precision": 1.0,
+      "recall": 0.8725,
+      "type_accuracy": 0.5844,
+      "success_cases": 154,
+      "avg_response_time": 7.93
+    },
+    "semantic_only": {
+      "accuracy": 0.8831,
+      "f1_score": 0.9357,
+      "precision": 1.0,
+      "recall": 0.8792,
+      "type_accuracy": 0.6039,
+      "success_cases": 154,
+      "avg_response_time": 8.17
+    },
+    "rrf": {
+      "accuracy": 0.8896,
+      "f1_score": 0.9395,
+      "precision": 1.0,
+      "recall": 0.8859,
+      "type_accuracy": 0.5909,
+      "success_cases": 154,
+      "avg_response_time": 8.12
+    },
+    "rrf_rerank": {
+      "accuracy": 0.9026,
+      "f1_score": 0.947,
+      "precision": 1.0,
+      "recall": 0.8993,
+      "type_accuracy": 0.6299,
+      "success_cases": 154,
+      "avg_response_time": 8.11
+    }
+  }
+}

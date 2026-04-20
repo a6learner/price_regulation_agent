@@ -1,0 +1,296 @@
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* 顶部导航栏 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.case-select {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    min-width: 150px;
+}
+
+.nav-btn {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.nav-btn:hover {
+    background: #f0f0f0;
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.case-counter {
+    font-weight: bold;
+    min-width: 80px;
+    text-align: center;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-select {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* 案例信息栏 */
+.case-info {
+    padding: 10px 15px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.info-row {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    font-size: 14px;
+}
+
+/* 案例描述 */
+.case-description {
+    padding: 10px 15px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.case-description h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.description-content {
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+/* 三列对比区域 */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.method-column {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #f8f8f8;
+    border-bottom: 1px solid #eee;
+}
+
+.column-header h2 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.status-badge {
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-badge.correct {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-badge.incorrect {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.status-badge.failed {
+    background: #e2e3e5;
+    color: #383d41;
+}
+
+.column-content {
+    padding: 10px 15px;
+    max-height: calc(100vh - 320px);
+    overflow-y: auto;
+}
+
+.section {
+    margin-bottom: 15px;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.section h4 {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 4px;
+}
+
+/* 响应框 */
+.response-box {
+    font-family: "Consolas", "Monaco", monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* 解析结果 */
+.parsed-result {
+    font-size: 13px;
+}
+
+.parsed-result .field {
+    margin-bottom: 8px;
+}
+
+.parsed-result .field-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.parsed-result .field-value {
+    margin-top: 2px;
+    padding-left: 10px;
+}
+
+.parsed-result .field-value.violation {
+    color: #dc3545;
+}
+
+.parsed-result .field-value.compliance {
+    color: #28a745;
+}
+
+/* 推理链 */
+.reasoning-chain {
+    font-size: 13px;
+}
+
+.reasoning-chain .step {
+    margin-bottom: 10px;
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    border-left: 3px solid #007bff;
+}
+
+.reasoning-chain .step-title {
+    font-weight: 600;
+    color: #007bff;
+    margin-bottom: 4px;
+}
+
+/* 整改建议 */
+.remediation-box {
+    font-size: 13px;
+}
+
+.remediation-box .remediation-step {
+    margin-bottom: 8px;
+    padding: 6px 8px;
+    background: #fff3cd;
+    border-radius: 4px;
+}
+
+.remediation-box .step-action {
+    font-weight: 500;
+}
+
+.remediation-box .step-meta {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+}
+
+/* 加载状态 */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+/* 响应式 */
+@media (max-width: 1200px) {
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .column-content {
+        max-height: none;
+    }
+}

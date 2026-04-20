@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-04-18 11:37:40",
+  "method": "agent",
+  "models": [
+    "agent"
+  ],
+  "eval_data": "data/eval/eval_dataset_v4_final.jsonl",
+  "eval_cases": 780,
+  "limit": null,
+  "note": "agent full eval-780"
+}

@@ -1,0 +1,225 @@
+{"id": "CASE_0013", "stage": 1, "result": "ok", "articles": ["价格法_十三_一"]}
+{"id": "CASE_0017", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0021", "stage": 1, "result": "ok", "articles": ["价格法_十三_二"]}
+{"id": "CASE_0029", "stage": 1, "result": "ok", "articles": ["价格法_十二"]}
+{"id": "CASE_0032", "stage": 1, "result": "skip_no_text"}
+{"file": "esfile_9334e0cd1125b5de94317ce014184b4a.pdf_becacf00-485f-4981-ac8f-5316226d2fb0_9334e0cd1125b5de94317ce014184b4a.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0371", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_ceb366aeaeef156d771df61763950156.pdf_eef45100-507f-4214-a8b0-2323cdc3b799_ceb366aeaeef156d771df61763950156.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0372", "articles": ["价格法_十三", "价格法_十四", "明码标价和禁止价格欺诈规定_十九"]}
+{"file": "esfile_b5747853dbe44415a41a108e0adc7e2f.pdf_3948abc3-e43b-4fb9-ab70-4205976c93bc_b5747853dbe44415a41a108e0adc7e2f.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0373", "articles": ["价格法_十二", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_2a972d78efe341188c9e672be83f1653.pdf_19ba528a-0858-4e7e-b9fe-f3c3c28017af_2a972d78efe341188c9e672be83f1653.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0374", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_314a365fbaf742589822ffb8360c15b2.pdf_8e309ee2-8444-4d44-8c0b-652d1941b2b8_314a365fbaf742589822ffb8360c15b2.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0375", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九"]}
+{"id": "CASE_0013", "stage": 1, "result": "ok", "articles": ["价格法_十三_一"]}
+{"id": "CASE_0017", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0021", "stage": 1, "result": "ok", "articles": ["价格法_十三_二"]}
+{"id": "CASE_0029", "stage": 1, "result": "ok", "articles": ["价格法_十二"]}
+{"id": "CASE_0032", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0038", "stage": 1, "result": "ok", "articles": ["价格法_十三_二"]}
+{"id": "CASE_0069", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0079", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0081", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0084", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0103", "stage": 1, "result": "ok", "articles": ["价格法_十三"]}
+{"id": "CASE_0115", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0116", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0130", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0193", "stage": 1, "result": "ok", "articles": ["明码标价和禁止价格欺诈规定_五_一"]}
+{"id": "CASE_0212", "stage": 1, "result": "ok", "articles": ["价格法_十二"]}
+{"id": "CASE_0215", "stage": 1, "result": "ok", "articles": ["价格法_十二"]}
+{"id": "CASE_0216", "stage": 1, "result": "ok", "articles": ["价格法_十二"]}
+{"id": "CASE_0220", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0255", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0258", "stage": 1, "result": "ok", "articles": ["价格法_十三_一"]}
+{"id": "CASE_0283", "stage": 1, "result": "fail_no_articles"}
+{"id": "CASE_0294", "stage": 1, "result": "ok", "articles": ["价格法_十四_四"]}
+{"id": "CASE_0296", "stage": 1, "result": "fail_no_articles"}
+{"id": "CASE_0299", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0303", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0307", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0316", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0327", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0328", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0330", "stage": 1, "result": "ok", "articles": ["价格法_十二"]}
+{"id": "CASE_0335", "stage": 1, "result": "ok", "articles": ["价格法_十三_二"]}
+{"id": "CASE_0340", "stage": 1, "result": "fail_no_articles"}
+{"id": "CASE_0343", "stage": 1, "result": "fail_no_articles"}
+{"id": "CASE_0350", "stage": 1, "result": "fail_no_articles"}
+{"id": "CASE_0353", "stage": 1, "result": "fail_no_articles"}
+{"id": "CASE_0354", "stage": 1, "result": "ok", "articles": ["城镇供水价格管理办法_十五_一_二_二"]}
+{"id": "CASE_0356", "stage": 1, "result": "ok", "articles": ["价格法_十三_二"]}
+{"id": "CASE_0357", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0366", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0367", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0369", "stage": 1, "result": "ok", "articles": ["价格法_十三_一"]}
+{"id": "CASE_0374", "stage": 1, "result": "fail_no_articles"}
+{"id": "CASE_0384", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0387", "stage": 1, "result": "ok", "articles": ["价格法_十二"]}
+{"id": "CASE_0391", "stage": 1, "result": "fail_no_articles"}
+{"id": "CASE_0415", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0417", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0418", "stage": 1, "result": "ok", "articles": ["价格法_十三_一"]}
+{"id": "CASE_0449", "stage": 1, "result": "ok", "articles": ["价格法_十三"]}
+{"id": "CASE_0450", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0465", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0469", "stage": 1, "result": "ok", "articles": ["价格法_十三_一"]}
+{"id": "CASE_0519", "stage": 1, "result": "ok", "articles": ["价格法_十三_一"]}
+{"id": "CASE_0523", "stage": 1, "result": "ok", "articles": ["价格法_十三_一"]}
+{"id": "CASE_0560", "stage": 1, "result": "ok", "articles": ["价格法_十三_一"]}
+{"id": "CASE_0580", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0591", "stage": 1, "result": "fail_no_articles"}
+{"id": "CASE_0593", "stage": 1, "result": "fail_no_articles"}
+{"id": "CASE_0617", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0618", "stage": 1, "result": "fail_no_articles"}
+{"id": "CASE_0647", "stage": 1, "result": "ok", "articles": ["价格法_十三"]}
+{"id": "CASE_0648", "stage": 1, "result": "ok", "articles": ["价格法_十三_一"]}
+{"id": "CASE_0649", "stage": 1, "result": "ok", "articles": ["价格法_十三"]}
+{"id": "CASE_0669", "stage": 1, "result": "ok", "articles": ["价格法_十三_一"]}
+{"id": "CASE_0671", "stage": 1, "result": "fail_no_articles"}
+{"id": "CASE_0678", "stage": 1, "result": "fail_no_articles"}
+{"id": "CASE_0683", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0689", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0691", "stage": 1, "result": "fail_no_articles"}
+{"id": "CASE_0692", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0696", "stage": 1, "result": "ok", "articles": ["价格法_十三_二"]}
+{"id": "CASE_0702", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0703", "stage": 1, "result": "fail_no_articles"}
+{"id": "CASE_0708", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0714", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0719", "stage": 1, "result": "ok", "articles": ["价格法_十三_二"]}
+{"id": "CASE_0725", "stage": 1, "result": "ok", "articles": ["价格法_十二"]}
+{"id": "CASE_0726", "stage": 1, "result": "fail_no_articles"}
+{"id": "CASE_0728", "stage": 1, "result": "ok", "articles": ["价格法_十四_八", "优化营商环境条例_二十八_一"]}
+{"id": "CASE_0734", "stage": 1, "result": "skip_no_text"}
+{"id": "CASE_0740", "stage": 1, "result": "ok", "articles": ["价格法_十二"]}
+{"id": "CASE_0766", "stage": 1, "result": "fail_no_articles"}
+{"id": "CASE_0771", "stage": 1, "result": "ok", "articles": ["价格法_十三_二"]}
+{"file": "esfile_9334e0cd1125b5de94317ce014184b4a.pdf_becacf00-485f-4981-ac8f-5316226d2fb0_9334e0cd1125b5de94317ce014184b4a.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0371", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_ceb366aeaeef156d771df61763950156.pdf_eef45100-507f-4214-a8b0-2323cdc3b799_ceb366aeaeef156d771df61763950156.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0372", "articles": ["价格法_十三", "价格法_十四", "明码标价和禁止价格欺诈规定_十九"]}
+{"file": "esfile_b5747853dbe44415a41a108e0adc7e2f.pdf_3948abc3-e43b-4fb9-ab70-4205976c93bc_b5747853dbe44415a41a108e0adc7e2f.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0373", "articles": ["价格法_十二", "价格法_十三", "明码标价和禁止价格欺诈规定_十九"]}
+{"file": "esfile_2a972d78efe341188c9e672be83f1653.pdf_19ba528a-0858-4e7e-b9fe-f3c3c28017af_2a972d78efe341188c9e672be83f1653.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0374", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_314a365fbaf742589822ffb8360c15b2.pdf_8e309ee2-8444-4d44-8c0b-652d1941b2b8_314a365fbaf742589822ffb8360c15b2.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0375", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_031459f7768c4b219b779f13b65c5ffd.pdf_b74ad661-a09b-48e7-9999-223db75b2cd4_031459f7768c4b219b779f13b65c5ffd.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0376", "articles": ["价格法_十二", "价格法_十三", "明码标价和禁止价格欺诈规定_十九"]}
+{"file": "esfile_764508f1ccbd782b4378b550f2d8894c.pdf_db84f405-d0a2-45ba-8ede-fb7bab52bccc_764508f1ccbd782b4378b550f2d8894c.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0377", "articles": ["价格法_十四_一", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_400030ba1c3f439b968b4554617d6595.pdf_a26acb48-a97a-420e-8511-aebb23f8a1e0_400030ba1c3f439b968b4554617d6595.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0378", "articles": ["价格法_十二", "价格法_十三", "明码标价和禁止价格欺诈规定_十九"]}
+{"file": "esfile_2d0dbe8c167246ae834aea731e2ac9fc.pdf_7a7d42ce-c948-4e83-90ec-9f8d1810ee20_2d0dbe8c167246ae834aea731e2ac9fc.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0379", "articles": ["价格法_十二", "价格法_十三", "明码标价和禁止价格欺诈规定_十九"]}
+{"file": "esfile_36693b24289345b1d269143a9577e5a4.pdf_1ad7ee9b-3714-4c76-a606-8cb0bf346ee1_36693b24289345b1d269143a9577e5a4.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0380", "articles": ["价格法_十四", "明码标价和禁止价格欺诈规定_九"]}
+{"file": "esfile_429830f9943db47917f579473307b2ee.pdf_fa1dacbf-18db-43bd-8423-4d5694e92dde_429830f9943db47917f579473307b2ee.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0381", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_七"]}
+{"file": "esfile_230712000000309301310.pdf_1d6769d7-86a0-4f9e-a240-11e912cabedf_230712000000309301310.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0382", "articles": ["明码标价和禁止价格欺诈规定_十九_三", "明码标价和禁止价格欺诈规定_十三"]}
+{"file": "esfile_62C202500000031792.pdf_202cc9f8-0d93-4ed4-8507-1e045f418a95_62C202500000031792.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0383", "articles": ["价格法_十三", "价格法_十四"]}
+{"file": "esfile_7469964002306b1659adf4fa6ba8a5fc.pdf_380582c1-b388-49a5-9ca4-08ad2e44ef63_7469964002306b1659adf4fa6ba8a5fc.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0384", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_cd1c9a70707b4a8da5768796c6ac2ba4.pdf_0a50b01b-31a5-4248-a3ee-6bb03403c2f1_cd1c9a70707b4a8da5768796c6ac2ba4.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0385", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_cdec870c53f743d6b3666358a0e0a256.pdf_4fcd0ed9-2ad7-4ae8-8f68-04cf79a8ec12_cdec870c53f743d6b3666358a0e0a256.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0386", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_92ccec3725c72970beacbc5888c16e94.pdf_f22940ef-84fc-409c-ad29-2140e6e918c9_92ccec3725c72970beacbc5888c16e94.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0387", "articles": ["价格法_十四", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_f8340d4307ce474f89b03ea6ff97f9aa.pdf_ffcd375c-3c7f-4fb5-afc2-707a152a7b42_f8340d4307ce474f89b03ea6ff97f9aa.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0388", "articles": ["价格法_十四", "明码标价和禁止价格欺诈规定_十三"]}
+{"file": "esfile_230712000000309351988.pdf_96b88d82-fff8-4ad7-a51c-d6aac3e73912_230712000000309351988.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0389", "articles": ["明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_3307830220250700073307833060278188.pdf_efc361cc-7a75-4dec-a498-77ce8bc3390f_3307830220250700073307833060278188.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0390", "articles": ["价格法_十四", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_520100019185531308.pdf_0aed5150-5c6d-42ca-992a-89b1cadf72f8_520100019185531308.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0391", "articles": ["价格法_十二", "明码标价和禁止价格欺诈规定_十九"]}
+{"file": "esfile_230712000000309323574.pdf_dc8d0e47-e8a0-4db5-b6e7-a0d2159252ab_230712000000309323574.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0392", "articles": ["价格法_十三", "价格法_十四"]}
+{"file": "esfile_62C202500000016281.pdf_1a5646c8-9de9-47f8-98ae-521b16a10ae6_62C202500000016281.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0393", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_81909918effb4edfa48ebba68844967e.pdf_c9b7081a-a410-4e98-b089-4f3498779e2c_81909918effb4edfa48ebba68844967e.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0394", "articles": ["价格法_十二", "价格法_十三", "价格法_十四"]}
+{"file": "esfile_a85882bce1fa4ec7a9578467b970398f.pdf_d5621d23-3008-49c0-9522-0cf774d7dae3_a85882bce1fa4ec7a9578467b970398f.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0395", "articles": ["价格法_十四_二", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_fdadd3c5de71e02337c773f51277d7cf.pdf_63b9d350-a85b-445c-a1af-55c534b7c054_fdadd3c5de71e02337c773f51277d7cf.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0396", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_38d610996cef434499e3938543ecd4f3.pdf_5948426e-4ddc-40cd-a83e-4849c9c60d29_38d610996cef434499e3938543ecd4f3.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0397", "articles": ["价格法_十二", "价格法_十四", "辽宁省城市供水用水管理办法_十二", "辽宁省城市供水用水管理办法_十四"]}
+{"file": "esfile_285ee8bcf8be417282e85fe97bb1048c.pdf_649f140f-a40c-4e42-b1d6-565a212c9754_285ee8bcf8be417282e85fe97bb1048c.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0398", "articles": ["价格法_十三_三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_435a4d4536eeeee1c5392d0cbfce4b2a.pdf_3ced9320-037f-4e92-bd67-5feb59198bbe_435a4d4536eeeee1c5392d0cbfce4b2a.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0399", "articles": ["价格法_十四", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_230712000000309358744.pdf_6f86977a-ac77-4b03-8020-abdc71715d0c_230712000000309358744.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0400", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_7137f0a4cf8bbba9c53228a0e182eb37.pdf_f3f52a90-8b60-4c68-b01a-c7fdee410023_7137f0a4cf8bbba9c53228a0e182eb37.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0401", "articles": ["明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_230712000000309309448.pdf_ff8a4176-ed29-497b-8c4c-b8ce34361c03_230712000000309309448.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0402", "articles": ["价格法_十三", "食品安全法_三十四_十"]}
+{"file": "esfile_e3c055f2b1ad422d90caff59d470ab66.pdf_2acbce1f-28c6-494f-969e-21d057bbf7c7_e3c055f2b1ad422d90caff59d470ab66.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0403", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_b38a11b011a03d7925e9740200a2362d.pdf_3ce19bc6-adb8-4af5-a792-4366bed38907_b38a11b011a03d7925e9740200a2362d.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0404", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_a2af3709f82c4352b861c6f99b345176.pdf_5d2f5c49-60b7-4fef-9d46-b96179241632_a2af3709f82c4352b861c6f99b345176.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0405", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_328cfbaad3df76bc59ce4ccb496d8174.pdf_adc08172-6d66-45b2-a492-0b5942804680_328cfbaad3df76bc59ce4ccb496d8174.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0406", "articles": ["价格法_十四_四", "明码标价和禁止价格欺诈规定_十九_二"]}
+{"file": "esfile_a310867d9283369afa5b4639c3f0f224.pdf_b389d5b0-6c3e-4ce8-87ff-3617f51478f8_a310867d9283369afa5b4639c3f0f224.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0407", "articles": ["价格法_十二", "价格法_十三", "明码标价和禁止价格欺诈规定_十九"]}
+{"file": "esfile_d640773d51894763852c4e930e0afc0d.pdf_a9af8fbe-a71f-4cc3-88f1-505bf363d4fb_d640773d51894763852c4e930e0afc0d.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0408", "articles": ["价格法_十二", "价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_0315635087d9e00fa5931a8b5a9f8c8c.pdf_c674cbb2-6c88-400c-ae39-6568d934638d_0315635087d9e00fa5931a8b5a9f8c8c.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0409", "articles": ["价格法_十二", "价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_230712000000309337072.pdf_1863233a-f806-49df-a92c-cb1799551281_230712000000309337072.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0410", "articles": ["明码标价和禁止价格欺诈规定_五_一", "明码标价和禁止价格欺诈规定_二十二"]}
+{"file": "esfile_cd0ce3c29bec480b90779e8744fc5b96.pdf_16c683fc-950c-44c0-b601-96abd1cf1604_cd0ce3c29bec480b90779e8744fc5b96.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0411", "articles": ["价格法_十四_四", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_3303040520250800083303043000720014.pdf_5378a0cd-c6dc-48ca-bf68-107b460555b0_3303040520250800083303043000720014.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0412", "articles": ["价格法_十四_四", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_609e3787efa04e2ba045169e7a756271.pdf_ee05827b-d157-454d-9006-cc17fc6b45ab_609e3787efa04e2ba045169e7a756271.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0413", "articles": ["价格法_十二"]}
+{"file": "esfile_e6b462af882287981e8279bfb11ee48f.pdf_c8e82ba0-dec6-42dc-91e7-cc2b2d951102_e6b462af882287981e8279bfb11ee48f.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0414", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九"]}
+{"file": "esfile_e7aa5107c67148deb12b3815bce2d0a7.pdf_c0014162-071c-4a29-bc05-8485e66dd075_e7aa5107c67148deb12b3815bce2d0a7.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0415", "articles": ["价格法_十四_四", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_29897bb38b8b403281554a7bea360c25.pdf_7ffd8cf3-be30-4bf0-b904-0c36005e189e_29897bb38b8b403281554a7bea360c25.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0416", "articles": ["价格法_十二", "价格法_十三", "价格法_十四"]}
+{"file": "esfile_9e919df293e1f157019408a6af2c29cf.pdf_7a20595c-78e7-4e61-8f2c-aac05caec1a2_9e919df293e1f157019408a6af2c29cf.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0417", "articles": ["价格法_十二", "价格法_十三", "明码标价和禁止价格欺诈规定_十九"]}
+{"file": "esfile_9d0422bb1ff65a677f7f5f0a898a2062.pdf_76eb5e75-c6e1-4fc5-9b2d-7cb31e574461_9d0422bb1ff65a677f7f5f0a898a2062.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0418", "articles": ["价格法_十二"]}
+{"file": "esfile_203D8759DCA2AEAFE063BB831DACD5F9.pdf_5f2c4eb5-b4f4-4595-93ec-54e1f73fec79_203D8759DCA2AEAFE063BB831DACD5F9.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0419", "articles": ["价格法_十二", "价格法_十四"]}
+{"file": "esfile_c830babeb31f4aa48773ba25342f438a.pdf_685a143e-c30f-44f0-9ff4-501c10a0e91c_c830babeb31f4aa48773ba25342f438a.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0420", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十三_三"]}
+{"file": "esfile_33403a98d8fc4b359d68356b25ea7003.pdf_2b7c59b6-e755-4ff3-87d7-28ac33775808_33403a98d8fc4b359d68356b25ea7003.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0421", "articles": ["价格法_十二", "价格法_十三", "明码标价和禁止价格欺诈规定_十九"]}
+{"file": "esfile_9e919df29482cad5019b4e8393f72525.pdf_5bbd15e6-e0dc-4a6a-bfca-0a774053d834_9e919df29482cad5019b4e8393f72525.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0422", "articles": ["价格法_十二", "价格法_十三", "价格法_十四"]}
+{"file": "esfile_ff616ddbef60425ebe5729f52f204f58.pdf_96b0b759-d12e-45ad-914d-cfa544492081_ff616ddbef60425ebe5729f52f204f58.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0423", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_1014054459446.pdf_375685dc-ed56-4e40-a55d-40f5a903c98c_1014054459446.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0424", "articles": ["价格法_十四_六", "价格违法行为行政处罚实施办法_三"]}
+{"file": "esfile_62C202600000002516.pdf_09ca3aa1-96de-486f-9506-61a27d2ccd6b_62C202600000002516.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0425", "articles": ["价格法_十二", "价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_a92d8f8cca038002d311700821b4895f.pdf_962721d9-ee2a-4501-a612-bd4bb8b0942c_a92d8f8cca038002d311700821b4895f.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0426", "articles": ["价格法_十二", "价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_da1e3dcff26842d28552857dcdb7cb42.pdf_a0d3a7d5-f377-4a49-a75a-285794ab8e3c_da1e3dcff26842d28552857dcdb7cb42.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0427", "articles": ["价格法_十二", "价格法_十三", "明码标价和禁止价格欺诈规定_十九"]}
+{"file": "esfile_3371c8d862b845308db7a291d4ac7dcc.pdf_c24ec2e6-855c-448d-82af-91026ffb3550_3371c8d862b845308db7a291d4ac7dcc.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0428", "articles": ["价格法_十四_四", "江西省殡葬服务收费管理办法（试行）_九", "江西省公墓管理办法_十七_二", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_6e3e0cf429914fef8c96c4cce19c142b.pdf_c4a3076e-1ebe-4936-8559-a7b6a7211bc7_6e3e0cf429914fef8c96c4cce19c142b.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0429", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九"]}
+{"file": "esfile_7f4031b746de4793a3ccd6d792f90a4e.pdf_47264fe5-ffdc-450a-ac50-4354a3375765_7f4031b746de4793a3ccd6d792f90a4e.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0430", "articles": ["价格法_十四_四", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_82fc30a5b94996afcf3af3394ee08ff4.pdf_e1e62421-7e83-42a5-840e-35c5130217f4_82fc30a5b94996afcf3af3394ee08ff4.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0431", "articles": ["价格法_十三", "价格法_十四_四", "明码标价和禁止价格欺诈规定_十六_一、二"]}
+{"file": "esfile_d45478c12e294610954c1838065942a8.pdf_4cb33b93-b1ac-458d-8bea-d51263ca1d43_d45478c12e294610954c1838065942a8.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0432", "articles": ["价格法_十二", "价格法_十三", "价格法_十四"]}
+{"file": "esfile_9e919df293e1f1570194181a26f631a9.pdf_2728f623-9338-4668-82b8-e6e0d3a01e79_9e919df293e1f1570194181a26f631a9.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0433", "articles": ["价格法_十二", "价格法_十三", "价格法_十四"]}
+{"file": "esfile_3301820020250600013301823000478628.pdf_99d586fa-9d41-4f7f-b992-887ba2c856e9_3301820020250600013301823000478628.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0434", "articles": ["价格法_十四_四", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_230712000000309335124.pdf_ca3537e7-a554-4fc0-891a-e9bab831275e_230712000000309335124.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0435", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_409d819b8cb5565d018ccc9e429e1507.pdf_4a0871ce-dc14-48ba-b0bf-f80dfedd4c42_409d819b8cb5565d018ccc9e429e1507.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0436", "articles": ["价格法_十二", "价格法_十三"]}
+{"file": "esfile_8c138eed09b64b399f2990801dfe2a8b.pdf_f5c1cbaf-19ca-421d-bdeb-735530930595_8c138eed09b64b399f2990801dfe2a8b.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0437", "articles": ["明码标价和禁止价格欺诈规定_十六_一", "明码标价和禁止价格欺诈规定_十七_二", "明码标价和禁止价格欺诈规定_十九_三", "价格法_十四_四"]}
+{"file": "esfile_9e919df29482cad5019b495e865523ca.pdf_2ae68144-d79c-4c3b-8b3b-91e4e442bc76_9e919df29482cad5019b495e865523ca.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0438", "articles": ["价格法_十二"]}
+{"file": "esfile_3309031420250800013309030000073324.pdf_a8214740-5fbf-43db-b903-0a3521b62257_3309031420250800013309030000073324.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0439", "articles": ["价格法_十二", "价格法_十三"]}
+{"file": "esfile_230712000000559753870.pdf_453e8909-5f64-4615-a8ee-e1f8953dba4f_230712000000559753870.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0440", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_07810e85ffcd687ad471dcdd2ae599ca.pdf_4a274ceb-414b-46c0-897d-7c034866b58b_07810e85ffcd687ad471dcdd2ae599ca.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0441", "articles": ["价格法_十二", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_0A01065CAB704113E063BB831DAC5159.pdf_8b32e235-09a5-4255-b061-ef61fe0ffb1d_0A01065CAB704113E063BB831DAC5159.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0442", "articles": ["价格法_十四_四", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_515865efc3bc27c35727a7d33e5984c6.pdf_0718b449-ad2c-4663-8412-8a798170d87c_515865efc3bc27c35727a7d33e5984c6.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0443", "articles": ["价格法_十二", "明码标价和禁止价格欺诈规定_十九"]}
+{"file": "esfile_c99519c8ef6096fa161343970e4aac84.pdf_ad9dd2df-7fb7-4ae1-b9a0-61cf7079cb2e_c99519c8ef6096fa161343970e4aac84.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0444", "articles": ["价格法_十二", "价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_66ca064973cb40f19b050f2989c19827.pdf_96d0925b-f19c-41bf-8aca-36d82382e6be_66ca064973cb40f19b050f2989c19827.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0445", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_230712000000309304976.pdf_2f93ed11-28e4-436e-a45f-61faa4e6625c_230712000000309304976.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0446", "articles": ["价格法_十三", "价格法_十四"]}
+{"file": "esfile_3821e13288d7b89280015025c037e2b9.pdf_40485be7-11b5-4076-bf7f-a802a9009b93_3821e13288d7b89280015025c037e2b9.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0447", "articles": ["价格法_十二", "价格法_十三", "明码标价和禁止价格欺诈规定_十九"]}
+{"file": "esfile_659bdb382ac26656377df5772e649536.pdf_be543d00-9e41-4749-9ab1-12c8e3429487_659bdb382ac26656377df5772e649536.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0448", "articles": ["价格法_十二", "价格法_十三", "价格法_十四"]}
+{"file": "esfile_4f7646ae089634dcb868ff497124ea11.pdf_d39dd055-7553-4b17-9309-51633e65a5f1_4f7646ae089634dcb868ff497124ea11.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0449", "articles": ["价格法_十四_四", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_62C202600000001979.pdf_1380f856-4436-45f4-97f9-af74780f8699_62C202600000001979.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0450", "articles": ["价格法_十二", "价格法_十三", "价格法_十四"]}
+{"file": "esfile_c6f3af61d52a408a9101db09f093d041.pdf_914e28f9-1036-47b2-af1f-8e04f0db6c41_c6f3af61d52a408a9101db09f093d041.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0451", "articles": ["明码标价和禁止价格欺诈规定_十六_一", "明码标价和禁止价格欺诈规定_十七_二", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_3306810520250400033306813000873038.pdf_6d4e4910-4331-4b32-97a9-310516970bc4_3306810520250400033306813000873038.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0452", "articles": ["价格法_十四_四", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_28e30ad797e847f19c83e0f979203561.pdf_3d273f4d-3668-4622-a486-1416f9e057e4_28e30ad797e847f19c83e0f979203561.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0453", "articles": ["明码标价和禁止价格欺诈规定_十九_三", "明码标价和禁止价格欺诈规定_十七_二", "明码标价和禁止价格欺诈规定_十六_一"]}
+{"file": "esfile_9e919df292bd251f019347b9b4cb421f.pdf_475ba2e0-1542-42df-8ba1-15fb1891bae0_9e919df292bd251f019347b9b4cb421f.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0454", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_9e919df293b91e3d0193bb61ebb40195.pdf_a22a149e-9f48-4326-b7bf-bc1804069ca3_9e919df293b91e3d0193bb61ebb40195.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0455", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_9e919df292bd251f019347b9cf704222.pdf_2688af6b-6701-4cc0-9104-d5ba0f8e33d6_9e919df292bd251f019347b9cf704222.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0456", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_9e919df292bd251f019330560b523add.pdf_4b2ef426-e712-4d03-9876-b8a7e7dcdf1b_9e919df292bd251f019330560b523add.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0457", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_5035604139d49950207f95a7f382a25c.pdf_20d360f6-2241-49b3-b2a3-924a73282f7c_5035604139d49950207f95a7f382a25c.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0458", "articles": ["价格法_十二", "价格法_十三", "价格法_十四"]}
+{"file": "esfile_9e919df293b91e3d0193bb627d2401a5.pdf_254e2722-be2a-4c0a-a427-2c4b789c20a6_9e919df293b91e3d0193bb627d2401a5.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0459", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_e3b92509628feac6f1545485eb79656b.pdf_a54ebe4a-0b6f-435b-b7fb-938c9dc59adb_e3b92509628feac6f1545485eb79656b.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0460", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_eb20a98ae3ec33bf44c7ddbcdb551de4.pdf_a9b7ba55-b9a4-4269-aaff-10a13e54ca74_eb20a98ae3ec33bf44c7ddbcdb551de4.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0461", "articles": ["价格法_十四_四", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_fcf48cc904d64d399318eab23628d7e6.pdf_1370cc4e-ac0a-4736-8228-206836bee5d6_fcf48cc904d64d399318eab23628d7e6.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0462", "articles": ["价格法_十二", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_3303244420250900013303240000406243.pdf_deb31da5-a314-4709-aa8a-1d7d433dfde8_3303244420250900013303240000406243.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0463", "articles": ["价格法_十四_四", "明码标价和禁止价格欺诈规定_十九_五"]}
+{"file": "esfile_9e919df293b91e3d0193c0882e1303fa.pdf_f2eb9247-33ed-4f1e-9c94-e03439c1346b_9e919df293b91e3d0193c0882e1303fa.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0464", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_413c9d42a5429497175f8b3e3bb513d8.pdf_22885aad-3238-453f-9423-ab0bb879293c_413c9d42a5429497175f8b3e3bb513d8.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0465", "articles": ["价格法_十二", "价格法_十三", "价格法_十四"]}
+{"file": "esfile_9e919df293e1f15701940646d6ac2626.pdf_4e417483-80bf-43f7-b09f-3965b68e6762_9e919df293e1f15701940646d6ac2626.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0466", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_4bb1261d8240b583c1f27e69528f8a34.pdf_c5c8b134-1389-4c3a-ab5a-57d67ca8b92f_4bb1261d8240b583c1f27e69528f8a34.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0467", "articles": ["价格法_十二", "价格法_十三"]}
+{"file": "esfile_a0a0e2858c43b950018c59884efc10e6.pdf_c7a4e2d2-826d-4472-9008-34af90473487_a0a0e2858c43b950018c59884efc10e6.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0468", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_62C202600000001013.pdf_bb5eacfc-fbf1-4664-ad98-683ae902f908_62C202600000001013.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0469", "articles": ["价格法_十二", "价格法_十三", "价格法_十四"]}
+{"file": "esfile_5bace2b2064745e69d2a04cec8f58c27.pdf_98c14616-ddb9-4112-8db1-382857740471_5bace2b2064745e69d2a04cec8f58c27.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0470", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_a0a0e2858c383628018c3a898d3c612c.pdf_81ff0e78-d4ba-449e-97a2-aa06eab934fb_a0a0e2858c383628018c3a898d3c612c.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0471", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_520100018902796505.pdf_1e6801dd-3a72-4a7d-a9bd-2aaa1b7fc402_520100018902796505.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0472", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_a0a0e2858c8b8721018c8fae71d06892.pdf_cfb4160a-947c-4ed3-9f0d-17bf14b1cb9a_a0a0e2858c8b8721018c8fae71d06892.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0473", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_a8a4bf138ea55a2ce6b66ad453603b94.pdf_deced061-b5ad-470f-b50f-be669be58e57_a8a4bf138ea55a2ce6b66ad453603b94.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0474", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_五", "明码标价和禁止价格欺诈规定_二十二", "计量法_九", "计量法实施细则_十一"]}
+{"file": "esfile_ea1eaec4e77646d8ffdc650bedf04f38.pdf_1de4d720-8e0c-4fef-9b31-a03969a4737e_ea1eaec4e77646d8ffdc650bedf04f38.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0475", "articles": ["价格法_十四_四", "明码标价和禁止价格欺诈规定_十六_一", "明码标价和禁止价格欺诈规定_十七_二", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_230712000000309312616.pdf_4cd8b34d-04d4-4eaa-9451-5357617f3931_230712000000309312616.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0476", "articles": ["明码标价和禁止价格欺诈规定_八", "明码标价和禁止价格欺诈规定_二二", "价格法_十三、二"]}
+{"file": "esfile_a0a0e2858c82317e018c8561f94d58e5.pdf_4db51f2f-4a20-493a-a232-a7c1f26aeb79_a0a0e2858c82317e018c8561f94d58e5.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0477", "articles": ["价格法_十三、二", "明码标价和禁止价格欺诈规定_十九、三"]}
+{"file": "esfile_230712000000309454820.pdf_c5b2577c-7617-4016-b436-089272cffdac_230712000000309454820.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0478", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十三_三"]}
+{"file": "esfile_9e919df292bd251f019319606ee62bd6.pdf_9a91e48c-9ca3-406b-90d0-864637b454ed_9e919df292bd251f019319606ee62bd6.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0479", "articles": ["价格法_十三"]}
+{"file": "esfile_20fc06105875260af173dd1857931bae.pdf_f7480875-ffa6-46c9-8f62-28f01fc0ba2a_20fc06105875260af173dd1857931bae.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0480", "articles": ["价格法_十二", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_c11d35663f101b16b6e4b05e1e632c65.pdf_744e2090-aba4-40fa-80bf-b49093ee8bef_c11d35663f101b16b6e4b05e1e632c65.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0481", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_五"]}
+{"file": "esfile_a0a0e2858c82317e018c87c4a0463a0b.pdf_63d5f103-80fb-41ec-86c8-5b2ddfa906c0_a0a0e2858c82317e018c87c4a0463a0b.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0482", "articles": ["价格法_十三、", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_a0a0e2858c82317e018c87c33c0a39e4.pdf_aef8a09d-21f6-481f-a8f0-b146acbb46c5_a0a0e2858c82317e018c87c33c0a39e4.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0483", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_df804522edf55863d9ed9195535d9762.pdf_f344229d-6a71-44a6-8dad-3e2090b20b63_df804522edf55863d9ed9195535d9762.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0484", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_fb285764dd981691349e400c60f83dbb.pdf_de1eccc0-dc10-42b8-b4d8-051090987995_fb285764dd981691349e400c60f83dbb.pdf", "stage": 2, "result": "skip_short_desc"}
+{"file": "esfile_a0a0e2858b5b4b9e018b5b5664f400f1.pdf_c143a4f2-6e9e-42f8-a74d-c95854b51fc0_a0a0e2858b5b4b9e018b5b5664f400f1.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0485", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_a0a0e2858c5ba0a2018c68ed1a1f299d.pdf_131c5adc-54dc-477c-bd41-02622e03ba49_a0a0e2858c5ba0a2018c68ed1a1f299d.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0486", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_9e919df293ae42da0193b115b28e02d5.pdf_5304a6c5-f456-4c64-b88e-40542eb72160_9e919df293ae42da0193b115b28e02d5.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0487", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_a0a0e2858b5b4b9e018b5b564a4000ed.pdf_56227f35-71c4-4ae0-92f9-ca77c887d870_a0a0e2858b5b4b9e018b5b564a4000ed.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0488", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_a0a0e2858b5b4b9e018b5b57692f0123.pdf_90a67639-9f95-4f68-a929-1cef483b8a95_a0a0e2858b5b4b9e018b5b57692f0123.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0489", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_9e919df292bd251f019323acf9ac3234.pdf_c119eb64-40ed-4c47-9f79-e4bbc2185d43_9e919df292bd251f019323acf9ac3234.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0490", "articles": ["价格法_十三"]}
+{"file": "esfile_9e919df292bd251f01933fc9b7c93f03.pdf_568d0d35-880f-41ae-8d87-87d1ee3313ec_9e919df292bd251f01933fc9b7c93f03.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0491", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_dacb3d9bda6e4c8387be3c8a021b756d.pdf_5d325eb1-01c2-4e8d-99d0-67f68ff0b050_dacb3d9bda6e4c8387be3c8a021b756d.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0492", "articles": ["价格法_十三_二", "明码标价和禁止价格欺诈规定_十三_三"]}
+{"file": "esfile_9e919df29482cad5019abb870af64dda.pdf_6a7a3d3b-c852-4428-aadd-4b8f1663ea6d_9e919df29482cad5019abb870af64dda.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0493", "articles": ["价格法_十三", "计量法_九"]}
+{"file": "esfile_9e919df2936757dd0193734b90c70d0f.pdf_61c2a06f-a446-4b72-91eb-ea40ee5fee1b_9e919df2936757dd0193734b90c70d0f.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0494", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}
+{"file": "esfile_9e919df2936757dd0193734e7b0a0d79.pdf_39edf7d7-ecf6-4266-bf49-3d2cd26df97d_9e919df2936757dd0193734e7b0a0d79.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0495", "articles": ["价格法_十二", "价格法_十三"]}
+{"file": "esfile_3305040420250900023305043000161812.pdf_b6796ff6-de73-4f91-918c-53353eff7b73_3305040420250900023305043000161812.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0496", "articles": ["价格法_十三", "价格法_十四_四"]}
+{"file": "esfile_409d8f868ad67200018bb1600970258b.pdf_ac3a7a97-731a-47f7-8115-bb67cdff1af1_409d8f868ad67200018bb1600970258b.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0497", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十三_一"]}
+{"file": "esfile_9e919df29482cad5019ad812bfec5e6b.pdf_e7b85bf5-8c1b-4918-8b17-76259dd99dad_9e919df29482cad5019ad812bfec5e6b.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0498", "articles": ["价格法_十三", "计量法_九"]}
+{"file": "esfile_befa8e5fb63331f22cba12129dc26347.pdf_8428ff7f-adf9-4f09-94b4-6281a48f727c_befa8e5fb63331f22cba12129dc26347.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0499", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_五_一"]}
+{"file": "esfile_a0a0e2858c5ba0a2018c7b19daee6c30.pdf_2ac0e6b8-0569-49da-9b3a-feb406d2199e_a0a0e2858c5ba0a2018c7b19daee6c30.pdf", "stage": 2, "result": "ok", "case_id": "CASE_0500", "articles": ["价格法_十三", "明码标价和禁止价格欺诈规定_十九_三"]}

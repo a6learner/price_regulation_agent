@@ -1,0 +1,4727 @@
+[
+  {
+    "case_id": "CASE_0001",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": false,
+      "violation_type": "无违规",
+      "confidence": 0.95,
+      "reasoning": "根据提供的案例事实，当事人作为销售居间服务方，其主要职责是市场调研、营销策划、价格制定公布、房屋销售及售后等服务。从案例内容来看，当事人并未直接参与商品房的定价行为，而是根据委托方（南平嘉达房地产有限公司）的要求进行相关服务。因此，当事人未直接涉及商品房的定价或标价行为。此外，案例中并未提及当事人存在任何价格欺诈、不明码标价或变相提高价格等行为，也未涉及政府定价违规或哄抬价格等问题。综上，当事人在案例描述中未违反相关价格法律法规。",
+      "legal_basis": "《中华人民共和国价格法》第十三条第一款规定，经营者销售商品应当明码标价，但该条款适用于直接销售商品的经营者。对于销售居间服务方，其主要职责为策划和推广，不直接参与商品房的定价，因此不适用该条款。"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": false,
+      "type_correct": false,
+      "match_details": {}
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 97
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 5,
+        "reasoning_score": 1.0,
+        "reasoning_length": 217
+      }
+    },
+    "performance": {
+      "response_time": 6.77,
+      "input_tokens": 878,
+      "output_tokens": 271
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": false,\n  \"violation_type\": \"无违规\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据提供的案例事实，当事人作为销售居间服务方，其主要职责是市场调研、营销策划、价格制定公布、房屋销售及售后等服务。从案例内容来看，当事人并未直接参与商品房的定价行为，而是根据委托方（南平嘉达房地产有限公司）的要求进行相关服务。因此，当事人未直接涉及商品房的定价或标价行为。此外，案例中并未提及当事人存在任何价格欺诈、不明码标价或变相提高价格等行为，也未涉及政府定价违规或哄抬价格等问题。综上，当事人在案例描述中未违反相关价格法律法规。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十三条第一款规定，经营者销售商品应当明码标价，但该条款适用于直接销售商品的经营者。对于销售居间服务方，其主要职责为策划和推广，不直接参与商品房的定价，因此不适用该条款。\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《中华人民共和国价格法》\",\n      \"article\": \"第十三条第一款\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0002",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "confidence": 0.95,
+      "reasoning": "根据《自治区发展改革委 住房城乡建设厅 市场监管厅关于规范电动自行车充电收费行为的通知》（宁发改价格（调控）〔2024〕570号），自2025年1月1日起银川市居民住宅小区内的电动自行车充电设施应按居民合表用户现行电价0.4986元/千瓦时计收充电电费。本案中，宁夏荣汇世通科技有限公司作为充电桩经营企业，其公示的收费标准中包含电费+服务费的组合（0.5元+0.85元），但无法提供证据证明电费部分按0.5元执行，说明其未按政府定价执行，且未完全落实政府定价要求。",
+      "legal_basis": "《中华人民共和国价格法》第十三条第一款"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "京东",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'政府定价违规' 与 真值'不明码标价' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 1,
+        "has_specific_article": true,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 19
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 2,
+        "reasoning_score": 0.45,
+        "reasoning_length": 232
+      }
+    },
+    "performance": {
+      "response_time": 6.77,
+      "input_tokens": 837,
+      "output_tokens": 271
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"政府定价违规\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据《自治区发展改革委 住房城乡建设厅 市场监管厅关于规范电动自行车充电收费行为的通知》（宁发改价格（调控）〔2024〕570号），自2025年1月1日起银川市居民住宅小区内的电动自行车充电设施应按居民合表用户现行电价0.4986元/千瓦时计收充电电费。本案中，宁夏荣汇世通科技有限公司作为充电桩经营企业，其公示的收费标准中包含电费+服务费的组合（0.5元+0.85元），但无法提供证据证明电费部分按0.5元执行，说明其未按政府定价执行，且未完全落实政府定价要求。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十三条第一款\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十三条第一款\"},\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十六条第一款\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0004",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人在诊所中使用药品进行诊疗活动时，未对药品进行明码标价，违反了价格标示的法定要求。尽管当事人通过药品使用获利，但未按规定明码标价的行为与获利无直接关联，但该行为本身已构成价格违法行为。根据《明码标价和禁止价格欺诈规定》的相关要求，经营者应当对商品或服务的价格进行明码标价，确保价格信息的透明和规范。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 15
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 158
+      }
+    },
+    "performance": {
+      "response_time": 5.05,
+      "input_tokens": 563,
+      "output_tokens": 199
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人在诊所中使用药品进行诊疗活动时，未对药品进行明码标价，违反了价格标示的法定要求。尽管当事人通过药品使用获利，但未按规定明码标价的行为与获利无直接关联，但该行为本身已构成价格违法行为。根据《明码标价和禁止价格欺诈规定》的相关要求，经营者应当对商品或服务的价格进行明码标价，确保价格信息的透明和规范。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十三条第（一）项\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0008",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "confidence": 0.95,
+      "reasoning": "根据案例事实，当事人作为基层公立医疗机构，其医疗服务项目价格应执行政府定价。然而，当事人在2023年1月5日至2024年3月25日期间，对“X线计算机体层（CT）平扫”项目收费高于《福州市医疗保障局 福州市卫生健康委员会关于重新公布福州市医疗机构医疗服务价格项目及有关问题的通知》（榕医保文〔2019〕15号）规定的174元/部位标准，分别以219元/部位、228元/部位、308.75元/部位、617.5元/部位的标准收费，属于超出政府定价浮动范围的行为。此外，案例中还提到当事人推迟执行“X线计算机体层（CT）扫描（三维重建加”项目，进一步表明其未按政府定价执行，存在违规收费行为。",
+      "legal_basis": "当事人未按政府定价执行，属于超出政府定价浮动范围或不执行政府定价的行为。"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '政府定价违规' == '政府定价违规'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 0,
+        "has_specific_article": false,
+        "legal_basis_score": 0.3,
+        "legal_basis_length": 36
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 293
+      }
+    },
+    "performance": {
+      "response_time": 7.62,
+      "input_tokens": 844,
+      "output_tokens": 312
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"政府定价违规\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例事实，当事人作为基层公立医疗机构，其医疗服务项目价格应执行政府定价。然而，当事人在2023年1月5日至2024年3月25日期间，对“X线计算机体层（CT）平扫”项目收费高于《福州市医疗保障局 福州市卫生健康委员会关于重新公布福州市医疗机构医疗服务价格项目及有关问题的通知》（榕医保文〔2019〕15号）规定的174元/部位标准，分别以219元/部位、228元/部位、308.75元/部位、617.5元/部位的标准收费，属于超出政府定价浮动范围的行为。此外，案例中还提到当事人推迟执行“X线计算机体层（CT）扫描（三维重建加”项目，进一步表明其未按政府定价执行，存在违规收费行为。\",\n  \"legal_basis\": \"当事人未按政府定价执行，属于超出政府定价浮动范围或不执行政府定价的行为。\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十三条第一款\"},\n    {\"law\": \"《价格违法行为行政处罚规定》\", \"article\": \"第十三条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0009",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，部分商品在促销期间的成交价低于标价后的折扣价。例如，'红色拖拉机澳大利亚速食纯燕麦粥 50g'在促销期间的折后价为28.79元，但3月14日成交价为25.9元，低于折扣价。这表明在标价之外存在额外的优惠或折扣，可能构成标价外加价的行为，违反了价格标示的合规性要求。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十九条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "误导性价格标示",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'标价外加价' 与 真值'误导性价格标示' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 19
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 139
+      }
+    },
+    "performance": {
+      "response_time": 5.57,
+      "input_tokens": 933,
+      "output_tokens": 205
+    },
+    "llm_response": "{\n  \"is_violation\": true,\n  \"violation_type\": \"标价外加价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，部分商品在促销期间的成交价低于标价后的折扣价。例如，'红色拖拉机澳大利亚速食纯燕麦粥 50g'在促销期间的折后价为28.79元，但3月14日成交价为25.9元，低于折扣价。这表明在标价之外存在额外的优惠或折扣，可能构成标价外加价的行为，违反了价格标示的合规性要求。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十九条\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第十九条\"\n    }\n  ]\n}"
+  },
+  {
+    "case_id": "CASE_0011",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "confidence": 0.95,
+      "reasoning": "当事人作为公办非营利性医疗机构，其提供的基本医疗服务属于政府定价内容，但其在收费过程中存在未执行优惠价和重复收费的行为，违反了政府定价的执行要求。例如，对于彩色多普勒超声常规检查的第二部位，未按优惠价执行，导致多收费；同时，重复收取本应包含在套餐中的项目费用，均属于超出政府定价范围或未执行政府定价的违规行为。",
+      "legal_basis": "《中华人民共和国价格法》第十二条、《明码标价和禁止价格欺诈规定》第六条、《价格违法行为行政处罚规定》第九条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '政府定价违规' == '政府定价违规'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 4,
+        "has_specific_article": true,
+        "legal_basis_score": 1.0,
+        "legal_basis_length": 53
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 2,
+        "reasoning_score": 0.6,
+        "reasoning_length": 155
+      }
+    },
+    "performance": {
+      "response_time": 6.17,
+      "input_tokens": 882,
+      "output_tokens": 241
+    },
+    "llm_response": "{\n  \"is_violation\": true,\n  \"violation_type\": \"政府定价违规\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人作为公办非营利性医疗机构，其提供的基本医疗服务属于政府定价内容，但其在收费过程中存在未执行优惠价和重复收费的行为，违反了政府定价的执行要求。例如，对于彩色多普勒超声常规检查的第二部位，未按优惠价执行，导致多收费；同时，重复收取本应包含在套餐中的项目费用，均属于超出政府定价范围或未执行政府定价的违规行为。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十二条、《明码标价和禁止价格欺诈规定》第六条、《价格违法行为行政处罚规定》第九条\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十二条\"},\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第六条\"},\n    {\"law\": \"《价格违法行为行政处罚规定》\", \"article\": \"第九条\"}\n  ]\n}"
+  },
+  {
+    "case_id": "CASE_0012",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "其他价格违法",
+      "confidence": 0.95,
+      "reasoning": "当事人违规收取用水计量装置费用，且未在法定期限内退赔相关费用，存在价格违法行为。此外，水表未在检定有效期内且未进行轮换，可能涉及违反价格相关法规，如《价格法》和《明码标价和禁止价格欺诈规定》。这些行为可能构成其他价格违法类型。",
+      "legal_basis": "《中华人民共和国价格法》第十三条第一款、《明码标价和禁止价格欺诈规定》第十五条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'其他价格违法' 与 真值'政府定价违规' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 3,
+        "has_specific_article": true,
+        "legal_basis_score": 1.0,
+        "legal_basis_length": 39
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.6,
+        "reasoning_length": 113
+      }
+    },
+    "performance": {
+      "response_time": 5.2,
+      "input_tokens": 828,
+      "output_tokens": 201
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"其他价格违法\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人违规收取用水计量装置费用，且未在法定期限内退赔相关费用，存在价格违法行为。此外，水表未在检定有效期内且未进行轮换，可能涉及违反价格相关法规，如《价格法》和《明码标价和禁止价格欺诈规定》。这些行为可能构成其他价格违法类型。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十三条第一款、《明码标价和禁止价格欺诈规定》第十五条\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十三条第一款\"},\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十五条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0013",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据案例事实，经营者未对商品标明价格，且无法提供销售记录，无法认定违法所得。这种行为直接违反了明码标价的规定，属于典型的不明码标价行为。依据《明码标价和禁止价格欺诈规定》第十五条，经营者应当标明商品的名称、价格、计价单位等必要信息，未标明价格的行为属于违法。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十五条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "未识别",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'不明码标价' 与 真值'未识别' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 19
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 129
+      }
+    },
+    "performance": {
+      "response_time": 4.72,
+      "input_tokens": 594,
+      "output_tokens": 179
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例事实，经营者未对商品标明价格，且无法提供销售记录，无法认定违法所得。这种行为直接违反了明码标价的规定，属于典型的不明码标价行为。依据《明码标价和禁止价格欺诈规定》第十五条，经营者应当标明商品的名称、价格、计价单位等必要信息，未标明价格的行为属于违法。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十五条\",\n  \"cited_articles\": [\n    {\n      \"law\": \"明码标价和禁止价格欺诈规定\",\n      \"article\": \"第十五条\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0015",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "confidence": 0.95,
+      "reasoning": "当事人存在将两个不同项目费用合并收取的行为，属于在标价之外额外收取未标明的费用。根据《明码标价和禁止价格欺诈规定》第十二条，经营者不得在标价之外加价出售商品或提供服务，且不得收取任何未标明的费用。当事人的行为违反了该规定，构成标价外加价的违法行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十二条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '标价外加价' == '标价外加价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 19
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 124
+      }
+    },
+    "performance": {
+      "response_time": 4.76,
+      "input_tokens": 808,
+      "output_tokens": 179
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"标价外加价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人存在将两个不同项目费用合并收取的行为，属于在标价之外额外收取未标明的费用。根据《明码标价和禁止价格欺诈规定》第十二条，经营者不得在标价之外加价出售商品或提供服务，且不得收取任何未标明的费用。当事人的行为违反了该规定，构成标价外加价的违法行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十二条\",\n  \"cited_articles\": [\n    {\n      \"law\": \"明码标价和禁止价格欺诈规定\",\n      \"article\": \"第十二条\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0016",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "其他价格违法",
+      "confidence": 0.95,
+      "reasoning": "根据提供的事实，当事人在为用户提供自来水供水管道安装服务过程中，通过《永泰县嵩口镇自来水厂领料单》和《自来水安装结算单》结算物料和安装费用，其中物料费包含了水表费用。然而，依据《国务院办公厅转发国家发展改革委等部门关于清理规范城镇供水供电供气供暖行业收费促进行业高质量发展意见的通知》（国办函〔2020〕129号）的规定，严禁向用户收取水电气热计量装置费用。当事人通过安装服务向用户收取水表费用，涉嫌违反上述规定，属于其他价格违法行为。",
+      "legal_basis": "《国务院办公厅转发国家发展改革委等部门关于清理规范城镇供水供电供气供暖行业收费促进行业高质量发展意见的通知》（国办函〔2020〕129号）"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'其他价格违法' 与 真值'政府定价违规' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 0,
+        "has_specific_article": false,
+        "legal_basis_score": 0.3,
+        "legal_basis_length": 69
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 218
+      }
+    },
+    "performance": {
+      "response_time": 7.2,
+      "input_tokens": 876,
+      "output_tokens": 276
+    },
+    "llm_response": "{\n  \"is_violation\": true,\n  \"violation_type\": \"其他价格违法\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据提供的事实，当事人在为用户提供自来水供水管道安装服务过程中，通过《永泰县嵩口镇自来水厂领料单》和《自来水安装结算单》结算物料和安装费用，其中物料费包含了水表费用。然而，依据《国务院办公厅转发国家发展改革委等部门关于清理规范城镇供水供电供气供暖行业收费促进行业高质量发展意见的通知》（国办函〔2020〕129号）的规定，严禁向用户收取水电气热计量装置费用。当事人通过安装服务向用户收取水表费用，涉嫌违反上述规定，属于其他价格违法行为。\",\n  \"legal_basis\": \"《国务院办公厅转发国家发展改革委等部门关于清理规范城镇供水供电供气供暖行业收费促进行业高质量发展意见的通知》（国办函〔2020〕129号）\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《国务院办公厅转发国家发展改革委等部门关于清理规范城镇供水供电供气供暖行业收费促进行业高质量发展意见的通知》\",\n      \"article\": \"第二条第（六）项\"\n    }\n  ]\n}"
+  },
+  {
+    "case_id": "CASE_0017",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": false,
+      "violation_type": "无违规",
+      "confidence": 0.95,
+      "reasoning": "根据提供的案例事实，当事人对儿童入园体检收费执行标准进行了逐年调整，并在不同年份分别提供了具体的收费项目和人次。从描述来看，收费项目和标准是明确的，未发现价格欺诈或违规行为，且未提及存在不明码标价、误导性价格标示或变相提高价格等情况。此外，案例中未涉及政府定价或指导价违规的内容，因此未发现违反价格法律法规的行为。",
+      "legal_basis": "《中华人民共和国价格法》第十三条第一款规定，经营者应当明码标价，标明价格的水平、计价单位等必要信息。案例中当事人对收费项目和标准进行了明确说明，符合该条规定。"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": false,
+      "type_correct": false,
+      "match_details": {}
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 79
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 3,
+        "reasoning_score": 1.0,
+        "reasoning_length": 157
+      }
+    },
+    "performance": {
+      "response_time": 5.71,
+      "input_tokens": 897,
+      "output_tokens": 220
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": false,\n  \"violation_type\": \"无违规\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据提供的案例事实，当事人对儿童入园体检收费执行标准进行了逐年调整，并在不同年份分别提供了具体的收费项目和人次。从描述来看，收费项目和标准是明确的，未发现价格欺诈或违规行为，且未提及存在不明码标价、误导性价格标示或变相提高价格等情况。此外，案例中未涉及政府定价或指导价违规的内容，因此未发现违反价格法律法规的行为。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十三条第一款规定，经营者应当明码标价，标明价格的水平、计价单位等必要信息。案例中当事人对收费项目和标准进行了明确说明，符合该条规定。\",\n  \"cited_articles\": [\n    {\n      \"law\": \"中华人民共和国价格法\",\n      \"article\": \"第十三条第一款\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0019",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "confidence": 0.95,
+      "reasoning": "根据《国务院办公厅转发国家发展改革委等部门关于清理规范城镇供水供电供气供暖行业收费促进行业高质量发展意见的通知》（国办函[2020]129号）的规定，自2021年3月1日起，严禁向用户收取水电气热计量装置费用。当事人在2021年3月1日至2025年4月24日期间向用户收取自来水表费，违反了该规定。尽管当事人在2025年5月1日进行了整改，并在收到通知后退还了多收的价款，但其在规定期限内违规收费的行为已经构成政府定价违规。",
+      "legal_basis": "《国务院办公厅转发国家发展改革委等部门关于清理规范城镇供水供电供气供暖行业收费促进行业高质量发展意见的通知》（国办函[2020]129号）"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "误导性价格标示",
+      "platform": "1688",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'政府定价违规' 与 真值'误导性价格标示' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 0,
+        "has_specific_article": false,
+        "legal_basis_score": 0.3,
+        "legal_basis_length": 69
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.6,
+        "reasoning_length": 212
+      }
+    },
+    "performance": {
+      "response_time": 7.48,
+      "input_tokens": 850,
+      "output_tokens": 284
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"政府定价违规\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据《国务院办公厅转发国家发展改革委等部门关于清理规范城镇供水供电供气供暖行业收费促进行业高质量发展意见的通知》（国办函[2020]129号）的规定，自2021年3月1日起，严禁向用户收取水电气热计量装置费用。当事人在2021年3月1日至2025年4月24日期间向用户收取自来水表费，违反了该规定。尽管当事人在2025年5月1日进行了整改，并在收到通知后退还了多收的价款，但其在规定期限内违规收费的行为已经构成政府定价违规。\",\n  \"legal_basis\": \"《国务院办公厅转发国家发展改革委等部门关于清理规范城镇供水供电供气供暖行业收费促进行业高质量发展意见的通知》（国办函[2020]129号）\",\n  \"cited_articles\": [\n    {\"law\": \"国务院办公厅转发国家发展改革委等部门关于清理规范城镇供水供电供气供暖行业收费促进行业高质量发展意见的通知\", \"article\": \"第二条第六项\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0021",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人在商品标价之外加价出售，多收取丧属购买殡葬用品费用670元，这属于在标价之外额外收取未标明的费用，符合《明码标价和禁止价格欺诈规定》中关于标价外加价的违规行为。当事人虽已退还多收欠款，但其行为已经构成价格违法行为。",
+      "legal_basis": "在标价之外加价属于价格欺诈行为。"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '标价外加价' == '标价外加价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 0,
+        "has_specific_article": false,
+        "legal_basis_score": 0.3,
+        "legal_basis_length": 16
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 2,
+        "reasoning_score": 0.7,
+        "reasoning_length": 117
+      }
+    },
+    "performance": {
+      "response_time": 4.8,
+      "input_tokens": 558,
+      "output_tokens": 186
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"标价外加价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人在商品标价之外加价出售，多收取丧属购买殡葬用品费用670元，这属于在标价之外额外收取未标明的费用，符合《明码标价和禁止价格欺诈规定》中关于标价外加价的违规行为。当事人虽已退还多收欠款，但其行为已经构成价格违法行为。\",\n  \"legal_basis\": \"在标价之外加价属于价格欺诈行为。\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第十六条第（一）项\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0025",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人销售葡萄干时，标价签上明确标明了单价（12.80元/500g）和重量（如0.828斤），但总价却为10.60元。计算显示，0.828斤相当于414克，按照单价12.80元/500克计算，总价应为10.60元（12.80元/500克 * 0.828斤 = 10.60元）。然而，投诉人实际支付了6.1元，明显低于标价。这表明当事人可能在标价之外额外收取了费用或存在其他价格欺诈行为，因此符合“标价外加价”的违规类型。",
+      "legal_basis": "当事人未按规定明码标价并在标价之外加价出售商品，违反了《明码标价和禁止价格欺诈规定》的相关规定。"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '标价外加价' == '标价外加价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 48
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 0.75,
+        "reasoning_length": 217
+      }
+    },
+    "performance": {
+      "response_time": 7.91,
+      "input_tokens": 879,
+      "output_tokens": 319
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"标价外加价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人销售葡萄干时，标价签上明确标明了单价（12.80元/500g）和重量（如0.828斤），但总价却为10.60元。计算显示，0.828斤相当于414克，按照单价12.80元/500克计算，总价应为10.60元（12.80元/500克 * 0.828斤 = 10.60元）。然而，投诉人实际支付了6.1元，明显低于标价。这表明当事人可能在标价之外额外收取了费用或存在其他价格欺诈行为，因此符合“标价外加价”的违规类型。\",\n  \"legal_basis\": \"当事人未按规定明码标价并在标价之外加价出售商品，违反了《明码标价和禁止价格欺诈规定》的相关规定。\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第十六条第（三）项\"\n    },\n    {\n      \"law\": \"《价格法》\",\n      \"article\": \"第十三条第一款\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0026",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "误导性价格标示",
+      "confidence": 0.95,
+      "reasoning": "当事人作为公益性墓地的管理单位，其墓地收费涉及价格标示问题。根据《明码标价和禁止价格欺诈规定》第十六条，经营者应当明码标价，标明价格、计价单位、服务项目、价格等内容。在2023年9月9日后，当事人对二期墓地价格进行了调整，区分本村原始村民与非本村亲属的不同价格，但未在价格标示中明确说明这一区分规则，可能导致消费者产生误解，属于误导性价格标示行为。此外，根据《价格法》第十三条第一款，经营者应当遵循公平、合法和诚实信用的原则，明码标价。因此，该行为涉嫌违反相关法律法规。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十六条、《价格法》第十三条第一款"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'误导性价格标示' 与 真值'标价外加价' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 3,
+        "has_specific_article": true,
+        "legal_basis_score": 1.0,
+        "legal_basis_length": 32
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 5,
+        "reasoning_score": 1.0,
+        "reasoning_length": 235
+      }
+    },
+    "performance": {
+      "response_time": 7.49,
+      "input_tokens": 869,
+      "output_tokens": 278
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"误导性价格标示\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人作为公益性墓地的管理单位，其墓地收费涉及价格标示问题。根据《明码标价和禁止价格欺诈规定》第十六条，经营者应当明码标价，标明价格、计价单位、服务项目、价格等内容。在2023年9月9日后，当事人对二期墓地价格进行了调整，区分本村原始村民与非本村亲属的不同价格，但未在价格标示中明确说明这一区分规则，可能导致消费者产生误解，属于误导性价格标示行为。此外，根据《价格法》第十三条第一款，经营者应当遵循公平、合法和诚实信用的原则，明码标价。因此，该行为涉嫌违反相关法律法规。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十六条、《价格法》第十三条第一款\",\n  \"cited_articles\": [\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十六条\"},\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十三条第一款\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0028",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "误导性价格标示",
+      "confidence": 0.95,
+      "reasoning": "当事人在抖音和美团平台上架的团购项目中使用了划线价270元，但明确说明实际并未以该价格进行过交易，且未提供任何与划线价相关的交易记录或依据。这种行为可能构成虚构原价或虚假折扣，属于误导性价格标示。此外，当事人未制作销售记录，导致核销单数无法查明，违法所得无法确定，进一步强化了其价格标示行为的违法性。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "误导性价格标示",
+      "platform": "美团",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '误导性价格标示' == '误导性价格标示'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 15
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 3,
+        "reasoning_score": 0.75,
+        "reasoning_length": 150
+      }
+    },
+    "performance": {
+      "response_time": 6.01,
+      "input_tokens": 731,
+      "output_tokens": 228
+    },
+    "llm_response": "{\n  \"is_violation\": true,\n  \"violation_type\": \"误导性价格标示\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人在抖音和美团平台上架的团购项目中使用了划线价270元，但明确说明实际并未以该价格进行过交易，且未提供任何与划线价相关的交易记录或依据。这种行为可能构成虚构原价或虚假折扣，属于误导性价格标示。此外，当事人未制作销售记录，导致核销单数无法查明，违法所得无法确定，进一步强化了其价格标示行为的违法性。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第十九条第（一）项\"\n    },\n    {\n      \"law\": \"《价格法》\",\n      \"article\": \"第十四条第（一）项\"\n    }\n  ]\n}"
+  },
+  {
+    "case_id": "CASE_0029",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "变相提高价格",
+      "confidence": 0.95,
+      "reasoning": "当事人存在重复收费行为，其行为实质上是通过不合理计费方式变相提高价格。根据《价格法》和《明码标价和禁止价格欺诈规定》，医疗机构应明确计价单位并规范收费项目，不得以其他形式重复收费或变相提高价格。当事人的行为已违反相关法律法规，构成变相提高价格的违法行为。",
+      "legal_basis": "《中华人民共和国价格法》第十四条第四项、《明码标价和禁止价格欺诈规定》第十九条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'变相提高价格' 与 真值'政府定价违规' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 3,
+        "has_specific_article": true,
+        "legal_basis_score": 1.0,
+        "legal_basis_length": 39
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.6,
+        "reasoning_length": 127
+      }
+    },
+    "performance": {
+      "response_time": 5.63,
+      "input_tokens": 872,
+      "output_tokens": 200
+    },
+    "llm_response": "{\n  \"is_violation\": true,\n  \"violation_type\": \"变相提高价格\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人存在重复收费行为，其行为实质上是通过不合理计费方式变相提高价格。根据《价格法》和《明码标价和禁止价格欺诈规定》，医疗机构应明确计价单位并规范收费项目，不得以其他形式重复收费或变相提高价格。当事人的行为已违反相关法律法规，构成变相提高价格的违法行为。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十四条第四项、《明码标价和禁止价格欺诈规定》第十九条\",\n  \"cited_articles\": [\n    {\"law\": \"中华人民共和国价格法\", \"article\": \"第十四条第四项\"},\n    {\"law\": \"明码标价和禁止价格欺诈规定\", \"article\": \"第十九条\"}\n  ]\n}"
+  },
+  {
+    "case_id": "CASE_0030",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "confidence": 0.95,
+      "reasoning": "当事人未按照《福州市规范放射检查类医疗服务价格项目及福州市公立医疗机构价格表》中规定执行零差率销售价格，而是自定收费标准向患者收取费用。该行为属于超出政府指导价浮动范围、不执行政府定价的违法行为。尽管当事人已退还违规收取的费用，但其行为已构成价格违法行为。",
+      "legal_basis": "《中华人民共和国价格法》第十三条第一款、《价格违法行为行政处罚规定》第十三条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'政府定价违规' 与 真值'标价外加价' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 38
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.6,
+        "reasoning_length": 128
+      }
+    },
+    "performance": {
+      "response_time": 5.01,
+      "input_tokens": 863,
+      "output_tokens": 191
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"政府定价违规\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人未按照《福州市规范放射检查类医疗服务价格项目及福州市公立医疗机构价格表》中规定执行零差率销售价格，而是自定收费标准向患者收取费用。该行为属于超出政府指导价浮动范围、不执行政府定价的违法行为。尽管当事人已退还违规收取的费用，但其行为已构成价格违法行为。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十三条第一款、《价格违法行为行政处罚规定》第十三条\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十三条第一款\"},\n    {\"law\": \"《价格违法行为行政处罚规定》\", \"article\": \"第十三条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0032",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "其他价格违法",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，存在多项价格违法行为，包括超标准收费、串换项目、重复收费和虚记收费项目。这些行为违反了《中华人民共和国价格法》、《明码标价和禁止价格欺诈规定》以及《价格违法行为行政处罚规定》等法规，涉及价格欺诈和违规收费行为。",
+      "legal_basis": "《中华人民共和国价格法》第十三条、第十四条；《明码标价和禁止价格欺诈规定》第四条、第十条；《价格违法行为行政处罚规定》第十六条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'其他价格违法' 与 真值'政府定价违规' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 4,
+        "has_specific_article": true,
+        "legal_basis_score": 1.0,
+        "legal_basis_length": 63
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 2,
+        "reasoning_score": 0.45,
+        "reasoning_length": 112
+      }
+    },
+    "performance": {
+      "response_time": 6.9,
+      "input_tokens": 887,
+      "output_tokens": 277
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"其他价格违法\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，存在多项价格违法行为，包括超标准收费、串换项目、重复收费和虚记收费项目。这些行为违反了《中华人民共和国价格法》、《明码标价和禁止价格欺诈规定》以及《价格违法行为行政处罚规定》等法规，涉及价格欺诈和违规收费行为。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十三条、第十四条；《明码标价和禁止价格欺诈规定》第四条、第十条；《价格违法行为行政处罚规定》第十六条\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十三条第（一）项\"},\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十四条第（三）项\"},\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第四条\"},\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十条\"},\n    {\"law\": \"《价格违法行为行政处罚规定》\", \"article\": \"第十六条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0034",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "当事人未对预包装食品达利园青梅绿茶饮料进行明码标价，违反了《明码标价和禁止价格欺诈规定》中关于商品必须标明价格的要求。尽管当事人声称因进货时间短一时疏忽未标价，但根据《价格法》和相关法规，未明码标价属于价格违法行为，且该行为尚未销售，仍构成违规。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第二条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 18
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 2,
+        "reasoning_score": 0.7,
+        "reasoning_length": 123
+      }
+    },
+    "performance": {
+      "response_time": 5.37,
+      "input_tokens": 738,
+      "output_tokens": 211
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人未对预包装食品达利园青梅绿茶饮料进行明码标价，违反了《明码标价和禁止价格欺诈规定》中关于商品必须标明价格的要求。尽管当事人声称因进货时间短一时疏忽未标价，但根据《价格法》和相关法规，未明码标价属于价格违法行为，且该行为尚未销售，仍构成违规。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第二条\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第二条\"\n    },\n    {\n      \"law\": \"《中华人民共和国价格法》\",\n      \"article\": \"第十三条第一款\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0036",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "其他价格违法",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人作为医疗机构，在诊疗活动中存在重复收费和超出规定范围收费的行为，这些行为属于价格违法行为中的其他价格违法。根据《价格法》和《明码标价和禁止价格欺诈规定》，医疗机构应当按照规定收取费用，不得违规收费。",
+      "legal_basis": "《中华人民共和国价格法》第十三条第一款"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'其他价格违法' 与 真值'政府定价违规' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 1,
+        "has_specific_article": true,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 19
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 2,
+        "reasoning_score": 0.45,
+        "reasoning_length": 109
+      }
+    },
+    "performance": {
+      "response_time": 4.16,
+      "input_tokens": 844,
+      "output_tokens": 148
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"其他价格违法\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人作为医疗机构，在诊疗活动中存在重复收费和超出规定范围收费的行为，这些行为属于价格违法行为中的其他价格违法。根据《价格法》和《明码标价和禁止价格欺诈规定》，医疗机构应当按照规定收取费用，不得违规收费。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十三条第一款\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十三条第一款\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0037",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "误导性价格标示",
+      "confidence": 0.95,
+      "reasoning": "当事人通过线上平台销售宠物诊疗服务时，采用价格比较的方式标示服务价格，标示为“￥273 ￥1200”和“￥373 ￥1288”，其中划线价（即门市价）标示为“￥1200”和“￥1288”。然而，线下门店实际销售单价分别为“￥378”和“￥520”，与线上平台标示的划线价存在明显差异。这种做法容易误导消费者认为划线价是实际价格或原价，而实际价格远低于划线价，属于虚构原价或虚假价格比较的范畴，构成误导性价格标示行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "虚假价格比较",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'误导性价格标示' 与 真值'虚假价格比较' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 15
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.6,
+        "reasoning_length": 208
+      }
+    },
+    "performance": {
+      "response_time": 7.29,
+      "input_tokens": 851,
+      "output_tokens": 274
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"误导性价格标示\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人通过线上平台销售宠物诊疗服务时，采用价格比较的方式标示服务价格，标示为“￥273 ￥1200”和“￥373 ￥1288”，其中划线价（即门市价）标示为“￥1200”和“￥1288”。然而，线下门店实际销售单价分别为“￥378”和“￥520”，与线上平台标示的划线价存在明显差异。这种做法容易误导消费者认为划线价是实际价格或原价，而实际价格远低于划线价，属于虚构原价或虚假价格比较的范畴，构成误导性价格标示行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十九条\"},\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第二十条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0038",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人使用物业管理系统进行物业费收取时，默认设置为四舍五入精确到“元”，导致部分费用被多收。尽管当事人对物业费收费标准进行了公示，但未明确说明四舍五入的计价规则，可能误导消费者对实际费用的预期。根据《明码标价和禁止价格欺诈规定》第七条，经营者应当明码标价，标明价格、计价单位、商品或者服务项目、计量单位等必要信息。未明确说明四舍五入规则属于未完整标明价格信息，构成不明码标价行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第七条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'不明码标价' 与 真值'标价外加价' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 18
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 1.0,
+        "reasoning_length": 197
+      }
+    },
+    "performance": {
+      "response_time": 5.65,
+      "input_tokens": 860,
+      "output_tokens": 220
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人使用物业管理系统进行物业费收取时，默认设置为四舍五入精确到“元”，导致部分费用被多收。尽管当事人对物业费收费标准进行了公示，但未明确说明四舍五入的计价规则，可能误导消费者对实际费用的预期。根据《明码标价和禁止价格欺诈规定》第七条，经营者应当明码标价，标明价格、计价单位、商品或者服务项目、计量单位等必要信息。未明确说明四舍五入规则属于未完整标明价格信息，构成不明码标价行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第七条\",\n  \"cited_articles\": [\n    {\"law\": \"明码标价和禁止价格欺诈规定\", \"article\": \"第七条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0039",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人在销售过程中存在未按规定明码标价的行为。具体表现为：当事人将价格标签贴在某一单个商品上，由于顾客无意中将贴有价格标签的商品买走，且当事人未能及时发现并补标价格，导致现场待售的海天海鲜酱均未按规定明码标价。此外，当事人未按规定明码标价销售海天海鲜酱的持续时间、销售数量，无从查证。根据《明码标价和禁止价格欺诈规定》和《价格法》，经营者必须按规定标明价格，否则构成价格违法行为。",
+      "legal_basis": "当事人未按规定明码标价的行为违反了价格相关法律法规。"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 1,
+        "has_specific_article": false,
+        "legal_basis_score": 0.5,
+        "legal_basis_length": 26
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 1.0,
+        "reasoning_length": 197
+      }
+    },
+    "performance": {
+      "response_time": 6.29,
+      "input_tokens": 863,
+      "output_tokens": 240
+    },
+    "llm_response": "{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人在销售过程中存在未按规定明码标价的行为。具体表现为：当事人将价格标签贴在某一单个商品上，由于顾客无意中将贴有价格标签的商品买走，且当事人未能及时发现并补标价格，导致现场待售的海天海鲜酱均未按规定明码标价。此外，当事人未按规定明码标价销售海天海鲜酱的持续时间、销售数量，无从查证。根据《明码标价和禁止价格欺诈规定》和《价格法》，经营者必须按规定标明价格，否则构成价格违法行为。\",\n  \"legal_basis\": \"当事人未按规定明码标价的行为违反了价格相关法律法规。\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十三条第一款\"},\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第八条\"}\n  ]\n}"
+  },
+  {
+    "case_id": "CASE_0040",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "confidence": 0.95,
+      "reasoning": "根据提供的案例，新吴区喜来客超市在销售德庄重庆火锅底料（36º）时，标价为19.9元/袋，但实际收取26.8元/袋，每袋多收6.9元。该行为属于在商品标价之外额外收取未标明的费用，构成标价外加价的违法行为。尽管案发后超市尝试退款，但仍有部分消费者未能成功退款，这进一步证明其行为的违法性。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十九条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '标价外加价' == '标价外加价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 19
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 144
+      }
+    },
+    "performance": {
+      "response_time": 5.87,
+      "input_tokens": 614,
+      "output_tokens": 208
+    },
+    "llm_response": "{\n  \"is_violation\": true,\n  \"violation_type\": \"标价外加价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据提供的案例，新吴区喜来客超市在销售德庄重庆火锅底料（36º）时，标价为19.9元/袋，但实际收取26.8元/袋，每袋多收6.9元。该行为属于在商品标价之外额外收取未标明的费用，构成标价外加价的违法行为。尽管案发后超市尝试退款，但仍有部分消费者未能成功退款，这进一步证明其行为的违法性。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十九条\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第十九条\"\n    }\n  ]\n}"
+  },
+  {
+    "case_id": "CASE_0041",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "当事人在2023年9月19日未按规定明码标价销售‘达利园·派’，违反了明码标价的相关规定。虽然该商品尚未形成销售，但当事人未能及时按规定明码标价，属于未按规定标明价格的行为。依据《明码标价和禁止价格欺诈规定》第十八条，经营者应当明码标价，未标明价格、标价签不规范等行为属于不明码标价。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十八条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 19
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 142
+      }
+    },
+    "performance": {
+      "response_time": 5.29,
+      "input_tokens": 876,
+      "output_tokens": 199
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人在2023年9月19日未按规定明码标价销售‘达利园·派’，违反了明码标价的相关规定。虽然该商品尚未形成销售，但当事人未能及时按规定明码标价，属于未按规定标明价格的行为。依据《明码标价和禁止价格欺诈规定》第十八条，经营者应当明码标价，未标明价格、标价签不规范等行为属于不明码标价。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十八条\",\n  \"cited_articles\": [\n    {\n      \"law\": \"明码标价和禁止价格欺诈规定\",\n      \"article\": \"第十八条\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0042",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": false,
+      "violation_type": "无违规",
+      "confidence": 0.95,
+      "reasoning": "本案中，当事人销售的汽车配件被认定为侵犯浙江吉利控股集团有限公司注册商标专用权的假冒商品。然而，该案例的核心问题涉及的是商标侵权，而非价格违法行为。根据提供的信息，当事人未涉及价格标示、价格欺诈、价格操纵等与价格相关的违法行为。因此，该案例在价格合规性方面不构成违法。",
+      "legal_basis": "《中华人民共和国价格法》及相关规定主要针对价格行为，不适用于商标侵权案件。"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": false,
+      "type_correct": false,
+      "match_details": {}
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 1,
+        "has_specific_article": false,
+        "legal_basis_score": 0.5,
+        "legal_basis_length": 37
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 1.0,
+        "reasoning_length": 134
+      }
+    },
+    "performance": {
+      "response_time": 4.6,
+      "input_tokens": 844,
+      "output_tokens": 171
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": false,\n  \"violation_type\": \"无违规\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"本案中，当事人销售的汽车配件被认定为侵犯浙江吉利控股集团有限公司注册商标专用权的假冒商品。然而，该案例的核心问题涉及的是商标侵权，而非价格违法行为。根据提供的信息，当事人未涉及价格标示、价格欺诈、价格操纵等与价格相关的违法行为。因此，该案例在价格合规性方面不构成违法。\",\n  \"legal_basis\": \"《中华人民共和国价格法》及相关规定主要针对价格行为，不适用于商标侵权案件。\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十三条第一款\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0044",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": false,
+      "violation_type": "无违规",
+      "confidence": 0.95,
+      "reasoning": "根据提供的案例事实，当事人销售的汽车配件标有“GEELY”商标，但并未明确表明这些产品是否为浙江吉利控股集团有限公司的正品。该行为可能涉及侵犯注册商标专用权的问题，但案例中未提及当事人存在价格违法行为。同时，案例中未提供与价格相关的具体信息，如标价、计价单位、价格调整等，因此无法判断是否存在价格违法行为。因此，基于现有信息，无法认定当事人存在价格违法行为。",
+      "legal_basis": "根据《中华人民共和国价格法》和《明码标价和禁止价格欺诈规定》，价格违法行为通常涉及标价不规范、虚假价格信息或变相提价等行为，但本案未涉及价格相关违规内容。"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": false,
+      "type_correct": false,
+      "match_details": {}
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 4,
+        "has_specific_article": false,
+        "legal_basis_score": 0.8,
+        "legal_basis_length": 77
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 1.0,
+        "reasoning_length": 179
+      }
+    },
+    "performance": {
+      "response_time": 6.85,
+      "input_tokens": 876,
+      "output_tokens": 248
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": false,\n  \"violation_type\": \"无违规\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据提供的案例事实，当事人销售的汽车配件标有“GEELY”商标，但并未明确表明这些产品是否为浙江吉利控股集团有限公司的正品。该行为可能涉及侵犯注册商标专用权的问题，但案例中未提及当事人存在价格违法行为。同时，案例中未提供与价格相关的具体信息，如标价、计价单位、价格调整等，因此无法判断是否存在价格违法行为。因此，基于现有信息，无法认定当事人存在价格违法行为。\",\n  \"legal_basis\": \"根据《中华人民共和国价格法》和《明码标价和禁止价格欺诈规定》，价格违法行为通常涉及标价不规范、虚假价格信息或变相提价等行为，但本案未涉及价格相关违规内容。\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十三条第一款\"},\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第九条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0045",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人在使用新的手机收银系统时，对促销价服装进行四舍五入计价，导致部分订单出现向上抹零的情况，多收消费者0.35元/笔。根据《明码标价和禁止价格欺诈规定》第十一条，经营者进行价格标示时应当明确标示商品价格，不得以虚假的或使人误解的价格手段进行标价。同时，《价格法》第十三条第一款规定，经营者应当明码标价，不得在标价之外加价，或者收取任何未标明的费用。本案中，当事人未明确告知消费者收银系统会进行四舍五入操作，导致消费者被多收款项，属于不明码标价行为，构成价格违法行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十一条；《价格法》第十三条第一款"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 3,
+        "has_specific_article": true,
+        "legal_basis_score": 1.0,
+        "legal_basis_length": 32
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 1.0,
+        "reasoning_length": 241
+      }
+    },
+    "performance": {
+      "response_time": 6.88,
+      "input_tokens": 725,
+      "output_tokens": 281
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人在使用新的手机收银系统时，对促销价服装进行四舍五入计价，导致部分订单出现向上抹零的情况，多收消费者0.35元/笔。根据《明码标价和禁止价格欺诈规定》第十一条，经营者进行价格标示时应当明确标示商品价格，不得以虚假的或使人误解的价格手段进行标价。同时，《价格法》第十三条第一款规定，经营者应当明码标价，不得在标价之外加价，或者收取任何未标明的费用。本案中，当事人未明确告知消费者收银系统会进行四舍五入操作，导致消费者被多收款项，属于不明码标价行为，构成价格违法行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十一条；《价格法》第十三条第一款\",\n  \"cited_articles\": [\n    {\"law\": \"明码标价和禁止价格欺诈规定\", \"article\": \"第十一\"},\n    {\"law\": \"中华人民共和国价格法\", \"article\": \"第十三条第一款\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0047",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "当事人采用‘四舍五入’的计费方式，实质上属于在价格计算中未明确标明实际计价方式，导致消费者对商品价格产生误解。根据《明码标价和禁止价格欺诈规定》第十六条，经营者应当明码标价，标明商品的品名、价格、计价单位等必要信息。当事人未明确告知消费者其计费方式，属于未按规定标明价格的行为，构成不明码标价的违规。此外，当事人实际多收的货款总额为9.39元，说明其行为具有价格欺诈的性质。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十六条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'不明码标价' 与 真值'标价外加价' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 19
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 1.0,
+        "reasoning_length": 187
+      }
+    },
+    "performance": {
+      "response_time": 6.12,
+      "input_tokens": 754,
+      "output_tokens": 224
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人采用‘四舍五入’的计费方式，实质上属于在价格计算中未明确标明实际计价方式，导致消费者对商品价格产生误解。根据《明码标价和禁止价格欺诈规定》第十六条，经营者应当明码标价，标明商品的品名、价格、计价单位等必要信息。当事人未明确告知消费者其计费方式，属于未按规定标明价格的行为，构成不明码标价的违规。此外，当事人实际多收的货款总额为9.39元，说明其行为具有价格欺诈的性质。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十六条\",\n  \"cited_articles\": [\n    {\n      \"law\": \"明码标价和禁止价格欺诈规定\",\n      \"article\": \"第十六条\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0051",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "误导性价格标示",
+      "confidence": 0.95,
+      "reasoning": "根据案例事实，当事人销售的燕窝标签中经销商信息（中文地址和电话）与实际不符，且未标明商品的完整信息（如生产日期、保质期等），可能构成误导性价格标示。此外，标签中经销商信息的不一致可能误导消费者对商品来源和质量的认知，违反了《明码标价和禁止价格欺诈规定》中关于价格标示真实、准确的要求。同时，商品标签中未标明保质期的具体起始日期，可能影响消费者对商品质量的判断。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十条、第十三条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'误导性价格标示' 与 真值'不明码标价' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 23
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 180
+      }
+    },
+    "performance": {
+      "response_time": 6.21,
+      "input_tokens": 867,
+      "output_tokens": 235
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"误导性价格标示\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例事实，当事人销售的燕窝标签中经销商信息（中文地址和电话）与实际不符，且未标明商品的完整信息（如生产日期、保质期等），可能构成误导性价格标示。此外，标签中经销商信息的不一致可能误导消费者对商品来源和质量的认知，违反了《明码标价和禁止价格欺诈规定》中关于价格标示真实、准确的要求。同时，商品标签中未标明保质期的具体起始日期，可能影响消费者对商品质量的判断。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十条、第十三条\",\n  \"cited_articles\": [\n    {\"law\": \"明码标价和禁止价格欺诈规定\", \"article\": \"第十条\"},\n    {\"law\": \"明码标价和禁止价格欺诈规定\", \"article\": \"第十三条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0052",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": false,
+      "violation_type": "无违规",
+      "confidence": 0.95,
+      "reasoning": "本案涉及的是侵犯注册商标专用权的行为，而非直接的价格违法行为。根据案例描述，当事人销售的汽车配件侵犯了浙江吉利控股集团有限公司的注册商标专用权。这种行为属于侵犯知识产权的范畴，主要涉及《中华人民共和国商标法》和《中华人民共和国反不正当竞争法》等相关法律法规，而非价格方面的违规行为。因此，根据提供的信息，该案例不构成价格违法行为。",
+      "legal_basis": "本案不构成价格违法行为，但涉及商标侵权，相关法律依据为《中华人民共和国商标法》及《中华人民共和国反不正当竞争法》。"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": false,
+      "type_correct": false,
+      "match_details": {}
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 57
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 0.75,
+        "reasoning_length": 165
+      }
+    },
+    "performance": {
+      "response_time": 5.45,
+      "input_tokens": 845,
+      "output_tokens": 213
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": false,\n  \"violation_type\": \"无违规\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"本案涉及的是侵犯注册商标专用权的行为，而非直接的价格违法行为。根据案例描述，当事人销售的汽车配件侵犯了浙江吉利控股集团有限公司的注册商标专用权。这种行为属于侵犯知识产权的范畴，主要涉及《中华人民共和国商标法》和《中华人民共和国反不正当竞争法》等相关法律法规，而非价格方面的违规行为。因此，根据提供的信息，该案例不构成价格违法行为。\",\n  \"legal_basis\": \"本案不构成价格违法行为，但涉及商标侵权，相关法律依据为《中华人民共和国商标法》及《中华人民共和国反不正当竞争法》。\",\n  \"cited_articles\": [\n    {\"law\": \"中华人民共和国商标法\", \"article\": \"第57条\"},\n    {\"law\": \"中华人民共和国反不正当竞争法\", \"article\": \"第6条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0054",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据案例事实，当事人经营的“蛮好阁包子”在销售时未明码标价，且销售系统无法查看销售明细，也未记账，导致无法确认销售行为及违法所得。根据《明码标价和禁止价格欺诈规定》的相关要求，经营者应当明码标价，标明商品的品名、计价单位、价格等必要信息。当事人未履行该义务，构成了不明码标价的违法行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 15
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 3,
+        "reasoning_score": 1.0,
+        "reasoning_length": 143
+      }
+    },
+    "performance": {
+      "response_time": 5.43,
+      "input_tokens": 771,
+      "output_tokens": 193
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例事实，当事人经营的“蛮好阁包子”在销售时未明码标价，且销售系统无法查看销售明细，也未记账，导致无法确认销售行为及违法所得。根据《明码标价和禁止价格欺诈规定》的相关要求，经营者应当明码标价，标明商品的品名、计价单位、价格等必要信息。当事人未履行该义务，构成了不明码标价的违法行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\"law\": \"明码标价和禁止价格欺诈规定\", \"article\": \"第十六条第（一）项\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0055",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据案情描述，当事人在提供拔肉刺服务时，未向消费者出示或公示该服务的收费标准，仅通过口头告知收费情况。依据《明码标价和禁止价格欺诈规定》第六条，经营者应当在经营场所的显著位置，以明显方式标明价格，标明的价格应当真实准确。本案中，当事人未履行明码标价义务，属于不明码标价的违法行为。此外，《价格法》第十三条第一款也规定，经营者销售商品，应当按照规定明码标价。当事人在服务过程中未公示价格，违反了上述规定。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第六条、《价格法》第十三条第一款"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 3,
+        "has_specific_article": true,
+        "legal_basis_score": 1.0,
+        "legal_basis_length": 31
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 5,
+        "reasoning_score": 0.85,
+        "reasoning_length": 201
+      }
+    },
+    "performance": {
+      "response_time": 6.18,
+      "input_tokens": 761,
+      "output_tokens": 248
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案情描述，当事人在提供拔肉刺服务时，未向消费者出示或公示该服务的收费标准，仅通过口头告知收费情况。依据《明码标价和禁止价格欺诈规定》第六条，经营者应当在经营场所的显著位置，以明显方式标明价格，标明的价格应当真实准确。本案中，当事人未履行明码标价义务，属于不明码标价的违法行为。此外，《价格法》第十三条第一款也规定，经营者销售商品，应当按照规定明码标价。当事人在服务过程中未公示价格，违反了上述规定。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第六条、《价格法》第十三条第一款\",\n  \"cited_articles\": [\n    {\"law\": \"明码标价和禁止价格欺诈规定\", \"article\": \"第六条\"},\n    {\"law\": \"中华人民共和国价格法\", \"article\": \"第十三条第一款\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0056",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": false,
+      "violation_type": "无违规",
+      "confidence": 0.95,
+      "reasoning": "根据提供的案例事实，当事人从永辉生活APP采购食品，进价为2.3元/份，货值金额为7元，违法所得无法计算。当事人在进货时查验了永辉云创科技有限公司的营业执照及食品经营许可证，但未能提供食品的合格检测证明。然而，案例中并未提及价格违法行为，例如未明码标价、虚假折扣、价格欺诈等。因此，基于现有信息，无法认定存在价格违法行为。",
+      "legal_basis": "《中华人民共和国价格法》及《明码标价和禁止价格欺诈规定》的相关条款未被违反。"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "未识别",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": false,
+      "type_correct": false,
+      "match_details": {}
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 3,
+        "has_specific_article": false,
+        "legal_basis_score": 0.8,
+        "legal_basis_length": 38
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 1.0,
+        "reasoning_length": 161
+      }
+    },
+    "performance": {
+      "response_time": 5.55,
+      "input_tokens": 572,
+      "output_tokens": 225
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": false,\n  \"violation_type\": \"无违规\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据提供的案例事实，当事人从永辉生活APP采购食品，进价为2.3元/份，货值金额为7元，违法所得无法计算。当事人在进货时查验了永辉云创科技有限公司的营业执照及食品经营许可证，但未能提供食品的合格检测证明。然而，案例中并未提及价格违法行为，例如未明码标价、虚假折扣、价格欺诈等。因此，基于现有信息，无法认定存在价格违法行为。\",\n  \"legal_basis\": \"《中华人民共和国价格法》及《明码标价和禁止价格欺诈规定》的相关条款未被违反。\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十三条第一款\"},\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十六条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0058",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "其他价格违法",
+      "confidence": 0.95,
+      "reasoning": "根据案例事实，当事人销售过期食品的行为涉及价格违法行为。虽然案例中未直接提及价格欺诈或标价问题，但销售过期食品的行为本质上涉及商品质量与消费者权益保护，可能间接导致价格欺诈或虚假宣传。同时，当事人未查验供货者的许可证，违反了食品经营相关法规，可能构成其他价格违法行为。此外，当事人未在酒类销售区域设置不向未成年人销售酒的标志，也属于其他违法行为，但与价格行为无直接关联。",
+      "legal_basis": "《中华人民共和国价格法》第十四条、《明码标价和禁止价格欺诈规定》第七条、《价格违法行为行政处罚规定》第十条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'其他价格违法' 与 真值'不明码标价' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 4,
+        "has_specific_article": true,
+        "legal_basis_score": 1.0,
+        "legal_basis_length": 53
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 1.0,
+        "reasoning_length": 185
+      }
+    },
+    "performance": {
+      "response_time": 6.87,
+      "input_tokens": 858,
+      "output_tokens": 256
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"其他价格违法\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例事实，当事人销售过期食品的行为涉及价格违法行为。虽然案例中未直接提及价格欺诈或标价问题，但销售过期食品的行为本质上涉及商品质量与消费者权益保护，可能间接导致价格欺诈或虚假宣传。同时，当事人未查验供货者的许可证，违反了食品经营相关法规，可能构成其他价格违法行为。此外，当事人未在酒类销售区域设置不向未成年人销售酒的标志，也属于其他违法行为，但与价格行为无直接关联。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十四条、《明码标价和禁止价格欺诈规定》第七条、《价格违法行为行政处罚规定》第十条\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十四条\"},\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第七条\"},\n    {\"law\": \"《价格违法行为行政处罚规定》\", \"article\": \"第十条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0061",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": false,
+      "violation_type": "无违规",
+      "confidence": 0.95,
+      "reasoning": "根据提供的案例事实，当事人购买的食品标签上标注了产品名称、净含量、保质期、生产日期、执行标准、食品生产许可证编号等必要信息，符合《中华人民共和国食品安全法》及《预包装食品标签通则》（GB7718-2011）的相关要求。此外，当事人已取得食品经营许可证，并在有效期内，未发现存在价格欺诈、不明码标价或其他价格违法行为的迹象。因此，经营行为符合价格合规要求。",
+      "legal_basis": "《中华人民共和国食品安全法》第六十七条、《预包装食品标签通则》（GB7718-2011）"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": false,
+      "type_correct": false,
+      "match_details": {}
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 0,
+        "has_specific_article": true,
+        "legal_basis_score": 0.5,
+        "legal_basis_length": 44
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 3,
+        "reasoning_score": 1.0,
+        "reasoning_length": 177
+      }
+    },
+    "performance": {
+      "response_time": 6.03,
+      "input_tokens": 891,
+      "output_tokens": 234
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": false,\n  \"violation_type\": \"无违规\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据提供的案例事实，当事人购买的食品标签上标注了产品名称、净含量、保质期、生产日期、执行标准、食品生产许可证编号等必要信息，符合《中华人民共和国食品安全法》及《预包装食品标签通则》（GB7718-2011）的相关要求。此外，当事人已取得食品经营许可证，并在有效期内，未发现存在价格欺诈、不明码标价或其他价格违法行为的迹象。因此，经营行为符合价格合规要求。\",\n  \"legal_basis\": \"《中华人民共和国食品安全法》第六十七条、《预包装食品标签通则》（GB7718-2011）\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国食品安全法》\", \"article\": \"第六十七条\"},\n    {\"law\": \"《预包装食品标签通则》\", \"article\": \"第3条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0063",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人在销售预包装食品时未在食品柜中明码标价注明销售价格。虽然当事人表示价格标签曾掉落，但未及时补标，导致消费者无法清楚了解商品价格。根据《明码标价和禁止价格欺诈规定》第七条，经营者应当在销售商品时明码标价，标明商品的品名、计价单位、价格等必要信息。因此，当事人的行为构成不明码标价的违法行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第七条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 18
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 1.0,
+        "reasoning_length": 154
+      }
+    },
+    "performance": {
+      "response_time": 5.29,
+      "input_tokens": 784,
+      "output_tokens": 202
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人在销售预包装食品时未在食品柜中明码标价注明销售价格。虽然当事人表示价格标签曾掉落，但未及时补标，导致消费者无法清楚了解商品价格。根据《明码标价和禁止价格欺诈规定》第七条，经营者应当在销售商品时明码标价，标明商品的品名、计价单位、价格等必要信息。因此，当事人的行为构成不明码标价的违法行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第七条\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第七条\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0064",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "其他价格违法",
+      "confidence": 0.95,
+      "reasoning": "根据案例事实，当事人存在以下价格违法行为：1. 销售过期食品，违反《中华人民共和国食品安全法》第三十四条的规定，属于违法行为。2. 冰柜内棒冰未标明价格，违反《明码标价和禁止价格欺诈规定》第八条关于商品应明码标价的规定。3. 酒类货柜未设置不向未成年人销售酒的标志，违反《未成年人保护法》第五十九条的规定。因此，当事人的行为涉及价格违法及其他违法行为。",
+      "legal_basis": "《中华人民共和国食品安全法》第三十四条、《明码标价和禁止价格欺诈规定》第八条、《未成年人保护法》第五十九条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'其他价格违法' 与 真值'不明码标价' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 53
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 1.0,
+        "reasoning_length": 176
+      }
+    },
+    "performance": {
+      "response_time": 6.87,
+      "input_tokens": 823,
+      "output_tokens": 262
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"其他价格违法\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例事实，当事人存在以下价格违法行为：1. 销售过期食品，违反《中华人民共和国食品安全法》第三十四条的规定，属于违法行为。2. 冰柜内棒冰未标明价格，违反《明码标价和禁止价格欺诈规定》第八条关于商品应明码标价的规定。3. 酒类货柜未设置不向未成年人销售酒的标志，违反《未成年人保护法》第五十九条的规定。因此，当事人的行为涉及价格违法及其他违法行为。\",\n  \"legal_basis\": \"《中华人民共和国食品安全法》第三十四条、《明码标价和禁止价格欺诈规定》第八条、《未成年人保护法》第五十九条\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国食品安全法》\", \"article\": \"第三十四条\"},\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第八条\"},\n    {\"law\": \"《中华人民共和国未成年人保护法》\", \"article\": \"第五十九条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0065",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "其他价格违法",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人存在两个主要违规行为：1. 将保健食品与普通食品混放销售，违反了《中华人民共和国食品安全法》及《特殊食品注册与备案管理办法》的相关规定，属于特殊食品与普通食品混放销售的行为；2. 商品未明码标价，违反了《明码标价和禁止价格欺诈规定》。尽管未被处罚过，但已构成价格违法行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第六条和《中华人民共和国食品安全法》第三十八条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'其他价格违法' 与 真值'不明码标价' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 38
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 2,
+        "reasoning_score": 0.7,
+        "reasoning_length": 146
+      }
+    },
+    "performance": {
+      "response_time": 5.52,
+      "input_tokens": 588,
+      "output_tokens": 214
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"其他价格违法\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人存在两个主要违规行为：1. 将保健食品与普通食品混放销售，违反了《中华人民共和国食品安全法》及《特殊食品注册与备案管理办法》的相关规定，属于特殊食品与普通食品混放销售的行为；2. 商品未明码标价，违反了《明码标价和禁止价格欺诈规定》。尽管未被处罚过，但已构成价格违法行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第六条和《中华人民共和国食品安全法》第三十八条\",\n  \"cited_articles\": [\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第六条\"},\n    {\"law\": \"《中华人民共和国食品安全法》\", \"article\": \"第三十八条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0066",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人在销售酒类商品及饮料时未标明价格，且未在销售酒类商品的显著位置设置‘不向未成年人销售酒’的标志。根据《明码标价和禁止价格欺诈规定》的相关规定，经营者应当在销售商品时标明价格，未标明价格属于不明码标价的行为。此外，未设置‘不向未成年人销售酒’的标志可能违反了《未成年人保护法》的相关规定，但根据问题要求，主要聚焦于价格合规性，因此重点分析不明码标价行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 15
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 3,
+        "reasoning_score": 1.0,
+        "reasoning_length": 186
+      }
+    },
+    "performance": {
+      "response_time": 5.7,
+      "input_tokens": 645,
+      "output_tokens": 222
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人在销售酒类商品及饮料时未标明价格，且未在销售酒类商品的显著位置设置‘不向未成年人销售酒’的标志。根据《明码标价和禁止价格欺诈规定》的相关规定，经营者应当在销售商品时标明价格，未标明价格属于不明码标价的行为。此外，未设置‘不向未成年人销售酒’的标志可能违反了《未成年人保护法》的相关规定，但根据问题要求，主要聚焦于价格合规性，因此重点分析不明码标价行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第十五条第（一）项\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0067",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据案情描述，当事人未在自助小料处标明价格，也未以其他形式说明价格，违反了明码标价的规定。此外，当事人销售酒类商品未作销售记录，导致无法核实是否向未成年人销售酒的情况，但此部分属于酒类销售管理范畴，与价格合规无直接关联。因此，主要违规行为为未标明自助小料的价格，构成不明码标价。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 15
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 3,
+        "reasoning_score": 1.0,
+        "reasoning_length": 139
+      }
+    },
+    "performance": {
+      "response_time": 4.97,
+      "input_tokens": 664,
+      "output_tokens": 191
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案情描述，当事人未在自助小料处标明价格，也未以其他形式说明价格，违反了明码标价的规定。此外，当事人销售酒类商品未作销售记录，导致无法核实是否向未成年人销售酒的情况，但此部分属于酒类销售管理范畴，与价格合规无直接关联。因此，主要违规行为为未标明自助小料的价格，构成不明码标价。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第十三条第一款\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0068",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据案情描述，当事人销售酒类商品及饮料时未标明价格，且未在显著位置设置“不向未成年人销售酒”的标志。根据《明码标价和禁止价格欺诈规定》第十三条，经营者应当在经营场所显著位置标明价格，未标明价格属于不明码标价的违法行为。同时，《价格法》第十三条第一款规定，经营者应当明码标价，当事人未标明价格的行为违反了该规定。此外，根据《价格违法行为行政处罚规定》第十三条，未标明价格属于价格违法行为。因此，当事人的行为构成不明码标价的违规。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十三条、《价格法》第十三条第一款、《价格违法行为行政处罚规定》第十三条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 4,
+        "has_specific_article": true,
+        "legal_basis_score": 1.0,
+        "legal_basis_length": 51
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 5,
+        "reasoning_score": 1.0,
+        "reasoning_length": 213
+      }
+    },
+    "performance": {
+      "response_time": 7.21,
+      "input_tokens": 652,
+      "output_tokens": 283
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案情描述，当事人销售酒类商品及饮料时未标明价格，且未在显著位置设置“不向未成年人销售酒”的标志。根据《明码标价和禁止价格欺诈规定》第十三条，经营者应当在经营场所显著位置标明价格，未标明价格属于不明码标价的违法行为。同时，《价格法》第十三条第一款规定，经营者应当明码标价，当事人未标明价格的行为违反了该规定。此外，根据《价格违法行为行政处罚规定》第十三条，未标明价格属于价格违法行为。因此，当事人的行为构成不明码标价的违规。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十三条、《价格法》第十三条第一款、《价格违法行为行政处罚规定》第十三条\",\n  \"cited_articles\": [\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十三条\"},\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十三条第一款\"},\n    {\"law\": \"《价格违法行为行政处罚规定》\", \"article\": \"第十三条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0069",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "当事人未标明价格，违反了明码标价的规定。根据《明码标价和禁止价格欺诈规定》第十三条，经营者应当标明价格，标价签应当标明品名、计价单位、价格等必要信息。案例中提到当事人店内多款商品未标明价格，且电子结算系统无法统计销售情况，未能提供完整的价格信息，符合不明码标价的违法情形。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十三条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 19
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 136
+      }
+    },
+    "performance": {
+      "response_time": 5.27,
+      "input_tokens": 846,
+      "output_tokens": 186
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人未标明价格，违反了明码标价的规定。根据《明码标价和禁止价格欺诈规定》第十三条，经营者应当标明价格，标价签应当标明品名、计价单位、价格等必要信息。案例中提到当事人店内多款商品未标明价格，且电子结算系统无法统计销售情况，未能提供完整的价格信息，符合不明码标价的违法情形。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十三条\",\n  \"cited_articles\": [\n    {\n      \"law\": \"明码标价和禁止价格欺诈规定\",\n      \"article\": \"第十三条\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0073",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人在销售华味亨烧烤味牛板筋和华味亨香辣小鱼仔时，未标注价格标签，且案发时销售的标签为另一规格同种商品，表明其未按规定标明价格。这种行为违反了明码标价的规定，属于不明码标价的违规行为。此外，违法所得的计算也进一步证实了其价格行为存在不合规之处。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 15
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 130
+      }
+    },
+    "performance": {
+      "response_time": 4.88,
+      "input_tokens": 834,
+      "output_tokens": 180
+    },
+    "llm_response": "{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人在销售华味亨烧烤味牛板筋和华味亨香辣小鱼仔时，未标注价格标签，且案发时销售的标签为另一规格同种商品，表明其未按规定标明价格。这种行为违反了明码标价的规定，属于不明码标价的违规行为。此外，违法所得的计算也进一步证实了其价格行为存在不合规之处。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十五条\"}\n  ]\n}"
+  },
+  {
+    "case_id": "CASE_0074",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据提供的案例事实，当事人未标注在售的3款糖果的价格，即小猪佩奇益生菌奶片售价2.5元/板、炫迈无糖颗粒口香糖售价9.5元/瓶、旺仔软糖售价3.5元/袋。根据《明码标价和禁止价格欺诈规定》第十六条第一款，经营者应当标明商品的品名、计价单位、价格等必要信息。当事人未标明上述商品的价格，属于未按规定明码标价的违法行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十六条第一款"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 22
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 158
+      }
+    },
+    "performance": {
+      "response_time": 5.63,
+      "input_tokens": 783,
+      "output_tokens": 217
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据提供的案例事实，当事人未标注在售的3款糖果的价格，即小猪佩奇益生菌奶片售价2.5元/板、炫迈无糖颗粒口香糖售价9.5元/瓶、旺仔软糖售价3.5元/袋。根据《明码标价和禁止价格欺诈规定》第十六条第一款，经营者应当标明商品的品名、计价单位、价格等必要信息。当事人未标明上述商品的价格，属于未按规定明码标价的违法行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十六条第一款\",\n  \"cited_articles\": [\n    {\n      \"law\": \"明码标价和禁止价格欺诈规定\",\n      \"article\": \"第十六条第一款\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0079",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "当事人销售一款‘牛栏山’白酒未明码标价，违反了《明码标价和禁止价格欺诈规定》的相关要求。根据规定，经营者应当在销售商品时明码标价，标明商品的名称、价格等信息。本案中，当事人未对‘牛栏山’白酒进行明码标价，且无销售记录，但该行为已构成未明码标价的违法行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 15
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 127
+      }
+    },
+    "performance": {
+      "response_time": 4.95,
+      "input_tokens": 794,
+      "output_tokens": 190
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人销售一款‘牛栏山’白酒未明码标价，违反了《明码标价和禁止价格欺诈规定》的相关要求。根据规定，经营者应当在销售商品时明码标价，标明商品的名称、价格等信息。本案中，当事人未对‘牛栏山’白酒进行明码标价，且无销售记录，但该行为已构成未明码标价的违法行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十五条第（一）项\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0081",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "其他价格违法",
+      "confidence": 0.95,
+      "reasoning": "本案中，当事人未标明价格的行为违反了《明码标价和禁止价格欺诈规定》的相关要求。根据规定，经营者应当在销售商品时标明价格，未标明价格属于价格违法行为。此外，当事人未留存相关供货单据，且未标明价格，导致违法所得无法查明，进一步表明其存在价格违规行为。虽然案例主要涉及食品过期及未标明价格问题，但未标明价格的行为直接违反了价格标示的合规要求，因此属于其他价格违法行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第六条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'其他价格违法' 与 真值'不明码标价' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 18
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 1.0,
+        "reasoning_length": 181
+      }
+    },
+    "performance": {
+      "response_time": 5.92,
+      "input_tokens": 876,
+      "output_tokens": 206
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"其他价格违法\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"本案中，当事人未标明价格的行为违反了《明码标价和禁止价格欺诈规定》的相关要求。根据规定，经营者应当在销售商品时标明价格，未标明价格属于价格违法行为。此外，当事人未留存相关供货单据，且未标明价格，导致违法所得无法查明，进一步表明其存在价格违规行为。虽然案例主要涉及食品过期及未标明价格问题，但未标明价格的行为直接违反了价格标示的合规要求，因此属于其他价格违法行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第六条\",\n  \"cited_articles\": [\n    {\n      \"law\": \"明码标价和禁止价格欺诈规定\",\n      \"article\": \"第6条\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0082",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "当事人未在经营场所设置不向未成年人销售酒的标志，违反了相关法律法规中关于未成年人保护的规定。同时，当事人店内冰箱里销售的王老吉凉茶、椰树牌椰汁等商品均未标明价格，属于未按规定标明价格的行为。根据《明码标价和禁止价格欺诈规定》的要求，商品应当标明价格，而当事人未能做到这一点，因此构成了不明码标价的违法行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 15
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 3,
+        "reasoning_score": 1.0,
+        "reasoning_length": 153
+      }
+    },
+    "performance": {
+      "response_time": 5.13,
+      "input_tokens": 689,
+      "output_tokens": 188
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人未在经营场所设置不向未成年人销售酒的标志，违反了相关法律法规中关于未成年人保护的规定。同时，当事人店内冰箱里销售的王老吉凉茶、椰树牌椰汁等商品均未标明价格，属于未按规定标明价格的行为。根据《明码标价和禁止价格欺诈规定》的要求，商品应当标明价格，而当事人未能做到这一点，因此构成了不明码标价的违法行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十五条第一款\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0083",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "当事人经营雪糕及饮料未明码标价，违反了明码标价的相关规定。根据《明码标价和禁止价格欺诈规定》第六条，经营者应当在销售商品时明码标价，标明价格，标价签应当包含商品的品名、计价单位、价格等必要信息。当事人未在销售雪糕及饮料时标明价格，属于未按规定明码标价的行为。此外，当事人未在销售场所显著位置设置“不向未成年人销售酒”的标志，虽未向未成年人出售酒品，但该行为仍可能被认定为未履行明码标价及警示义务的违规行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第六条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 18
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 4,
+        "reasoning_score": 0.85,
+        "reasoning_length": 203
+      }
+    },
+    "performance": {
+      "response_time": 6.22,
+      "input_tokens": 749,
+      "output_tokens": 233
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人经营雪糕及饮料未明码标价，违反了明码标价的相关规定。根据《明码标价和禁止价格欺诈规定》第六条，经营者应当在销售商品时明码标价，标明价格，标价签应当包含商品的品名、计价单位、价格等必要信息。当事人未在销售雪糕及饮料时标明价格，属于未按规定明码标价的行为。此外，当事人未在销售场所显著位置设置“不向未成年人销售酒”的标志，虽未向未成年人出售酒品，但该行为仍可能被认定为未履行明码标价及警示义务的违规行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第六条\",\n  \"cited_articles\": [\n    {\"law\": \"明码标价和禁止价格欺诈规定\", \"article\": \"第六条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0084",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据案例事实，当事人未标明价格，且店内无电子结算系统，无法查明霉变食品的销售情况。根据《明码标价和禁止价格欺诈规定》第十五条，经营者应当在销售商品时明码标价，标明商品的品名、计价单位、价格等必要信息。当事人未标明价格，违反了该规定，属于不明码标价行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 15
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 126
+      }
+    },
+    "performance": {
+      "response_time": 4.73,
+      "input_tokens": 807,
+      "output_tokens": 176
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例事实，当事人未标明价格，且店内无电子结算系统，无法查明霉变食品的销售情况。根据《明码标价和禁止价格欺诈规定》第十五条，经营者应当在销售商品时明码标价，标明商品的品名、计价单位、价格等必要信息。当事人未标明价格，违反了该规定，属于不明码标价行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\"law\": \"明码标价和禁止价格欺诈规定\", \"article\": \"第十五条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0085",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "其他价格违法",
+      "confidence": 0.95,
+      "reasoning": "根据提供的案例，当事人销售的山核桃味瓜子经抽检不合格，但案例中并未提及当事人是否对商品进行了明码标价、是否在标价外加价，或是否存在误导性价格标示等价格违法行为。然而，当事人销售的食品质量不符合国家食品安全标准，且根据《中华人民共和国食品安全法》和《中华人民共和国价格法》的相关规定，销售不合格商品属于违反食品安全法规的行为，间接影响了消费者权益和市场秩序。因此，这种行为可能构成其他价格违法。",
+      "legal_basis": "《中华人民共和国价格法》第十四条、《中华人民共和国食品安全法》第三十四条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'其他价格违法' 与 真值'不明码标价' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 1,
+        "has_specific_article": true,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 36
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 3,
+        "reasoning_score": 1.0,
+        "reasoning_length": 196
+      }
+    },
+    "performance": {
+      "response_time": 5.73,
+      "input_tokens": 873,
+      "output_tokens": 222
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"其他价格违法\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据提供的案例，当事人销售的山核桃味瓜子经抽检不合格，但案例中并未提及当事人是否对商品进行了明码标价、是否在标价外加价，或是否存在误导性价格标示等价格违法行为。然而，当事人销售的食品质量不符合国家食品安全标准，且根据《中华人民共和国食品安全法》和《中华人民共和国价格法》的相关规定，销售不合格商品属于违反食品安全法规的行为，间接影响了消费者权益和市场秩序。因此，这种行为可能构成其他价格违法。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十四条、《中华人民共和国食品安全法》第三十四条\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十四条\"},\n    {\"law\": \"《中华人民共和国食品安全法》\", \"article\": \"第三十四条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0088",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "confidence": 0.95,
+      "reasoning": "当事人在销售商品时，以8折优惠销售女长袖连衣裙，应收金额为535.20元，但实际收取536元，多收0.80元；同时，女袜以88折优惠销售，应收16.72元，但实际收取17元，多收0.28元。这种在标价之外额外收取未标明的费用的行为，构成标价外加价的违法行为。根据《明码标价和禁止价格欺诈规定》，经营者不得在标价之外加价出售商品，不得收取任何未标明的费用。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十三条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '标价外加价' == '标价外加价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 19
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 177
+      }
+    },
+    "performance": {
+      "response_time": 5.83,
+      "input_tokens": 852,
+      "output_tokens": 228
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"标价外加价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人在销售商品时，以8折优惠销售女长袖连衣裙，应收金额为535.20元，但实际收取536元，多收0.80元；同时，女袜以88折优惠销售，应收16.72元，但实际收取17元，多收0.28元。这种在标价之外额外收取未标明的费用的行为，构成标价外加价的违法行为。根据《明码标价和禁止价格欺诈规定》，经营者不得在标价之外加价出售商品，不得收取任何未标明的费用。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十三条\",\n  \"cited_articles\": [\n    {\"law\": \"明码标价和禁止价格欺诈规定\", \"article\": \"第十三条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0091",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "其他价格违法",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人销售的‘帝聚堂黄酒’已过期2年多，且当事人已饮用其中一瓶。尽管案例未直接提及价格标示问题，但当事人销售过期食品的行为属于违反《中华人民共和国食品安全法》的行为，而非价格违法行为。然而，由于案例中提到当事人以12元/瓶的价格销售该食品，但未提及是否存在价格欺诈、不明码标价或其他价格违规行为，因此无法明确该行为是否涉及价格违法。因此，根据现有信息，该行为不属于价格违法行为，但属于食品安全违法行为。",
+      "legal_basis": "《中华人民共和国食品安全法》第三十四条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'其他价格违法' 与 真值'不明码标价' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 0,
+        "has_specific_article": true,
+        "legal_basis_score": 0.5,
+        "legal_basis_length": 19
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 0.75,
+        "reasoning_length": 208
+      }
+    },
+    "performance": {
+      "response_time": 5.65,
+      "input_tokens": 872,
+      "output_tokens": 206
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"其他价格违法\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人销售的‘帝聚堂黄酒’已过期2年多，且当事人已饮用其中一瓶。尽管案例未直接提及价格标示问题，但当事人销售过期食品的行为属于违反《中华人民共和国食品安全法》的行为，而非价格违法行为。然而，由于案例中提到当事人以12元/瓶的价格销售该食品，但未提及是否存在价格欺诈、不明码标价或其他价格违规行为，因此无法明确该行为是否涉及价格违法。因此，根据现有信息，该行为不属于价格违法行为，但属于食品安全违法行为。\",\n  \"legal_basis\": \"《中华人民共和国食品安全法》第三十四条\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国食品安全法》\", \"article\": \"第三十四条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0092",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "其他价格违法",
+      "confidence": 0.95,
+      "reasoning": "本案中，当事人销售的进口乳酸菌饮料外包装上无中文标签，违反了《中华人民共和国食品安全法》关于进口食品必须有中文标签的规定。此外，当事人未在酒类销售区域显著位置设置“不向未成年人销售酒”的标志，违反了《中华人民共和国未成年人保护法》关于禁止向未成年人销售酒类的规定。以上行为虽然不直接涉及价格行为，但属于经营行为中的违规，可归类为“其他价格违法”。",
+      "legal_basis": "《中华人民共和国食品安全法》第三十四条、《中华人民共和国未成年人保护法》第十七条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'其他价格违法' 与 真值'不明码标价' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 0,
+        "has_specific_article": true,
+        "legal_basis_score": 0.5,
+        "legal_basis_length": 40
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.6,
+        "reasoning_length": 173
+      }
+    },
+    "performance": {
+      "response_time": 5.89,
+      "input_tokens": 854,
+      "output_tokens": 216
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"其他价格违法\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"本案中，当事人销售的进口乳酸菌饮料外包装上无中文标签，违反了《中华人民共和国食品安全法》关于进口食品必须有中文标签的规定。此外，当事人未在酒类销售区域显著位置设置“不向未成年人销售酒”的标志，违反了《中华人民共和国未成年人保护法》关于禁止向未成年人销售酒类的规定。以上行为虽然不直接涉及价格行为，但属于经营行为中的违规，可归类为“其他价格违法”。\",\n  \"legal_basis\": \"《中华人民共和国食品安全法》第三十四条、《中华人民共和国未成年人保护法》第十七条\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国食品安全法》\", \"article\": \"第三十四条\"},\n    {\"law\": \"《中华人民共和国未成年人保护法》\", \"article\": \"第十七条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0093",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人未按规定明码标价，且在商品上架销售期间未标明价格。尽管当事人未涨价且无消费者投诉，但依据相关法律规定，明码标价是经营者的法定义务。未明码标价属于价格违法行为。此外，当事人未在网店首页显著位置公示行政许可信息或链接标识，也构成违法，但该行为与价格行为属于不同范畴，本案主要分析价格行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "美团",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 15
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 4,
+        "reasoning_score": 0.85,
+        "reasoning_length": 152
+      }
+    },
+    "performance": {
+      "response_time": 5.07,
+      "input_tokens": 851,
+      "output_tokens": 191
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人未按规定明码标价，且在商品上架销售期间未标明价格。尽管当事人未涨价且无消费者投诉，但依据相关法律规定，明码标价是经营者的法定义务。未明码标价属于价格违法行为。此外，当事人未在网店首页显著位置公示行政许可信息或链接标识，也构成违法，但该行为与价格行为属于不同范畴，本案主要分析价格行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十三条第一款\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0094",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人在促销活动中对部分商品标注了“5折”优惠，并在收银系统中进行了折扣操作。然而，收银系统在计算时将小数点后的金额进行四舍五入并多收了0.5元。这种行为属于在标价之外额外收取未标明的费用，构成“标价外加价”违法行为。尽管当事人在案发后进行了整改，但其行为已违反了价格标示的合规要求。",
+      "legal_basis": "在标价之外加价属于价格欺诈行为，违反了《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '标价外加价' == '标价外加价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 34
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 4,
+        "reasoning_score": 0.85,
+        "reasoning_length": 149
+      }
+    },
+    "performance": {
+      "response_time": 5.47,
+      "input_tokens": 876,
+      "output_tokens": 212
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"标价外加价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人在促销活动中对部分商品标注了“5折”优惠，并在收银系统中进行了折扣操作。然而，收银系统在计算时将小数点后的金额进行四舍五入并多收了0.5元。这种行为属于在标价之外额外收取未标明的费用，构成“标价外加价”违法行为。尽管当事人在案发后进行了整改，但其行为已违反了价格标示的合规要求。\",\n  \"legal_basis\": \"在标价之外加价属于价格欺诈行为，违反了《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十九条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0095",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "其他价格违法",
+      "confidence": 0.95,
+      "reasoning": "当事人未对冷藏柜内待出售的饮料标明价格，违反了明码标价的规定。同时，当事人未查验供货者的证照、未保存进货单据，违反了食品采购的相关规定。此外，当事人未对过期南乳汁的使用情况进行记录，导致违法所得无法计算，这可能涉及食品安全和价格记录的不规范。根据相关法律法规，这些行为均构成价格违法行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十条、《价格法》第十三条第一款、《价格违法行为行政处罚规定》第十三条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'其他价格违法' 与 真值'不明码标价' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 4,
+        "has_specific_article": true,
+        "legal_basis_score": 1.0,
+        "legal_basis_length": 50
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 0.75,
+        "reasoning_length": 144
+      }
+    },
+    "performance": {
+      "response_time": 6.37,
+      "input_tokens": 866,
+      "output_tokens": 235
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"其他价格违法\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人未对冷藏柜内待出售的饮料标明价格，违反了明码标价的规定。同时，当事人未查验供货者的证照、未保存进货单据，违反了食品采购的相关规定。此外，当事人未对过期南乳汁的使用情况进行记录，导致违法所得无法计算，这可能涉及食品安全和价格记录的不规范。根据相关法律法规，这些行为均构成价格违法行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十条、《价格法》第十三条第一款、《价格违法行为行政处罚规定》第十三条\",\n  \"cited_articles\": [\n    {\"law\": \"明码标价和禁止价格欺诈规定\", \"article\": \"第十条\"},\n    {\"law\": \"中华人民共和国价格法\", \"article\": \"第十三条第一款\"},\n    {\"law\": \"价格违法行为行政处罚规定\", \"article\": \"第十三条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0097",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "其他价格违法",
+      "confidence": 0.95,
+      "reasoning": "本案中，当事人使用了已超过食品保质期的味椒盐进行菜品调味，但未对过期食品的使用情况及销售情况做记录，导致违法所得无法计算。根据《中华人民共和国价格法》和《明码标价和禁止价格欺诈规定》，食品经营者应当确保所售食品符合安全标准，且不得以过期或变质食品进行加工销售。当事人使用过期食品的行为不仅违反食品安全相关法规，也涉及价格合规问题，因其可能通过变相提高成本或隐性定价损害消费者权益，因此构成其他价格违法行为。",
+      "legal_basis": "《中华人民共和国价格法》第十四条、《明码标价和禁止价格欺诈规定》第七条、《价格违法行为行政处罚规定》第十二条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'其他价格违法' 与 真值'不明码标价' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 4,
+        "has_specific_article": true,
+        "legal_basis_score": 1.0,
+        "legal_basis_length": 54
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 3,
+        "reasoning_score": 1.0,
+        "reasoning_length": 203
+      }
+    },
+    "performance": {
+      "response_time": 6.93,
+      "input_tokens": 874,
+      "output_tokens": 275
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"其他价格违法\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"本案中，当事人使用了已超过食品保质期的味椒盐进行菜品调味，但未对过期食品的使用情况及销售情况做记录，导致违法所得无法计算。根据《中华人民共和国价格法》和《明码标价和禁止价格欺诈规定》，食品经营者应当确保所售食品符合安全标准，且不得以过期或变质食品进行加工销售。当事人使用过期食品的行为不仅违反食品安全相关法规，也涉及价格合规问题，因其可能通过变相提高成本或隐性定价损害消费者权益，因此构成其他价格违法行为。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十四条、《明码标价和禁止价格欺诈规定》第七条、《价格违法行为行政处罚规定》第十二条\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十四条\"},\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第七条\"},\n    {\"law\": \"《价格违法行为行政处罚规定》\", \"article\": \"第十二条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0098",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，水果店在经营过程中出售的商品均未明码标价，违反了《明码标价和禁止价格欺诈规定》中关于商品必须标明价格的要求。未明码标价属于价格欺诈行为，且存在违法所得，进一步证明其违规行为的严重性。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第三条、第十六条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 23
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 2,
+        "reasoning_score": 0.7,
+        "reasoning_length": 98
+      }
+    },
+    "performance": {
+      "response_time": 4.79,
+      "input_tokens": 606,
+      "output_tokens": 183
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，水果店在经营过程中出售的商品均未明码标价，违反了《明码标价和禁止价格欺诈规定》中关于商品必须标明价格的要求。未明码标价属于价格欺诈行为，且存在违法所得，进一步证明其违规行为的严重性。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第三条、第十六条\",\n  \"cited_articles\": [\n    {\"law\": \"明码标价和禁止价格欺诈规定\", \"article\": \"第三条\"},\n    {\"law\": \"明码标价和禁止价格欺诈规定\", \"article\": \"第十六条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0099",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "当事人销售的食品已超过保质期，且在销售时未标示销售价格，违反了明码标价的相关规定。根据《明码标价和禁止价格欺诈规定》第十六条，经营者应当标明价格，标价签应当标明品名、计价单位、价格等必要信息。当事人未对过期食品进行价格标示，属于未按规定标明价格的行为。此外，当事人未查验平台店铺的营业执照、食品许可证及食品出厂检验报告等，但该行为与价格标示问题无直接关联，主要违规点仍在于未对食品进行明码标价。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十六条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": "京东",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 19
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 4,
+        "reasoning_score": 0.85,
+        "reasoning_length": 197
+      }
+    },
+    "performance": {
+      "response_time": 5.78,
+      "input_tokens": 714,
+      "output_tokens": 231
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人销售的食品已超过保质期，且在销售时未标示销售价格，违反了明码标价的相关规定。根据《明码标价和禁止价格欺诈规定》第十六条，经营者应当标明价格，标价签应当标明品名、计价单位、价格等必要信息。当事人未对过期食品进行价格标示，属于未按规定标明价格的行为。此外，当事人未查验平台店铺的营业执照、食品许可证及食品出厂检验报告等，但该行为与价格标示问题无直接关联，主要违规点仍在于未对食品进行明码标价。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十六条\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第十六条\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0100",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "当事人在2023年11月至2023年12月期间，由于更新货架，部分商品未及时重新标示销售价格即上架销售，导致未按规定明码标价销售商品。根据《明码标价和禁止价格欺诈规定》第七条，经营者应当标明价格，标价签应当标明品名、价格、计价单位、销售单位等必要信息。当事人未按规定明码标价的行为违反了该规定，构成价格违法行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第七条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 18
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 3,
+        "reasoning_score": 1.0,
+        "reasoning_length": 156
+      }
+    },
+    "performance": {
+      "response_time": 5.87,
+      "input_tokens": 869,
+      "output_tokens": 206
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人在2023年11月至2023年12月期间，由于更新货架，部分商品未及时重新标示销售价格即上架销售，导致未按规定明码标价销售商品。根据《明码标价和禁止价格欺诈规定》第七条，经营者应当标明价格，标价签应当标明品名、价格、计价单位、销售单位等必要信息。当事人未按规定明码标价的行为违反了该规定，构成价格违法行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第七条\",\n  \"cited_articles\": [\n    {\n      \"law\": \"明码标价和禁止价格欺诈规定\",\n      \"article\": \"第7条\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0103",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "当事人在调整商品售价后，未及时更新纸质价格标签，导致标价仍显示为原价7.9元/盒，而实际售价为9.2元/盒。根据《明码标价和禁止价格欺诈规定》第三条，经营者应当明码标价，标明价格、品名、计价单位等必要信息。本案中，标价未及时更新，导致消费者误以为商品仍按原价销售，构成未按规定标明价格的行为，属于不明码标价的违规类型。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第三条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 18
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 3,
+        "reasoning_score": 1.0,
+        "reasoning_length": 159
+      }
+    },
+    "performance": {
+      "response_time": 5.44,
+      "input_tokens": 737,
+      "output_tokens": 211
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人在调整商品售价后，未及时更新纸质价格标签，导致标价仍显示为原价7.9元/盒，而实际售价为9.2元/盒。根据《明码标价和禁止价格欺诈规定》第三条，经营者应当明码标价，标明价格、品名、计价单位等必要信息。本案中，标价未及时更新，导致消费者误以为商品仍按原价销售，构成未按规定标明价格的行为，属于不明码标价的违规类型。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第三条\",\n  \"cited_articles\": [\n    {\n      \"law\": \"明码标价和禁止价格欺诈规定\",\n      \"article\": \"第三条\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0104",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人使用计重秤进行交易时，系统自动对‘分’单位进行四舍五入，导致实际应收取的金额（4.17728元）与标价（4.2元）之间存在差异，多收价款0.0384元。这种行为属于在标价之外额外收取未标明的费用，构成标价外加价的违法行为。此外，执法人员认定该行为属于收取未予标明的费用，进一步佐证了违规性质。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十六条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '标价外加价' == '标价外加价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 19
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 3,
+        "reasoning_score": 0.75,
+        "reasoning_length": 156
+      }
+    },
+    "performance": {
+      "response_time": 5.69,
+      "input_tokens": 792,
+      "output_tokens": 217
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"标价外加价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人使用计重秤进行交易时，系统自动对‘分’单位进行四舍五入，导致实际应收取的金额（4.17728元）与标价（4.2元）之间存在差异，多收价款0.0384元。这种行为属于在标价之外额外收取未标明的费用，构成标价外加价的违法行为。此外，执法人员认定该行为属于收取未予标明的费用，进一步佐证了违规性质。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十六条\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第十六条\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0105",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "confidence": 0.95,
+      "reasoning": "本案中，当事人在消费者使用现金结算时，部分收银员按四舍五入计算而非有利于消费者的方式计算，导致在标价之外多收价款0.05元。根据《明码标价和禁止价格欺诈规定》第十二条，经营者不得在标价之外加价出售商品。该行为属于在标价之外额外收取未标明的费用，构成标价外加价的违法行为。",
+      "legal_basis": "在标价之外加价出售商品，属于价格欺诈行为。"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '标价外加价' == '标价外加价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 0,
+        "has_specific_article": false,
+        "legal_basis_score": 0.3,
+        "legal_basis_length": 21
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 3,
+        "reasoning_score": 1.0,
+        "reasoning_length": 135
+      }
+    },
+    "performance": {
+      "response_time": 6.73,
+      "input_tokens": 765,
+      "output_tokens": 216
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"标价外加价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"本案中，当事人在消费者使用现金结算时，部分收银员按四舍五入计算而非有利于消费者的方式计算，导致在标价之外多收价款0.05元。根据《明码标价和禁止价格欺诈规定》第十二条，经营者不得在标价之外加价出售商品。该行为属于在标价之外额外收取未标明的费用，构成标价外加价的违法行为。\",\n  \"legal_basis\": \"在标价之外加价出售商品，属于价格欺诈行为。\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第十二条\"\n    },\n    {\n      \"law\": \"《价格法》\",\n      \"article\": \"第十四条\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0111",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "变相提高价格",
+      "confidence": 0.95,
+      "reasoning": "当事人采用“四舍五入”的计费方式，即在计算散称商品总货款时，对分值为5-9的金额进行“多进一位到角位补整数”的操作，导致实际收取的货款高于应收取的货款，多收了1.91元。这种行为属于在商品价格之外，通过调整计价方式变相提高价格，属于价格违法行为。根据《价格法》及《明码标价和禁止价格欺诈规定》的相关规定，经营者不得利用不正当手段变相提高价格，损害消费者利益。",
+      "legal_basis": "《中华人民共和国价格法》第十四条第一款及《明码标价和禁止价格欺诈规定》第十九条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'变相提高价格' 与 真值'标价外加价' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 3,
+        "has_specific_article": true,
+        "legal_basis_score": 1.0,
+        "legal_basis_length": 39
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 3,
+        "reasoning_score": 1.0,
+        "reasoning_length": 179
+      }
+    },
+    "performance": {
+      "response_time": 6.6,
+      "input_tokens": 887,
+      "output_tokens": 256
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"变相提高价格\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人采用“四舍五入”的计费方式，即在计算散称商品总货款时，对分值为5-9的金额进行“多进一位到角位补整数”的操作，导致实际收取的货款高于应收取的货款，多收了1.91元。这种行为属于在商品价格之外，通过调整计价方式变相提高价格，属于价格违法行为。根据《价格法》及《明码标价和禁止价格欺诈规定》的相关规定，经营者不得利用不正当手段变相提高价格，损害消费者利益。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十四条第一款及《明码标价和禁止价格欺诈规定》第十九条\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十四条第一款\"},\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十九条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0113",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人使用电子秤称重后打印价格条码标签，结算时自动四舍五入到角，导致多收消费者费用。此行为属于在标价之外额外收取未标明的费用，违反了明码标价的规定。同时，当事人经营超过使用期限的洗发露，但未明确是否进行价格欺诈。综合分析，主要违规行为为标价外加价。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": "支付宝",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '标价外加价' == '标价外加价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 15
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 0.75,
+        "reasoning_length": 131
+      }
+    },
+    "performance": {
+      "response_time": 5.54,
+      "input_tokens": 648,
+      "output_tokens": 219
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"标价外加价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人使用电子秤称重后打印价格条码标签，结算时自动四舍五入到角，导致多收消费者费用。此行为属于在标价之外额外收取未标明的费用，违反了明码标价的规定。同时，当事人经营超过使用期限的洗发露，但未明确是否进行价格欺诈。综合分析，主要违规行为为标价外加价。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第十九条第（一）项\"\n    },\n    {\n      \"law\": \"《价格法》\",\n      \"article\": \"第十三条第一款\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0115",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人使用带秤电子收银机进行称重销售，系统设定的‘应付金额’为四舍五入后的金额，但存在‘五入’的反向抹零行为，多收消费者价款。例如，当事人加价收取投诉举报人0.02元，现场检查时交易的2单加价收取共0.06元，其他多收取的价款缺乏明细和销售记录。这种行为属于在标价之外额外收取未标明的费用，违反了《明码标价和禁止价格欺诈规定》及《价格法》的相关规定，构成‘标价外加价’的违法行为。",
+      "legal_basis": "当事人通过‘五入’方式多收消费者价款，属于在标价之外额外收取未标明的费用，构成价格欺诈。"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '标价外加价' == '标价外加价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 0,
+        "has_specific_article": false,
+        "legal_basis_score": 0.3,
+        "legal_basis_length": 44
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.6,
+        "reasoning_length": 197
+      }
+    },
+    "performance": {
+      "response_time": 6.87,
+      "input_tokens": 745,
+      "output_tokens": 276
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"标价外加价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人使用带秤电子收银机进行称重销售，系统设定的‘应付金额’为四舍五入后的金额，但存在‘五入’的反向抹零行为，多收消费者价款。例如，当事人加价收取投诉举报人0.02元，现场检查时交易的2单加价收取共0.06元，其他多收取的价款缺乏明细和销售记录。这种行为属于在标价之外额外收取未标明的费用，违反了《明码标价和禁止价格欺诈规定》及《价格法》的相关规定，构成‘标价外加价’的违法行为。\",\n  \"legal_basis\": \"当事人通过‘五入’方式多收消费者价款，属于在标价之外额外收取未标明的费用，构成价格欺诈。\",\n  \"cited_articles\": [\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十九条\"},\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十三条第一款\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0116",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "其他价格违法",
+      "confidence": 0.95,
+      "reasoning": "根据案情描述，当事人未标注销售价格，违反了《明码标价和禁止价格欺诈规定》中关于商品价格必须明码标价的要求。同时，当事人销售了超过保质期的食品，这属于《中华人民共和国食品安全法》的范畴，但结合价格合规分析，未标注销售价格属于价格违法行为。因此，该行为构成价格违法行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第四条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "未识别",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'其他价格违法' 与 真值'未识别' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 18
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 3,
+        "reasoning_score": 1.0,
+        "reasoning_length": 133
+      }
+    },
+    "performance": {
+      "response_time": 5.14,
+      "input_tokens": 876,
+      "output_tokens": 176
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"其他价格违法\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案情描述，当事人未标注销售价格，违反了《明码标价和禁止价格欺诈规定》中关于商品价格必须明码标价的要求。同时，当事人销售了超过保质期的食品，这属于《中华人民共和国食品安全法》的范畴，但结合价格合规分析，未标注销售价格属于价格违法行为。因此，该行为构成价格违法行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第四条\",\n  \"cited_articles\": [\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第四条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0117",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人销售牛百叶和小葱时，实际收取的金额高于按标价计算的金额。具体而言，0.25Kg牛百叶按单价116元/Kg计算应为29元，但实际收款为29.5元，多收0.5元；0.18Kg小葱按单价5.96元/Kg计算应为1.07元，但实际收款为1.10元，多收0.03元。这种在标价之外额外收取费用的行为符合《明码标价和禁止价格欺诈规定》中关于“标价外加价”的违规情形。",
+      "legal_basis": "在标价之外额外收取费用属于价格欺诈行为。"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '标价外加价' == '标价外加价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 0,
+        "has_specific_article": false,
+        "legal_basis_score": 0.3,
+        "legal_basis_length": 20
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.6,
+        "reasoning_length": 187
+      }
+    },
+    "performance": {
+      "response_time": 6.93,
+      "input_tokens": 653,
+      "output_tokens": 280
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"标价外加价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人销售牛百叶和小葱时，实际收取的金额高于按标价计算的金额。具体而言，0.25Kg牛百叶按单价116元/Kg计算应为29元，但实际收款为29.5元，多收0.5元；0.18Kg小葱按单价5.96元/Kg计算应为1.07元，但实际收款为1.10元，多收0.03元。这种在标价之外额外收取费用的行为符合《明码标价和禁止价格欺诈规定》中关于“标价外加价”的违规情形。\",\n  \"legal_basis\": \"在标价之外额外收取费用属于价格欺诈行为。\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第十六条第（三）项\"\n    },\n    {\n      \"law\": \"《价格法》\",\n      \"article\": \"第十四条第（三）项\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0118",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "confidence": 0.95,
+      "reasoning": "根据案例事实，当事人公示的《洗衣价目表》中明确标注了“羽绒服/棉衣中款（60-80cm）”的价格为35元，但其收银系统显示的“棉中衣”价格为40元，且实际收取的金额超过公示的35元。这表明当事人在标价之外额外收取了未标明的费用，构成价格欺诈行为。尽管当事人将部分多收费用退还至消费者会员卡中，但仍有340元无法退还，进一步证明其行为存在违规。该行为违反了《明码标价和禁止价格欺诈规定》中关于标价和收费的规范。",
+      "legal_basis": "在标价之外加价、变相提高价格等行为属于价格欺诈，违反了《明码标价和禁止价格欺诈规定》。"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '标价外加价' == '标价外加价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 43
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 4,
+        "reasoning_score": 0.85,
+        "reasoning_length": 204
+      }
+    },
+    "performance": {
+      "response_time": 6.61,
+      "input_tokens": 589,
+      "output_tokens": 266
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"标价外加价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例事实，当事人公示的《洗衣价目表》中明确标注了“羽绒服/棉衣中款（60-80cm）”的价格为35元，但其收银系统显示的“棉中衣”价格为40元，且实际收取的金额超过公示的35元。这表明当事人在标价之外额外收取了未标明的费用，构成价格欺诈行为。尽管当事人将部分多收费用退还至消费者会员卡中，但仍有340元无法退还，进一步证明其行为存在违规。该行为违反了《明码标价和禁止价格欺诈规定》中关于标价和收费的规范。\",\n  \"legal_basis\": \"在标价之外加价、变相提高价格等行为属于价格欺诈，违反了《明码标价和禁止价格欺诈规定》。\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第十九条\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0122",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据提供的案例事实，当事人未在经营过程中明码标价菜品价格，违反了《明码标价和禁止价格欺诈规定》中关于价格标示的要求。尽管当事人在检查后补上了标价公示，但其在检查前的未明码标价行为已构成价格违法行为。此外，当事人此前曾因类似行为被行政处罚，此次行为再次违反相关法规，进一步表明其存在价格合规意识不足的问题。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 15
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 152
+      }
+    },
+    "performance": {
+      "response_time": 5.62,
+      "input_tokens": 645,
+      "output_tokens": 209
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据提供的案例事实，当事人未在经营过程中明码标价菜品价格，违反了《明码标价和禁止价格欺诈规定》中关于价格标示的要求。尽管当事人在检查后补上了标价公示，但其在检查前的未明码标价行为已构成价格违法行为。此外，当事人此前曾因类似行为被行政处罚，此次行为再次违反相关法规，进一步表明其存在价格合规意识不足的问题。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十五条\"},\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十三条第一款\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0123",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据案情描述，涉案商品在检查当日处于待售状态，且未标明价格。依据《明码标价和禁止价格欺诈规定》的相关要求，经营者应当在销售商品时明码标价，确保消费者能够清晰了解商品价格。本案中，商品未明码标价，且当事人承认因价签用完未及时补充，导致部分商品未标价，属于未按规定标明价格的行为。此外，虽然商品未售出且无违法所得，但未明码标价的行为本身已构成价格违法行为。",
+      "legal_basis": "根据《明码标价和禁止价格欺诈规定》的相关规定，经营者应当标明价格，且不得以虚假或使人误解的价格手段进行标价。"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 54
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 1.0,
+        "reasoning_length": 176
+      }
+    },
+    "performance": {
+      "response_time": 6.42,
+      "input_tokens": 772,
+      "output_tokens": 257
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案情描述，涉案商品在检查当日处于待售状态，且未标明价格。依据《明码标价和禁止价格欺诈规定》的相关要求，经营者应当在销售商品时明码标价，确保消费者能够清晰了解商品价格。本案中，商品未明码标价，且当事人承认因价签用完未及时补充，导致部分商品未标价，属于未按规定标明价格的行为。此外，虽然商品未售出且无违法所得，但未明码标价的行为本身已构成价格违法行为。\",\n  \"legal_basis\": \"根据《明码标价和禁止价格欺诈规定》的相关规定，经营者应当标明价格，且不得以虚假或使人误解的价格手段进行标价。\",\n  \"cited_articles\": [\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十三条第（一）项\"},\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十三条第一款\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0130",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人作为基层公立医疗机构，应执行政府定价的医疗服务价格。然而，当事人在2024年1月10日至2024年2月29日期间，以70元/部位的标准收取“X线计算机体层（CT）扫描（三维重建加收）”项目费用，而根据《福州市医疗保障局 福州市卫生健康委员会关于重新公布福州市医疗机构医疗服务价格项目及有关问题的通知》（榕医保文〔2019〕15号）规定，该项目的政府定价为54元/部位。当事人超标准收费，违反了政府定价的相关规定。",
+      "legal_basis": "《中华人民共和国价格法》第四十条、《明码标价和禁止价格欺诈规定》第十六条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '政府定价违规' == '政府定价违规'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 3,
+        "has_specific_article": true,
+        "legal_basis_score": 1.0,
+        "legal_basis_length": 36
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.6,
+        "reasoning_length": 216
+      }
+    },
+    "performance": {
+      "response_time": 6.59,
+      "input_tokens": 838,
+      "output_tokens": 263
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"政府定价违规\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人作为基层公立医疗机构，应执行政府定价的医疗服务价格。然而，当事人在2024年1月10日至2024年2月29日期间，以70元/部位的标准收取“X线计算机体层（CT）扫描（三维重建加收）”项目费用，而根据《福州市医疗保障局 福州市卫生健康委员会关于重新公布福州市医疗机构医疗服务价格项目及有关问题的通知》（榕医保文〔2019〕15号）规定，该项目的政府定价为54元/部位。当事人超标准收费，违反了政府定价的相关规定。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第四十条、《明码标价和禁止价格欺诈规定》第十六条\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第四十条\"},\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十六条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0132",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "其他价格违法",
+      "confidence": 0.95,
+      "reasoning": "根据案件描述，当事人作为医疗机构，在诊疗活动中存在违规收取医疗费用的行为，包括违规收取特定项目费用、串换项目收费以及重复收费。这些行为属于价格违法行为，涉及在医疗服务中不当收费，可能构成变相提高价格或虚构收费项目的行为。根据《中华人民共和国价格法》和《明码标价和禁止价格欺诈规定》，医疗机构应当按照规定收取费用，并确保收费行为的透明和合规。",
+      "legal_basis": "《中华人民共和国价格法》第十四条、《明码标价和禁止价格欺诈规定》第三条、《价格违法行为行政处罚规定》第十三条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'其他价格违法' 与 真值'政府定价违规' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 4,
+        "has_specific_article": true,
+        "legal_basis_score": 1.0,
+        "legal_basis_length": 54
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.6,
+        "reasoning_length": 170
+      }
+    },
+    "performance": {
+      "response_time": 6.54,
+      "input_tokens": 845,
+      "output_tokens": 243
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"其他价格违法\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案件描述，当事人作为医疗机构，在诊疗活动中存在违规收取医疗费用的行为，包括违规收取特定项目费用、串换项目收费以及重复收费。这些行为属于价格违法行为，涉及在医疗服务中不当收费，可能构成变相提高价格或虚构收费项目的行为。根据《中华人民共和国价格法》和《明码标价和禁止价格欺诈规定》，医疗机构应当按照规定收取费用，并确保收费行为的透明和合规。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十四条、《明码标价和禁止价格欺诈规定》第三条、《价格违法行为行政处罚规定》第十三条\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十四条\"},\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第三条\"},\n    {\"law\": \"《价格违法行为行政处罚规定》\", \"article\": \"第十三条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0133",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "本案中，当事人在住院部工作人员未按照实际情况录入医嘱内容，导致部分患者多收取氧气吸入低流量给氧（间断吸氧）和心电监测费用。虽然收费标准根据《资阳市医疗服务项目价格汇编（2024版）》执行并进行了公示，但未明确标明费用的医保报销比例和患者自付部分，导致患者对实际需承担的费用产生误解。根据《明码标价和禁止价格欺诈规定》第九条，经营者应当标明价格的必要信息，包括计价单位、价格、计价方式等。本案中，费用明细未明确标明医保报销比例和患者自付比例，存在未完整标明价格信息的情况，构成不明码标价的违法行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第九条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'不明码标价' 与 真值'政府定价违规' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 18
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 1.0,
+        "reasoning_length": 248
+      }
+    },
+    "performance": {
+      "response_time": 6.62,
+      "input_tokens": 850,
+      "output_tokens": 261
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"本案中，当事人在住院部工作人员未按照实际情况录入医嘱内容，导致部分患者多收取氧气吸入低流量给氧（间断吸氧）和心电监测费用。虽然收费标准根据《资阳市医疗服务项目价格汇编（2024版）》执行并进行了公示，但未明确标明费用的医保报销比例和患者自付部分，导致患者对实际需承担的费用产生误解。根据《明码标价和禁止价格欺诈规定》第九条，经营者应当标明价格的必要信息，包括计价单位、价格、计价方式等。本案中，费用明细未明确标明医保报销比例和患者自付比例，存在未完整标明价格信息的情况，构成不明码标价的违法行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第九条\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第9条\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0134",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人作为转供电主体，通过设置总表向终端用户供电，并向终端用户收取电费。但案例未提及当事人是否在租赁合同中明确标明电费的计价方式、计价单位及具体金额等必要信息，亦未提供清晰的电价构成说明。这可能导致终端用户在不知情的情况下被加价收取电费，违反了《明码标价和禁止价格欺诈规定》中关于价格信息必须清晰、完整和明确的要求，构成不明码标价行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'不明码标价' 与 真值'标价外加价' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 15
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 3,
+        "reasoning_score": 0.75,
+        "reasoning_length": 175
+      }
+    },
+    "performance": {
+      "response_time": 6.17,
+      "input_tokens": 834,
+      "output_tokens": 239
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人作为转供电主体，通过设置总表向终端用户供电，并向终端用户收取电费。但案例未提及当事人是否在租赁合同中明确标明电费的计价方式、计价单位及具体金额等必要信息，亦未提供清晰的电价构成说明。这可能导致终端用户在不知情的情况下被加价收取电费，违反了《明码标价和禁止价格欺诈规定》中关于价格信息必须清晰、完整和明确的要求，构成不明码标价行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第十五条第（一）项\"\n    },\n    {\n      \"law\": \"《中华人民共和国价格法》\",\n      \"article\": \"第十三条第一款\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0135",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "confidence": 0.95,
+      "reasoning": "当事人王丽娟在未获得投诉人同意的情况下，提供服务并约定总费用10000元，声称包含所有费用，但未向投诉人提供服务和商品的详细清单及价格。此外，当事人在收取10000元服务费后，又向投诉人收取了1600元的火化费及头七、五七祭品和烧纸费用，这属于在标价之外额外收取未标明的费用。同时，当事人经营的店内未对殡葬服务进行公示，殡葬商品价格公示不规范，进一步违反了明码标价的规定。当事人拒不配合执法检查，导致违法所得无法计算，但上述行为已构成价格违法行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十六条第一款"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'标价外加价' 与 真值'不明码标价' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 22
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 4,
+        "reasoning_score": 1.0,
+        "reasoning_length": 224
+      }
+    },
+    "performance": {
+      "response_time": 6.8,
+      "input_tokens": 696,
+      "output_tokens": 259
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"标价外加价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人王丽娟在未获得投诉人同意的情况下，提供服务并约定总费用10000元，声称包含所有费用，但未向投诉人提供服务和商品的详细清单及价格。此外，当事人在收取10000元服务费后，又向投诉人收取了1600元的火化费及头七、五七祭品和烧纸费用，这属于在标价之外额外收取未标明的费用。同时，当事人经营的店内未对殡葬服务进行公示，殡葬商品价格公示不规范，进一步违反了明码标价的规定。当事人拒不配合执法检查，导致违法所得无法计算，但上述行为已构成价格违法行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十六条第一款\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第十六条第一款\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0137",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "误导性价格标示",
+      "confidence": 0.95,
+      "reasoning": "当事人通过在酒店管理后台设置划线价格作为比较价格，但未对比较价格作出真实准确的说明，导致消费者产生价格折扣的误解。根据调查结果，设置的划线价格高于前七日的最低成交价格或最后一次交易价格，涉嫌虚构原价或虚假折扣，构成误导性价格标示的违法行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "误导性价格标示",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '误导性价格标示' == '误导性价格标示'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 15
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 2,
+        "reasoning_score": 0.85,
+        "reasoning_length": 120
+      }
+    },
+    "performance": {
+      "response_time": 4.57,
+      "input_tokens": 874,
+      "output_tokens": 165
+    },
+    "llm_response": "{\n  \"is_violation\": true,\n  \"violation_type\": \"误导性价格标示\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人通过在酒店管理后台设置划线价格作为比较价格，但未对比较价格作出真实准确的说明，导致消费者产生价格折扣的误解。根据调查结果，设置的划线价格高于前七日的最低成交价格或最后一次交易价格，涉嫌虚构原价或虚假折扣，构成误导性价格标示的违法行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十九条\"}\n  ]\n}"
+  },
+  {
+    "case_id": "CASE_0138",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "误导性价格标示",
+      "confidence": 0.95,
+      "reasoning": "当事人在其抖音店铺中对商品价格进行了比较，标示为'￥196 ￥1680'。然而，当事人无法提供以1680元销售该产品的销售记录，并明确表示未以该价格销售过该产品。根据《明码标价和禁止价格欺诈规定》第十六条，经营者不得虚构原价、虚假折扣或虚假价格比较，以误导消费者。本案中，当事人声称的1680元价格无实际销售依据，构成虚假价格比较，属于误导性价格标示行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十六条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "虚假价格比较",
+      "platform": "京东",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'误导性价格标示' 与 真值'虚假价格比较' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 19
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 4,
+        "reasoning_score": 0.85,
+        "reasoning_length": 178
+      }
+    },
+    "performance": {
+      "response_time": 5.68,
+      "input_tokens": 837,
+      "output_tokens": 218
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"误导性价格标示\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人在其抖音店铺中对商品价格进行了比较，标示为'￥196 ￥1680'。然而，当事人无法提供以1680元销售该产品的销售记录，并明确表示未以该价格销售过该产品。根据《明码标价和禁止价格欺诈规定》第十六条，经营者不得虚构原价、虚假折扣或虚假价格比较，以误导消费者。本案中，当事人声称的1680元价格无实际销售依据，构成虚假价格比较，属于误导性价格标示行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十六条\",\n  \"cited_articles\": [\n    {\n      \"law\": \"明码标价和禁止价格欺诈规定\",\n      \"article\": \"第十六条\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0143",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "变相提高价格",
+      "confidence": 0.95,
+      "reasoning": "当事人在参加消费品以旧换新活动前，对商品进行了涨价行为，且在活动期间未严格按照承诺执行价格政策，存在先涨价再补贴的行为。这种行为属于变相提高价格，违反了《价格法》和《明码标价和禁止价格欺诈规定》的相关规定。",
+      "legal_basis": "《价格法》第十四条、《明码标价和禁止价格欺诈规定》第十八条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "误导性价格标示",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": false,
+      "match_details": {
+        "matched": false,
+        "match_type": "none",
+        "confidence": 0.0,
+        "details": "预测'变相提高价格' 与 真值'误导性价格标示' 不匹配"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 3,
+        "has_specific_article": true,
+        "legal_basis_score": 1.0,
+        "legal_basis_length": 29
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 2,
+        "reasoning_score": 0.7,
+        "reasoning_length": 103
+      }
+    },
+    "performance": {
+      "response_time": 4.96,
+      "input_tokens": 867,
+      "output_tokens": 183
+    },
+    "llm_response": "{\n  \"is_violation\": true,\n  \"violation_type\": \"变相提高价格\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人在参加消费品以旧换新活动前，对商品进行了涨价行为，且在活动期间未严格按照承诺执行价格政策，存在先涨价再补贴的行为。这种行为属于变相提高价格，违反了《价格法》和《明码标价和禁止价格欺诈规定》的相关规定。\",\n  \"legal_basis\": \"《价格法》第十四条、《明码标价和禁止价格欺诈规定》第十八条\",\n  \"cited_articles\": [\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十四条\"},\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十八条\"}\n  ]\n}"
+  },
+  {
+    "case_id": "CASE_0185",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "误导性价格标示",
+      "confidence": 0.95,
+      "reasoning": "根据案情描述，当事人将实际成交价为389元的房型划线价提升至606.50元，实际成交价为428元的房型划线价提升至655.20元，并通过价格比较的方式进行标价。然而，该划线价并未在实际交易中被使用过，且当事人无法提供定价依据。这种行为属于虚构原价或虚假价格比较，具有误导消费者的性质。尽管该服务为市场调节价，但通过虚构价格进行比较，可能对消费者产生误导，构成价格欺诈行为。",
+      "legal_basis": "根据《明码标价和禁止价格欺诈规定》第十六条，经营者不得利用虚假或使人误解的价格手段进行价格欺诈。同时，《价格法》第十四条亦规定，经营者不得利用虚假的或者使人误解的价格手段，诱骗消费者或者其他经营者与其进行交易。"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "误导性价格标示",
+      "platform": "美团",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '误导性价格标示' == '误导性价格标示'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 3,
+        "has_specific_article": true,
+        "legal_basis_score": 1.0,
+        "legal_basis_length": 105
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 4,
+        "reasoning_score": 0.85,
+        "reasoning_length": 186
+      }
+    },
+    "performance": {
+      "response_time": 10.52,
+      "input_tokens": 859,
+      "output_tokens": 288
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"误导性价格标示\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案情描述，当事人将实际成交价为389元的房型划线价提升至606.50元，实际成交价为428元的房型划线价提升至655.20元，并通过价格比较的方式进行标价。然而，该划线价并未在实际交易中被使用过，且当事人无法提供定价依据。这种行为属于虚构原价或虚假价格比较，具有误导消费者的性质。尽管该服务为市场调节价，但通过虚构价格进行比较，可能对消费者产生误导，构成价格欺诈行为。\",\n  \"legal_basis\": \"根据《明码标价和禁止价格欺诈规定》第十六条，经营者不得利用虚假或使人误解的价格手段进行价格欺诈。同时，《价格法》第十四条亦规定，经营者不得利用虚假的或者使人误解的价格手段，诱骗消费者或者其他经营者与其进行交易。\",\n  \"cited_articles\": [\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十六条\"},\n    {\"law\": \"《中华人民共和国价格法》\", \"article\": \"第十四条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0186",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "误导性价格标示",
+      "confidence": 0.95,
+      "reasoning": "根据调查事实，该超市在销售萝卜时，将原价0.99元/斤标注为特价，并与半遮挡价格牌原价价签0.99元/500g同时陈列，导致原价和特价显示一致，形成虚假价格比较。此行为符合《明码标价和禁止价格欺诈规定》第十六条第二款中关于“未标明被比较价格的详细信息”的情形，属于误导性价格标示的违规行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第十六条第二款"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "误导性价格标示",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '误导性价格标示' == '误导性价格标示'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 22
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 2,
+        "reasoning_score": 0.85,
+        "reasoning_length": 145
+      }
+    },
+    "performance": {
+      "response_time": 5.46,
+      "input_tokens": 857,
+      "output_tokens": 208
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"误导性价格标示\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据调查事实，该超市在销售萝卜时，将原价0.99元/斤标注为特价，并与半遮挡价格牌原价价签0.99元/500g同时陈列，导致原价和特价显示一致，形成虚假价格比较。此行为符合《明码标价和禁止价格欺诈规定》第十六条第二款中关于“未标明被比较价格的详细信息”的情形，属于误导性价格标示的违规行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第十六条第二款\",\n  \"cited_articles\": [\n    {\n      \"law\": \"明码标价和禁止价格欺诈规定\",\n      \"article\": \"第十六条第二款\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0188",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "confidence": 0.95,
+      "reasoning": "当事人公示的《药品价格表》中显示黄柏和枸杞子的单价分别为0.3元和0.18元，但实际销售明细显示，黄柏的单价为0.39元，枸杞子的单价为0.24元，与公示价格不符。这种行为属于在标价之外额外收取未标明的费用，涉嫌违反《明码标价和禁止价格欺诈规定》中的相关规定。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '标价外加价' == '标价外加价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 15
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 2,
+        "reasoning_score": 0.45,
+        "reasoning_length": 130
+      }
+    },
+    "performance": {
+      "response_time": 4.95,
+      "input_tokens": 871,
+      "output_tokens": 189
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"标价外加价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人公示的《药品价格表》中显示黄柏和枸杞子的单价分别为0.3元和0.18元，但实际销售明细显示，黄柏的单价为0.39元，枸杞子的单价为0.24元，与公示价格不符。这种行为属于在标价之外额外收取未标明的费用，涉嫌违反《明码标价和禁止价格欺诈规定》中的相关规定。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十九条\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0189",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "confidence": 0.95,
+      "reasoning": "黑水县人民医院作为公立医疗机构，其救护车费用应执行政府定价。根据《阿坝州医疗服务与价格汇编》（2021版）（2024版）规定，救护车费（项目编码：1106）包含救护车费（项目编码：110600001含来回里程）3元/公里，救护车费（起步）（项目编码：110600001-1）25元/次。然而，医院在2023年1月1日—2025年5月31日期间，共计收取费用756478.80元，经核算应收费411865.63元，多收费348430.67元。此行为属于超出政府指导价或政府定价浮动范围，违反了政府定价相关规定。",
+      "legal_basis": "《中华人民共和国价格法》第十二条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '政府定价违规' == '政府定价违规'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 1,
+        "has_specific_article": true,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 16
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 4,
+        "reasoning_score": 0.6,
+        "reasoning_length": 254
+      }
+    },
+    "performance": {
+      "response_time": 8.15,
+      "input_tokens": 867,
+      "output_tokens": 309
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"政府定价违规\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"黑水县人民医院作为公立医疗机构，其救护车费用应执行政府定价。根据《阿坝州医疗服务与价格汇编》（2021版）（2024版）规定，救护车费（项目编码：1106）包含救护车费（项目编码：110600001含来回里程）3元/公里，救护车费（起步）（项目编码：110600001-1）25元/次。然而，医院在2023年1月1日—2025年5月31日期间，共计收取费用756478.80元，经核算应收费411865.63元，多收费348430.67元。此行为属于超出政府指导价或政府定价浮动范围，违反了政府定价相关规定。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十二条\",\n  \"cited_articles\": [\n    {\n      \"law\": \"中华人民共和国价格法\",\n      \"article\": \"第十二条\"\n    },\n    {\n      \"law\": \"明码标价和禁止价格欺诈规定\",\n      \"article\": \"第十二条\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0193",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "根据案例描述，当事人在收取电费时未明码标价，违反了《明码标价和禁止价格欺诈规定》中关于价格标示的规定。尽管电费费用在合理范围内，且未产生违法所得，但未按规定进行明码标价的行为已构成价格违法行为。当事人已被下达《责令改正通知书》，但未在第二次检查中改正，说明其行为具有持续性，且未履行法定的明码标价义务。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 15
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.6,
+        "reasoning_length": 151
+      }
+    },
+    "performance": {
+      "response_time": 5.08,
+      "input_tokens": 657,
+      "output_tokens": 196
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据案例描述，当事人在收取电费时未明码标价，违反了《明码标价和禁止价格欺诈规定》中关于价格标示的规定。尽管电费费用在合理范围内，且未产生违法所得，但未按规定进行明码标价的行为已构成价格违法行为。当事人已被下达《责令改正通知书》，但未在第二次检查中改正，说明其行为具有持续性，且未履行法定的明码标价义务。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\"law\": \"《明码标价和禁止价格欺诈规定》\", \"article\": \"第十三条第（一）项\"}\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0194",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": false,
+      "violation_type": "无违规",
+      "confidence": 0.95,
+      "reasoning": "根据提供的案例信息，当事人销售天然气时，居民用气价格由剑阁县发展和改革局确定后执行阶梯气价收费制度，非居民用气价格由发展和改革局指导天然气经营企业自主合理定价后收费。当事人按照规定的定价机制执行价格，不存在未标明价格、虚构原价、虚假折扣、利用虚假或使人误解的价格手段等价格违法行为。因此，该行为符合相关价格法规要求，不存在价格违法行为。",
+      "legal_basis": "《中华人民共和国价格法》第十三条第一款规定：经营者销售、收购商品和提供服务，应当按照政府价格主管部门的规定明码标价。"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "标价外加价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": false,
+      "type_correct": false,
+      "match_details": {}
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 58
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 3,
+        "reasoning_score": 0.75,
+        "reasoning_length": 168
+      }
+    },
+    "performance": {
+      "response_time": 5.57,
+      "input_tokens": 881,
+      "output_tokens": 211
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": false,\n  \"violation_type\": \"无违规\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"根据提供的案例信息，当事人销售天然气时，居民用气价格由剑阁县发展和改革局确定后执行阶梯气价收费制度，非居民用气价格由发展和改革局指导天然气经营企业自主合理定价后收费。当事人按照规定的定价机制执行价格，不存在未标明价格、虚构原价、虚假折扣、利用虚假或使人误解的价格手段等价格违法行为。因此，该行为符合相关价格法规要求，不存在价格违法行为。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十三条第一款规定：经营者销售、收购商品和提供服务，应当按照政府价格主管部门的规定明码标价。\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《中华人民共和国价格法》\",\n      \"article\": \"第十三条第一款\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0195",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "confidence": 0.95,
+      "reasoning": "当事人销售的三种食品在下达责令改正通知书后，仍未按规定进行明码标价。根据《明码标价和禁止价格欺诈规定》第六条，经营者应当标明商品的品名、计价单位、价格等必要信息。当事人未履行该义务，构成不明码标价的违法行为。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》第六条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "不明码标价",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '不明码标价' == '不明码标价'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": true,
+        "legal_basis_score": 0.8999999999999999,
+        "legal_basis_length": 18
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": true,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 3,
+        "reasoning_score": 0.85,
+        "reasoning_length": 104
+      }
+    },
+    "performance": {
+      "response_time": 4.5,
+      "input_tokens": 726,
+      "output_tokens": 166
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"不明码标价\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"当事人销售的三种食品在下达责令改正通知书后，仍未按规定进行明码标价。根据《明码标价和禁止价格欺诈规定》第六条，经营者应当标明商品的品名、计价单位、价格等必要信息。当事人未履行该义务，构成不明码标价的违法行为。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》第六条\",\n  \"cited_articles\": [\n    {\n      \"law\": \"明码标价和禁止价格欺诈规定\",\n      \"article\": \"第六条\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0197",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": true,
+      "violation_type": "误导性价格标示",
+      "confidence": 0.95,
+      "reasoning": "案例中当事人使用了“原价 888 限时限量特惠 288”的宣传语，但实际并未销售过 888 元的套餐，且所有订单的实际成交价格均为 288 元。这种宣传手段容易使消费者误以为存在原价 888 元的套餐，从而产生价格被大幅优惠的误解，属于虚构原价或虚假价格比较的行为，符合《明码标价和禁止价格欺诈规定》中关于误导性价格标示的违规情形。",
+      "legal_basis": "《明码标价和禁止价格欺诈规定》"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "误导性价格标示",
+      "platform": "拼多多",
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '误导性价格标示' == '误导性价格标示'"
+      }
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 2,
+        "has_specific_article": false,
+        "legal_basis_score": 0.7,
+        "legal_basis_length": 15
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": true,
+        "sentence_count": 2,
+        "reasoning_score": 0.6,
+        "reasoning_length": 166
+      }
+    },
+    "performance": {
+      "response_time": 5.73,
+      "input_tokens": 852,
+      "output_tokens": 221
+    },
+    "llm_response": "```json\n{\n  \"is_violation\": true,\n  \"violation_type\": \"误导性价格标示\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"案例中当事人使用了“原价 888 限时限量特惠 288”的宣传语，但实际并未销售过 888 元的套餐，且所有订单的实际成交价格均为 288 元。这种宣传手段容易使消费者误以为存在原价 888 元的套餐，从而产生价格被大幅优惠的误解，属于虚构原价或虚假价格比较的行为，符合《明码标价和禁止价格欺诈规定》中关于误导性价格标示的违规情形。\",\n  \"legal_basis\": \"《明码标价和禁止价格欺诈规定》\",\n  \"cited_articles\": [\n    {\n      \"law\": \"《明码标价和禁止价格欺诈规定》\",\n      \"article\": \"第十六条第（一）项\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "case_id": "CASE_0199",
+    "model": "qwen-8b",
+    "success": true,
+    "prediction": {
+      "is_violation": false,
+      "violation_type": "无违规",
+      "confidence": 0.95,
+      "reasoning": "西昌市宁远园林开发有限公司在2015年8月1日至2019年1月31日期间收取的墓位管理费未超过80元/年/穴，符合价格合规要求。在2019年2月1日至2024年3月27日期间，该公司根据不同墓区的管理成本或市场情况，对墓位管理费进行了差异化定价，未超出法律规定的范围。2024年3月28日起，该公司恢复了统一的80元/年/穴收费，未出现价格欺诈或违规定价行为。该行为符合《中华人民共和国价格法》和《明码标价和禁止价格欺诈规定》中关于价格自主决定权和明码标价的要求。",
+      "legal_basis": "《中华人民共和国价格法》第十三条第一款、《明码标价和禁止价格欺诈规定》第五条"
+    },
+    "ground_truth": {
+      "is_violation": true,
+      "violation_type": "政府定价违规",
+      "platform": null,
+      "scenario": "未知",
+      "complexity": "medium"
+    },
+    "metrics": {
+      "is_correct": false,
+      "type_correct": false,
+      "match_details": {}
+    },
+    "quality_metrics": {
+      "legal_basis": {
+        "has_legal_basis": true,
+        "laws_mentioned_count": 3,
+        "has_specific_article": true,
+        "legal_basis_score": 1.0,
+        "legal_basis_length": 38
+      },
+      "reasoning": {
+        "has_reasoning": true,
+        "has_facts": false,
+        "has_legal_analysis": true,
+        "has_logic_chain": false,
+        "sentence_count": 4,
+        "reasoning_score": 0.6,
+        "reasoning_length": 232
+      }
+    },
+    "performance": {
+      "response_time": 7.63,
+      "input_tokens": 913,
+      "output_tokens": 285
+    },
+    "llm_response": "{\n  \"is_violation\": false,\n  \"violation_type\": \"无违规\",\n  \"confidence\": 0.95,\n  \"reasoning\": \"西昌市宁远园林开发有限公司在2015年8月1日至2019年1月31日期间收取的墓位管理费未超过80元/年/穴，符合价格合规要求。在2019年2月1日至2024年3月27日期间，该公司根据不同墓区的管理成本或市场情况，对墓位管理费进行了差异化定价，未超出法律规定的范围。2024年3月28日起，该公司恢复了统一的80元/年/穴收费，未出现价格欺诈或违规定价行为。该行为符合《中华人民共和国价格法》和《明码标价和禁止价格欺诈规定》中关于价格自主决定权和明码标价的要求。\",\n  \"legal_basis\": \"《中华人民共和国价格法》第十三条第一款、《明码标价和禁止价格欺诈规定》第五条\",\n  \"cited_articles\": [\n    {\"law\": \"中华人民共和国价格法\", \"article\": \"第十三条第一款\"},\n    {\"law\": \"明码标价和禁止价格欺诈规定\", \"article\": \"第五条\"}\n  ]\n}"
+  }
+]

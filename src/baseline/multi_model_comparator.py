@@ -35,10 +35,10 @@ class MultiModelComparator:
         all_results = {}
 
         for model_key in model_keys:
-            result_path = self.registry.get_result_path(model_key, results_dir)
+            result_path = self.registry.find_latest_result(model_key, results_dir)
 
-            if not result_path.exists():
-                print(f"[警告] 未找到模型结果: {model_key} ({result_path})")
+            if not result_path:
+                print(f"[警告] 未找到模型结果: {model_key}")
                 continue
 
             with open(result_path, 'r', encoding='utf-8') as f:

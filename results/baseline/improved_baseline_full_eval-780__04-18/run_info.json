@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-04-18 23:06:17",
+  "method": "baseline",
+  "models": [
+    "qwen-8b"
+  ],
+  "eval_data": "data/eval/eval_dataset_v4_final.jsonl",
+  "eval_cases": 780,
+  "limit": null,
+  "note": "improved baseline full eval-780"
+}

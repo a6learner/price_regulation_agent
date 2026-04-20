@@ -1,0 +1,982 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-07 23:39:43",
+    "total_cases": 5,
+    "method": "Agent (5-node workflow)"
+  },
+  "metrics": {
+    "total": 5,
+    "successful": 5,
+    "error_rate": 0.0,
+    "accuracy": 1.0,
+    "violation_type_accuracy": 1.0,
+    "validation_passed_rate": 1.0,
+    "reflection_triggered_rate": 0.0,
+    "quality_metrics": {
+      "avg_legal_basis_score": 0.7,
+      "avg_reasoning_score": 0.9099999999999999
+    },
+    "advanced_metrics_summary": {
+      "evidence_chain_avg": 0.59,
+      "legal_citation_avg": 0.16,
+      "remediation_avg": 0.542,
+      "explainability_avg": 0.34,
+      "structured_output_avg": 0.32,
+      "overall_avg": 0.39
+    },
+    "performance": {
+      "avg_response_time": 86.02
+    }
+  },
+  "results": [
+    {
+      "case_id": "eval_001",
+      "success": true,
+      "is_violation": true,
+      "violation_type": "虚构原价",
+      "confidence": 0.95,
+      "reasoning_chain": [
+        "步骤1: 提取案例关键事实 - 该服装店在天猫平台销售一款商品，商品详情页标注'原价899元，限时特惠价299元'，经查该商品自上架以来从未以899元的价格成交过，也无法提供近期以899元销售的交易凭证。",
+        "步骤2: 检查历史数据/价格要素 - 原价899元从未真实成交，无历史交易记录，且实际销售价为299元，存在明显的价格差异。",
+        "步骤3: 匹配法律条款 - 根据《价格法》第七条，经营者利用虚假的或使人误解的价格手段诱骗消费者交易的，将面临责令改正、没收违法所得并处罚款等处罚。该行为符合'虚构原价'的特征。",
+        "步骤4: 参考相似案例 - 本案中与'虚构原价'情形类似，即原价从未真实成交，属于典型的虚构原价行为，与已有的案例处理逻辑一致。",
+        "步骤5: 得出结论 - 该经营者标注的原价899元从未真实成交，构成虚构原价行为，违反了价格合规要求。"
+      ],
+      "legal_basis": "《价格法》第七条",
+      "validation_passed": true,
+      "reflection_count": 0,
+      "remediation": {
+        "has_violation": true,
+        "violation_type": "虚构原价",
+        "remediation_steps": [
+          {
+            "step": 1,
+            "action": "立即删除虚构的原价标注，仅展示实际销售价格",
+            "legal_basis": "《禁止价格欺诈行为规定》第7条",
+            "priority": "high",
+            "responsible_party": "商家运营团队"
+          },
+          {
+            "step": 2,
+            "action": "提供前7日内实际成交记录作为原价依据，或调整为合规的标注方式",
+            "legal_basis": "《价格法》第14条",
+            "priority": "high",
+            "responsible_party": "商家定价部门"
+          },
+          {
+            "step": 3,
+            "action": "建立价格档案管理制度，培训运营人员了解原价标注规范",
+            "legal_basis": "《价格法》第七条",
+            "priority": "medium",
+            "responsible_party": "商家培训部门"
+          }
+        ],
+        "compliance_checklist": [
+          "检查前7日内是否有实际成交记录",
+          "原价标注需提供交易凭证",
+          "确保所有渠道价格标注一致",
+          "建立价格变更审批流程"
+        ],
+        "estimated_penalty_range": "1000-50000元（参考相似案例）",
+        "prevention_tips": [
+          "建立价格档案管理制度，保留历史交易记录",
+          "定期审核促销活动的原价标注依据",
+          "培训运营人员了解价格法相关规定"
+        ],
+        "generation_mode": "rule_based"
+      },
+      "ground_truth": {
+        "is_violation": true,
+        "violation_type": "虚构原价"
+      },
+      "match": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '虚构原价' == '虚构原价'"
+      },
+      "quality_metrics": {
+        "legal_basis": {
+          "has_legal_basis": true,
+          "laws_mentioned_count": 1,
+          "has_specific_article": true,
+          "legal_basis_score": 0.7,
+          "legal_basis_length": 8
+        },
+        "reasoning": {
+          "has_reasoning": true,
+          "has_facts": true,
+          "has_legal_analysis": true,
+          "has_logic_chain": false,
+          "sentence_count": 6,
+          "reasoning_score": 0.85,
+          "reasoning_length": 372
+        }
+      },
+      "advanced_metrics": {
+        "evidence_chain_completeness": {
+          "score": 0.59,
+          "details": {
+            "step_count": 5,
+            "step_score": 0.3,
+            "coherence_score": 0.2,
+            "citation_score": 0.09,
+            "has_fact_extraction": true,
+            "has_data_check": true,
+            "has_legal_match": true,
+            "has_case_reference": true,
+            "has_conclusion": true,
+            "law_citations_count": 1,
+            "has_case_citation": true
+          }
+        },
+        "legal_citation_accuracy": {
+          "score": 0.16,
+          "matched": false,
+          "partially_matched": false,
+          "details": {
+            "completeness_score": 0.16,
+            "correctness_score": 0.0,
+            "traceable_score": 0.0,
+            "law_names_found": [
+              "价格法",
+              "价格法"
+            ],
+            "article_numbers_found": [
+              "第七条",
+              "第七条"
+            ],
+            "is_traceable": false,
+            "ground_truth_laws": [
+              "《明码标价和禁止价格欺诈规定》第十七条",
+              "《中华人民共和国价格法》第十四条"
+            ]
+          }
+        },
+        "remediation_actionability": {
+          "score": 0.55,
+          "has_remediation": true,
+          "details": {
+            "existence_score": 0.3,
+            "specificity_score": 0.16,
+            "reference_score": 0.09,
+            "has_action": true,
+            "has_time": true,
+            "has_responsible": true,
+            "has_legal_basis": true,
+            "has_example": true
+          }
+        },
+        "explainability": {
+          "score": 0.34,
+          "details": {
+            "clarity_score": 0.09,
+            "traceability_score": 0.16,
+            "conclusion_score": 0.09,
+            "has_step_titles": true,
+            "avg_step_length": 73.6,
+            "term_density": 0.016,
+            "has_law_citation": true,
+            "has_case_citation": true,
+            "has_source_label": true,
+            "has_violation": true,
+            "has_confidence": true,
+            "has_violation_type": true
+          }
+        },
+        "structured_output_quality": {
+          "score": 0.32,
+          "missing_fields": [],
+          "details": {
+            "core_score": 0.25,
+            "extended_score": 0.03,
+            "format_score": 0.04,
+            "core_fields_count": 4,
+            "extended_fields_count": 2,
+            "present_extended_fields": [
+              "remediation",
+              "reasoning_chain"
+            ],
+            "type_correct": true,
+            "no_none_in_core": true
+          }
+        },
+        "summary": {
+          "evidence_chain_score": 0.59,
+          "legal_citation_score": 0.16,
+          "remediation_score": 0.55,
+          "explainability_score": 0.34,
+          "structured_output_score": 0.32,
+          "average_score": 0.392
+        }
+      },
+      "performance": {
+        "response_time": 82.36
+      }
+    },
+    {
+      "case_id": "eval_002",
+      "success": true,
+      "is_violation": true,
+      "violation_type": "虚构原价",
+      "confidence": 0.9,
+      "reasoning_chain": [
+        "步骤1: 提取案例关键事实 - 经营者在京东平台销售蓝牙耳机，商品页面标注'日常价498元，活动价298元'，并宣称'618大促，6折优惠'。经调查，该商品过去3个月的实际销售价格为288-310元之间，活动期间以298元价格销售89件，销售额26522元。",
+        "步骤2: 检查历史数据/价格要素 - 商品页面标注的日常价498元与实际销售价格288-310元存在明显差异，且未提供该日常价的成交记录或历史数据支持，存在虚构或虚高日常价的嫌疑。",
+        "步骤3: 匹配法律条款 - 根据《禁止价格欺诈行为规定》第六条，经营者不得虚构原价或虚假优惠折价。本案中，日常价498元未真实成交，且与实际销售价格差异较大，符合虚构原价的特征。",
+        "步骤4: 参考相似案例 - 类似案例显示，虚构原价或虚假优惠折价行为被认定为价格欺诈，且存在处罚风险。例如，当事人未真实成交的原价被认定为虚构原价，导致违规。",
+        "步骤5: 得出结论 - 本案中，日常价498元与实际销售价格288-310元存在明显差距，且无历史成交记录支持，符合虚构原价的特征，构成价格违规行为。"
+      ],
+      "legal_basis": "《禁止价格欺诈行为规定》第六条",
+      "validation_passed": true,
+      "reflection_count": 0,
+      "remediation": {
+        "has_violation": true,
+        "violation_type": "虚构原价",
+        "remediation_steps": [
+          {
+            "step": 1,
+            "action": "立即删除虚构的原价标注，仅展示实际销售价格",
+            "legal_basis": "《禁止价格欺诈行为规定》第7条",
+            "priority": "high",
+            "responsible_party": "商家运营团队"
+          },
+          {
+            "step": 2,
+            "action": "提供前7日内实际成交记录作为原价依据，或调整为合规的标注方式",
+            "legal_basis": "《价格法》第14条",
+            "priority": "high",
+            "responsible_party": "商家定价部门"
+          },
+          {
+            "step": 3,
+            "action": "建立价格档案管理制度，培训运营人员了解原价标注规范",
+            "legal_basis": "《价格法》第七条",
+            "priority": "medium",
+            "responsible_party": "商家培训部门"
+          }
+        ],
+        "compliance_checklist": [
+          "检查前7日内是否有实际成交记录",
+          "原价标注需提供交易凭证",
+          "确保所有渠道价格标注一致",
+          "建立价格变更审批流程"
+        ],
+        "estimated_penalty_range": "1000-50000元（参考相似案例）",
+        "prevention_tips": [
+          "建立价格档案管理制度，保留历史交易记录",
+          "定期审核促销活动的原价标注依据",
+          "培训运营人员了解价格法相关规定"
+        ],
+        "generation_mode": "rule_based"
+      },
+      "ground_truth": {
+        "is_violation": true,
+        "violation_type": "虚假折扣"
+      },
+      "match": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "synonym",
+        "confidence": 0.9,
+        "details": "同义词匹配: '虚构原价' ≈ '虚假折扣' (同义词组: ('虚假折扣', '虚构折扣', '不实折扣', '虚构原价'))"
+      },
+      "quality_metrics": {
+        "legal_basis": {
+          "has_legal_basis": true,
+          "laws_mentioned_count": 1,
+          "has_specific_article": true,
+          "legal_basis_score": 0.7,
+          "legal_basis_length": 15
+        },
+        "reasoning": {
+          "has_reasoning": true,
+          "has_facts": true,
+          "has_legal_analysis": true,
+          "has_logic_chain": true,
+          "sentence_count": 8,
+          "reasoning_score": 1.0,
+          "reasoning_length": 466
+        }
+      },
+      "advanced_metrics": {
+        "evidence_chain_completeness": {
+          "score": 0.59,
+          "details": {
+            "step_count": 5,
+            "step_score": 0.3,
+            "coherence_score": 0.2,
+            "citation_score": 0.09,
+            "has_fact_extraction": true,
+            "has_data_check": true,
+            "has_legal_match": true,
+            "has_case_reference": true,
+            "has_conclusion": true,
+            "law_citations_count": 1,
+            "has_case_citation": true
+          }
+        },
+        "legal_citation_accuracy": {
+          "score": 0.16,
+          "matched": false,
+          "partially_matched": false,
+          "details": {
+            "completeness_score": 0.16,
+            "correctness_score": 0.0,
+            "traceable_score": 0.0,
+            "law_names_found": [
+              "禁止价格欺诈行为规定",
+              "禁止价格欺诈行为规定"
+            ],
+            "article_numbers_found": [
+              "第六条",
+              "第六条"
+            ],
+            "is_traceable": false,
+            "ground_truth_laws": [
+              "《明码标价和禁止价格欺诈规定》第十九条",
+              "《价格违法行为行政处罚规定》第七条"
+            ]
+          }
+        },
+        "remediation_actionability": {
+          "score": 0.55,
+          "has_remediation": true,
+          "details": {
+            "existence_score": 0.3,
+            "specificity_score": 0.16,
+            "reference_score": 0.09,
+            "has_action": true,
+            "has_time": true,
+            "has_responsible": true,
+            "has_legal_basis": true,
+            "has_example": true
+          }
+        },
+        "explainability": {
+          "score": 0.34,
+          "details": {
+            "clarity_score": 0.09,
+            "traceability_score": 0.16,
+            "conclusion_score": 0.09,
+            "has_step_titles": true,
+            "avg_step_length": 92.4,
+            "term_density": 0.011,
+            "has_law_citation": true,
+            "has_case_citation": true,
+            "has_source_label": true,
+            "has_violation": true,
+            "has_confidence": true,
+            "has_violation_type": true
+          }
+        },
+        "structured_output_quality": {
+          "score": 0.32,
+          "missing_fields": [],
+          "details": {
+            "core_score": 0.25,
+            "extended_score": 0.03,
+            "format_score": 0.04,
+            "core_fields_count": 4,
+            "extended_fields_count": 2,
+            "present_extended_fields": [
+              "remediation",
+              "reasoning_chain"
+            ],
+            "type_correct": true,
+            "no_none_in_core": true
+          }
+        },
+        "summary": {
+          "evidence_chain_score": 0.59,
+          "legal_citation_score": 0.16,
+          "remediation_score": 0.55,
+          "explainability_score": 0.34,
+          "structured_output_score": 0.32,
+          "average_score": 0.392
+        }
+      },
+      "performance": {
+        "response_time": 86.22
+      }
+    },
+    {
+      "case_id": "eval_003",
+      "success": true,
+      "is_violation": true,
+      "violation_type": "价格误导",
+      "confidence": 0.85,
+      "reasoning_chain": [
+        "步骤1: 提取案例关键事实 - 该经营者在拼多多平台销售'进口巧克力礼盒'，首页宣传图标注'限时9.9元包邮'，但实际售价为29.9元，仅在满足'拼团+领券+首单'三个条件同时满足时才能达到9.9元。实际购买中，由于优惠券数量有限，大部分消费者无法凑齐条件，最终成交价为19.9-29.9元。",
+        "步骤2: 检查历史数据/价格要素 - 首页标注的9.9元并未真实成交，且优惠条件苛刻且未在首页明示，导致消费者难以达成优惠条件，实际成交价为19.9-29.9元，未达到宣传价。",
+        "步骤3: 匹配法律条款 - 根据《禁止价格欺诈行为规定》第十八条第四项，经营者不得通过虚假折价、减价或者价格比较等方式销售商品或者提供服务，且不得虚构、篡改、删除网络交易实际成交价格记录，诱骗消费者交易。此外，根据第十七条，经营者不得以虚假的或者使人误解的价格手段，诱骗消费者或者其他经营者与其进行交易。",
+        "步骤4: 参考相似案例 - 拼多多平台存在因价格标注误导消费者而被处罚的案例，例如因商品页面显示错误价格或优惠条件未明示而被认定为价格欺诈，该案例中经营者未在首页明示优惠条件，导致消费者无法达成优惠条件，属于误导性价格信息。",
+        "步骤5: 得出结论 - 该经营者在首页标注的9.9元未真实成交，且优惠条件未明示，属于价格误导行为，违反了《禁止价格欺诈行为规定》第十八条第四项和第十七条。"
+      ],
+      "legal_basis": "《禁止价格欺诈行为规定》第十八条第四项",
+      "validation_passed": true,
+      "reflection_count": 0,
+      "remediation": {
+        "has_violation": true,
+        "violation_type": "价格误导",
+        "remediation_steps": [
+          {
+            "step": 1,
+            "action": "清晰标注商品价格信息，避免使用模糊表述",
+            "legal_basis": "《价格法》第14条",
+            "priority": "high",
+            "responsible_party": "商家运营团队"
+          },
+          {
+            "step": 2,
+            "action": "补充完整的价格构成说明，包括所有附加费用",
+            "legal_basis": "《禁止价格欺诈行为规定》第十八条第四项",
+            "priority": "high",
+            "responsible_party": "商家运营团队"
+          },
+          {
+            "step": 3,
+            "action": "审核商品详情页的价格展示，确保显著位置清晰可见",
+            "legal_basis": "《禁止价格欺诈行为规定》第十八条第四项",
+            "priority": "medium",
+            "responsible_party": "商家审核部门"
+          }
+        ],
+        "compliance_checklist": [
+          "价格标注清晰易懂",
+          "所有费用透明公开",
+          "不使用误导性语言",
+          "价格与商品描述一致"
+        ],
+        "estimated_penalty_range": "1000-30000元（参考相似案例）",
+        "prevention_tips": [
+          "价格标注清晰明确，避免模糊表述",
+          "所有附加费用透明公开",
+          "定期审核商品详情页的价格展示"
+        ],
+        "generation_mode": "rule_based"
+      },
+      "ground_truth": {
+        "is_violation": true,
+        "violation_type": "价格误导"
+      },
+      "match": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '价格误导' == '价格误导'"
+      },
+      "quality_metrics": {
+        "legal_basis": {
+          "has_legal_basis": true,
+          "laws_mentioned_count": 1,
+          "has_specific_article": true,
+          "legal_basis_score": 0.7,
+          "legal_basis_length": 19
+        },
+        "reasoning": {
+          "has_reasoning": true,
+          "has_facts": true,
+          "has_legal_analysis": true,
+          "has_logic_chain": true,
+          "sentence_count": 7,
+          "reasoning_score": 1.0,
+          "reasoning_length": 580
+        }
+      },
+      "advanced_metrics": {
+        "evidence_chain_completeness": {
+          "score": 0.59,
+          "details": {
+            "step_count": 5,
+            "step_score": 0.3,
+            "coherence_score": 0.2,
+            "citation_score": 0.09,
+            "has_fact_extraction": true,
+            "has_data_check": true,
+            "has_legal_match": true,
+            "has_case_reference": true,
+            "has_conclusion": true,
+            "law_citations_count": 2,
+            "has_case_citation": true
+          }
+        },
+        "legal_citation_accuracy": {
+          "score": 0.16,
+          "matched": false,
+          "partially_matched": false,
+          "details": {
+            "completeness_score": 0.16,
+            "correctness_score": 0.0,
+            "traceable_score": 0.0,
+            "law_names_found": [
+              "禁止价格欺诈行为规定",
+              "禁止价格欺诈行为规定",
+              "禁止价格欺诈行为规定"
+            ],
+            "article_numbers_found": [
+              "第十八条",
+              "第十八条",
+              "第十七条",
+              "第十八条",
+              "第十七条"
+            ],
+            "is_traceable": false,
+            "ground_truth_laws": [
+              "《明码标价和禁止价格欺诈规定》第六条",
+              "《中华人民共和国价格法》第十四条"
+            ]
+          }
+        },
+        "remediation_actionability": {
+          "score": 0.51,
+          "has_remediation": true,
+          "details": {
+            "existence_score": 0.3,
+            "specificity_score": 0.12,
+            "reference_score": 0.09,
+            "has_action": true,
+            "has_time": false,
+            "has_responsible": true,
+            "has_legal_basis": true,
+            "has_example": true
+          }
+        },
+        "explainability": {
+          "score": 0.34,
+          "details": {
+            "clarity_score": 0.09,
+            "traceability_score": 0.16,
+            "conclusion_score": 0.09,
+            "has_step_titles": true,
+            "avg_step_length": 115.2,
+            "term_density": 0.014,
+            "has_law_citation": true,
+            "has_case_citation": true,
+            "has_source_label": true,
+            "has_violation": true,
+            "has_confidence": true,
+            "has_violation_type": true
+          }
+        },
+        "structured_output_quality": {
+          "score": 0.32,
+          "missing_fields": [],
+          "details": {
+            "core_score": 0.25,
+            "extended_score": 0.03,
+            "format_score": 0.04,
+            "core_fields_count": 4,
+            "extended_fields_count": 2,
+            "present_extended_fields": [
+              "remediation",
+              "reasoning_chain"
+            ],
+            "type_correct": true,
+            "no_none_in_core": true
+          }
+        },
+        "summary": {
+          "evidence_chain_score": 0.59,
+          "legal_citation_score": 0.16,
+          "remediation_score": 0.51,
+          "explainability_score": 0.34,
+          "structured_output_score": 0.32,
+          "average_score": 0.384
+        }
+      },
+      "performance": {
+        "response_time": 92.85
+      }
+    },
+    {
+      "case_id": "eval_004",
+      "success": true,
+      "is_violation": true,
+      "violation_type": "虚构原价",
+      "confidence": 0.95,
+      "reasoning_chain": [
+        "步骤1: 提取案例关键事实 - 该经营者在美团平台销售'猫咪绝育套餐'，标注原价1280元，团购价188元。经调查，该套餐自上架以来从未以1280元销售过，且套餐内服务项目若单独计价合计仅为680元左右。套餐销售65单，每单实际成交价188元，成本约150元。",
+        "步骤2: 检查历史数据/价格要素 - 原价1280元从未成交，且套餐内服务项目单独计价仅680元，表明原价明显高于实际服务价值，存在虚构原价的可能。",
+        "步骤3: 匹配法律条款 - 根据《价格法》第十四条第（一）项，经营者以低于成本的价格倾销，扰乱市场秩序，损害其他经营者合法权益，可能构成违规。同时，《禁止价格欺诈行为规定》第七条指出，利用虚假价格手段诱骗消费者交易，属于价格欺诈行为。",
+        "步骤4: 参考相似案例 - 在相似案例中，如当事人标注原价但无真实交易记录，且实际售价远低于原价，被认定为虚构原价行为，违反《价格法》第十四条。此案例与之高度相似。",
+        "步骤5: 得出结论 - 该经营者标注的原价1280元从未成交，且套餐实际售价远低于原价，属于虚构原价行为，违反《价格法》第十四条第（一）项。"
+      ],
+      "legal_basis": "《价格法》第十四条",
+      "validation_passed": true,
+      "reflection_count": 0,
+      "remediation": {
+        "has_violation": true,
+        "violation_type": "虚构原价",
+        "remediation_steps": [
+          {
+            "step": 1,
+            "action": "立即删除虚构的原价标注，仅展示实际销售价格",
+            "legal_basis": "《禁止价格欺诈行为规定》第7条",
+            "priority": "high",
+            "responsible_party": "商家运营团队"
+          },
+          {
+            "step": 2,
+            "action": "提供前7日内实际成交记录作为原价依据，或调整为合规的标注方式",
+            "legal_basis": "《价格法》第14条",
+            "priority": "high",
+            "responsible_party": "商家定价部门"
+          },
+          {
+            "step": 3,
+            "action": "建立价格档案管理制度，培训运营人员了解原价标注规范",
+            "legal_basis": "《价格法》第七条",
+            "priority": "medium",
+            "responsible_party": "商家培训部门"
+          }
+        ],
+        "compliance_checklist": [
+          "检查前7日内是否有实际成交记录",
+          "原价标注需提供交易凭证",
+          "确保所有渠道价格标注一致",
+          "建立价格变更审批流程"
+        ],
+        "estimated_penalty_range": "1000-50000元（参考相似案例）",
+        "prevention_tips": [
+          "建立价格档案管理制度，保留历史交易记录",
+          "定期审核促销活动的原价标注依据",
+          "培训运营人员了解价格法相关规定"
+        ],
+        "generation_mode": "rule_based"
+      },
+      "ground_truth": {
+        "is_violation": true,
+        "violation_type": "虚构原价"
+      },
+      "match": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "exact",
+        "confidence": 1.0,
+        "details": "精确匹配: '虚构原价' == '虚构原价'"
+      },
+      "quality_metrics": {
+        "legal_basis": {
+          "has_legal_basis": true,
+          "laws_mentioned_count": 1,
+          "has_specific_article": true,
+          "legal_basis_score": 0.7,
+          "legal_basis_length": 9
+        },
+        "reasoning": {
+          "has_reasoning": true,
+          "has_facts": true,
+          "has_legal_analysis": true,
+          "has_logic_chain": false,
+          "sentence_count": 9,
+          "reasoning_score": 0.85,
+          "reasoning_length": 477
+        }
+      },
+      "advanced_metrics": {
+        "evidence_chain_completeness": {
+          "score": 0.59,
+          "details": {
+            "step_count": 5,
+            "step_score": 0.3,
+            "coherence_score": 0.2,
+            "citation_score": 0.09,
+            "has_fact_extraction": true,
+            "has_data_check": true,
+            "has_legal_match": true,
+            "has_case_reference": true,
+            "has_conclusion": true,
+            "law_citations_count": 4,
+            "has_case_citation": true
+          }
+        },
+        "legal_citation_accuracy": {
+          "score": 0.16,
+          "matched": false,
+          "partially_matched": false,
+          "details": {
+            "completeness_score": 0.16,
+            "correctness_score": 0.0,
+            "traceable_score": 0.0,
+            "law_names_found": [
+              "价格法",
+              "价格法",
+              "禁止价格欺诈行为规定",
+              "价格法",
+              "价格法"
+            ],
+            "article_numbers_found": [
+              "第十四条",
+              "第十四条",
+              "第七条",
+              "第十四条",
+              "第十四条"
+            ],
+            "is_traceable": false,
+            "ground_truth_laws": [
+              "《明码标价和禁止价格欺诈规定》第十七条",
+              "《中华人民共和国价格法》第十四条"
+            ]
+          }
+        },
+        "remediation_actionability": {
+          "score": 0.55,
+          "has_remediation": true,
+          "details": {
+            "existence_score": 0.3,
+            "specificity_score": 0.16,
+            "reference_score": 0.09,
+            "has_action": true,
+            "has_time": true,
+            "has_responsible": true,
+            "has_legal_basis": true,
+            "has_example": true
+          }
+        },
+        "explainability": {
+          "score": 0.34,
+          "details": {
+            "clarity_score": 0.09,
+            "traceability_score": 0.16,
+            "conclusion_score": 0.09,
+            "has_step_titles": true,
+            "avg_step_length": 94.6,
+            "term_density": 0.013,
+            "has_law_citation": true,
+            "has_case_citation": true,
+            "has_source_label": true,
+            "has_violation": true,
+            "has_confidence": true,
+            "has_violation_type": true
+          }
+        },
+        "structured_output_quality": {
+          "score": 0.32,
+          "missing_fields": [],
+          "details": {
+            "core_score": 0.25,
+            "extended_score": 0.03,
+            "format_score": 0.04,
+            "core_fields_count": 4,
+            "extended_fields_count": 2,
+            "present_extended_fields": [
+              "remediation",
+              "reasoning_chain"
+            ],
+            "type_correct": true,
+            "no_none_in_core": true
+          }
+        },
+        "summary": {
+          "evidence_chain_score": 0.59,
+          "legal_citation_score": 0.16,
+          "remediation_score": 0.55,
+          "explainability_score": 0.34,
+          "structured_output_score": 0.32,
+          "average_score": 0.392
+        }
+      },
+      "performance": {
+        "response_time": 85.23
+      }
+    },
+    {
+      "case_id": "eval_005",
+      "success": true,
+      "is_violation": true,
+      "violation_type": "虚构原价",
+      "confidence": 0.95,
+      "reasoning_chain": [
+        "步骤1: 提取案例关键事实 - 经营者在抖音直播中声称商品原价798元，但实际从未以该价格成交；日常售价约为398元，且主播连续7天使用相同话术，声称'今天最后100件'，实际销售量远超700件。",
+        "步骤2: 检查历史数据/价格要素 - 该商品在过去30天内一直以398元左右的价格销售，未发现任何以798元成交的记录，说明'原价798元'并无真实交易依据。",
+        "步骤3: 匹配法律条款 - 根据《禁止价格欺诈行为规定》第七条，经营者利用虚假的或者使人误解的价格手段，诱骗消费者与其进行交易，属于价格欺诈行为。本案中'原价798元'未真实成交，且'限时5折'的折扣计算不实，构成虚假价格信息。",
+        "步骤4: 参考相似案例 - 在类似案例中，经营者通过虚构原价或虚假折扣误导消费者，被认定为价格欺诈行为，处罚依据为《禁止价格欺诈行为规定》第七条。",
+        "步骤5: 得出结论 - 该经营者通过虚构原价和虚假折扣误导消费者，违反了《禁止价格欺诈行为规定》第七条，构成价格违规行为。"
+      ],
+      "legal_basis": "《禁止价格欺诈行为规定》第七条",
+      "validation_passed": true,
+      "reflection_count": 0,
+      "remediation": {
+        "has_violation": true,
+        "violation_type": "虚构原价",
+        "remediation_steps": [
+          {
+            "step": 1,
+            "action": "立即删除虚构的原价标注，仅展示实际销售价格",
+            "legal_basis": "《禁止价格欺诈行为规定》第7条",
+            "priority": "high",
+            "responsible_party": "商家运营团队"
+          },
+          {
+            "step": 2,
+            "action": "提供前7日内实际成交记录作为原价依据，或调整为合规的标注方式",
+            "legal_basis": "《价格法》第14条",
+            "priority": "high",
+            "responsible_party": "商家定价部门"
+          },
+          {
+            "step": 3,
+            "action": "建立价格档案管理制度，培训运营人员了解原价标注规范",
+            "legal_basis": "《价格法》第七条",
+            "priority": "medium",
+            "responsible_party": "商家培训部门"
+          }
+        ],
+        "compliance_checklist": [
+          "检查前7日内是否有实际成交记录",
+          "原价标注需提供交易凭证",
+          "确保所有渠道价格标注一致",
+          "建立价格变更审批流程"
+        ],
+        "estimated_penalty_range": "1000-50000元（参考相似案例）",
+        "prevention_tips": [
+          "建立价格档案管理制度，保留历史交易记录",
+          "定期审核促销活动的原价标注依据",
+          "培训运营人员了解价格法相关规定"
+        ],
+        "generation_mode": "rule_based"
+      },
+      "ground_truth": {
+        "is_violation": true,
+        "violation_type": "虚假折扣"
+      },
+      "match": true,
+      "type_correct": true,
+      "match_details": {
+        "matched": true,
+        "match_type": "synonym",
+        "confidence": 0.9,
+        "details": "同义词匹配: '虚构原价' ≈ '虚假折扣' (同义词组: ('虚假折扣', '虚构折扣', '不实折扣', '虚构原价'))"
+      },
+      "quality_metrics": {
+        "legal_basis": {
+          "has_legal_basis": true,
+          "laws_mentioned_count": 1,
+          "has_specific_article": true,
+          "legal_basis_score": 0.7,
+          "legal_basis_length": 15
+        },
+        "reasoning": {
+          "has_reasoning": true,
+          "has_facts": true,
+          "has_legal_analysis": true,
+          "has_logic_chain": false,
+          "sentence_count": 6,
+          "reasoning_score": 0.85,
+          "reasoning_length": 429
+        }
+      },
+      "advanced_metrics": {
+        "evidence_chain_completeness": {
+          "score": 0.59,
+          "details": {
+            "step_count": 5,
+            "step_score": 0.3,
+            "coherence_score": 0.2,
+            "citation_score": 0.09,
+            "has_fact_extraction": true,
+            "has_data_check": true,
+            "has_legal_match": true,
+            "has_case_reference": true,
+            "has_conclusion": true,
+            "law_citations_count": 3,
+            "has_case_citation": true
+          }
+        },
+        "legal_citation_accuracy": {
+          "score": 0.16,
+          "matched": false,
+          "partially_matched": false,
+          "details": {
+            "completeness_score": 0.16,
+            "correctness_score": 0.0,
+            "traceable_score": 0.0,
+            "law_names_found": [
+              "禁止价格欺诈行为规定",
+              "禁止价格欺诈行为规定",
+              "禁止价格欺诈行为规定",
+              "禁止价格欺诈行为规定"
+            ],
+            "article_numbers_found": [
+              "第七条",
+              "第七条",
+              "第七条",
+              "第七条"
+            ],
+            "is_traceable": false,
+            "ground_truth_laws": [
+              "《明码标价和禁止价格欺诈规定》第十九条",
+              "《中华人民共和国价格法》第十四条"
+            ]
+          }
+        },
+        "remediation_actionability": {
+          "score": 0.55,
+          "has_remediation": true,
+          "details": {
+            "existence_score": 0.3,
+            "specificity_score": 0.16,
+            "reference_score": 0.09,
+            "has_action": true,
+            "has_time": true,
+            "has_responsible": true,
+            "has_legal_basis": true,
+            "has_example": true
+          }
+        },
+        "explainability": {
+          "score": 0.34,
+          "details": {
+            "clarity_score": 0.09,
+            "traceability_score": 0.16,
+            "conclusion_score": 0.09,
+            "has_step_titles": true,
+            "avg_step_length": 85.0,
+            "term_density": 0.023,
+            "has_law_citation": true,
+            "has_case_citation": true,
+            "has_source_label": true,
+            "has_violation": true,
+            "has_confidence": true,
+            "has_violation_type": true
+          }
+        },
+        "structured_output_quality": {
+          "score": 0.32,
+          "missing_fields": [],
+          "details": {
+            "core_score": 0.25,
+            "extended_score": 0.03,
+            "format_score": 0.04,
+            "core_fields_count": 4,
+            "extended_fields_count": 2,
+            "present_extended_fields": [
+              "remediation",
+              "reasoning_chain"
+            ],
+            "type_correct": true,
+            "no_none_in_core": true
+          }
+        },
+        "summary": {
+          "evidence_chain_score": 0.59,
+          "legal_citation_score": 0.16,
+          "remediation_score": 0.55,
+          "explainability_score": 0.34,
+          "structured_output_score": 0.32,
+          "average_score": 0.392
+        }
+      },
+      "performance": {
+        "response_time": 83.46
+      }
+    }
+  ]
+}

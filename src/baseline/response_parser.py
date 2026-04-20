@@ -7,6 +7,176 @@ import json
 import re
 from typing import Dict, Any, Optional, List
 
+from .violation_type_config import SYNONYM_GROUPS, HIERARCHY_MAPPING, MatchConfig
+
+
+class ViolationTypeMatcher:
+    """违规类型智能匹配器"""
+
+    def __init__(self, config: MatchConfig = MatchConfig()):
+        self.config = config
+        self.synonym_map = self._build_synonym_map()
+        self.hierarchy_map = HIERARCHY_MAPPING
+
+    def _build_synonym_map(self) -> dict:
+        """构建同义词映射表"""
+        synonym_map = {}
+        for group in SYNONYM_GROUPS:
+            for word in group:
+                synonym_map[word] = group
+        return synonym_map
+
+    def match(self, predicted: str, ground_truth: str) -> dict:
+        """
+        智能匹配违规类型
+
+        Returns:
+            {
+                'matched': bool,
+                'match_type': str,  # exact/normalized/synonym/multi_label/superclass/none
+                'confidence': float,
+                'details': str
+            }
+        """
+        if not self.config.ENABLE_SMART_MATCHING:
+            # 回退到简单匹配
+            return self._exact_match(predicted, ground_truth)
+
+        # 策略1: 精确匹配
+        result = self._exact_match(predicted, ground_truth)
+        if result['matched']:
+            return result
+
+        # 策略2: 标准化匹配
+        result = self._normalized_match(predicted, ground_truth)
+        if result['matched']:
+            return result
+
+        # 策略3: 同义词匹配
+        result = self._synonym_match(predicted, ground_truth)
+        if result['matched']:
+            return result
+
+        # 策略4: 多标签匹配
+        result = self._multi_label_match(predicted, ground_truth)
+        if result['matched']:
+            return result
+
+        # 策略5: 上位概念匹配
+        if self.config.ACCEPT_SUPERCLASS:
+            result = self._superclass_match(predicted, ground_truth)
+            if result['matched']:
+                return result
+
+        # 无匹配
+        return {
+            'matched': False,
+            'match_type': 'none',
+            'confidence': 0.0,
+            'details': f"预测'{predicted}' 与 真值'{ground_truth}' 不匹配"
+        }
+
+    def _exact_match(self, pred: str, truth: str) -> dict:
+        """精确匹配"""
+        if pred == truth:
+            return {
+                'matched': True,
+                'match_type': 'exact',
+                'confidence': 1.0,
+                'details': f"精确匹配: '{pred}' == '{truth}'"
+            }
+        return {'matched': False, 'match_type': 'none', 'confidence': 0.0, 'details': ''}
+
+    def _normalized_match(self, pred: str, truth: str) -> dict:
+        """标准化匹配（去除标点、空格）"""
+        def normalize(text):
+            # 去除所有标点和空格
+            return re.sub(r'[,，;；、\s]+', '', text.strip())
+
+        pred_norm = normalize(pred)
+        truth_norm = normalize(truth)
+
+        if pred_norm == truth_norm:
+            return {
+                'matched': True,
+                'match_type': 'normalized',
+                'confidence': self.config.CONFIDENCE_THRESHOLDS['normalized'],
+                'details': f"标准化匹配: '{pred}' → '{pred_norm}' == '{truth_norm}' ← '{truth}'"
+            }
+        return {'matched': False, 'match_type': 'none', 'confidence': 0.0, 'details': ''}
+
+    def _synonym_match(self, pred: str, truth: str) -> dict:
+        """同义词匹配"""
+        pred_group = self.synonym_map.get(pred.strip())
+        truth_group = self.synonym_map.get(truth.strip())
+
+        # 两者都在同一个同义词组中
+        if pred_group and truth_group and pred_group == truth_group:
+            return {
+                'matched': True,
+                'match_type': 'synonym',
+                'confidence': self.config.CONFIDENCE_THRESHOLDS['synonym'],
+                'details': f"同义词匹配: '{pred}' ≈ '{truth}' (同义词组: {pred_group})"
+            }
+        return {'matched': False, 'match_type': 'none', 'confidence': 0.0, 'details': ''}
+
+    def _multi_label_match(self, pred: str, truth: str) -> dict:
+        """多标签匹配"""
+        # 分割预测中的多个标签
+        pred_labels = self._split_labels(pred)
+
+        if len(pred_labels) <= 1:
+            return {'matched': False, 'match_type': 'none', 'confidence': 0.0, 'details': ''}
+
+        # 检查真值是否在预测标签中（精确或同义）
+        for pred_label in pred_labels:
+            # 精确包含
+            if pred_label.strip() == truth.strip():
+                return {
+                    'matched': True,
+                    'match_type': 'multi_label',
+                    'confidence': self.config.CONFIDENCE_THRESHOLDS['multi_label'],
+                    'details': f"多标签包含: '{truth}' in {pred_labels}"
+                }
+
+            # 同义词包含
+            pred_group = self.synonym_map.get(pred_label.strip())
+            truth_group = self.synonym_map.get(truth.strip())
+            if pred_group and truth_group and pred_group == truth_group:
+                return {
+                    'matched': True,
+                    'match_type': 'multi_label_synonym',
+                    'confidence': self.config.CONFIDENCE_THRESHOLDS['multi_label'] - 0.05,
+                    'details': f"多标签同义词包含: '{truth}' ≈ '{pred_label}' in {pred_labels}"
+                }
+
+        return {'matched': False, 'match_type': 'none', 'confidence': 0.0, 'details': ''}
+
+    def _superclass_match(self, pred: str, truth: str) -> dict:
+        """上位概念匹配"""
+        pred_clean = pred.strip()
+        truth_clean = truth.strip()
+
+        # 检查预测是否是真值的上位概念
+        if pred_clean in self.hierarchy_map:
+            children = self.hierarchy_map[pred_clean]
+            if truth_clean in children:
+                return {
+                    'matched': True,
+                    'match_type': 'superclass',
+                    'confidence': self.config.CONFIDENCE_THRESHOLDS['superclass'],
+                    'details': f"上位概念匹配: '{pred}' 包含 '{truth}'"
+                }
+
+        return {'matched': False, 'match_type': 'none', 'confidence': 0.0, 'details': ''}
+
+    def _split_labels(self, text: str) -> list:
+        """分割多标签文本"""
+        # 使用所有可能的分隔符
+        pattern = '|'.join(re.escape(sep) for sep in self.config.MULTI_LABEL_SEPARATORS)
+        labels = re.split(pattern, text)
+        return [label.strip() for label in labels if label.strip()]
+
 
 class ResponseParser:
     """响应解析器类"""
@@ -76,6 +246,11 @@ class ResponseParser:
         normalized = {
             'is_violation': prediction.get('is_violation', None),
             'violation_type': prediction.get('violation_type', '未知'),
+            'has_risk_flag': prediction.get('has_risk_flag', False),
+            'risk_level': prediction.get('risk_level', 'none'),
+            'risk_categories': prediction.get('risk_categories', []),
+            'risk_description': prediction.get('risk_description', ''),
+            'risk_suggestions': prediction.get('risk_suggestions', []),
             'confidence': prediction.get('confidence', 0.0),
             'reasoning': prediction.get('reasoning', ''),
             'legal_basis': prediction.get('legal_basis', '')
@@ -158,20 +333,23 @@ class ResponseParser:
     @staticmethod
     def compare_prediction_with_truth(
         prediction: Dict[str, Any],
-        ground_truth: Dict[str, Any]
-    ) -> Dict[str, bool]:
+        ground_truth: Dict[str, Any],
+        use_smart_matching: bool = True
+    ) -> Dict[str, Any]:
         """
         比较预测结果与ground truth
 
         Args:
             prediction: 预测结果
             ground_truth: ground truth
+            use_smart_matching: 是否使用智能匹配（默认True）
 
         Returns:
-            比较结果字典
+            比较结果字典（新增match_details字段）
         """
         is_correct = prediction['is_violation'] == ground_truth['is_violation']
         type_correct = False
+        match_details = {}
 
         # 只有当违规判断正确时，才比较违规类型
         if is_correct:
@@ -187,11 +365,26 @@ class ResponseParser:
             else:
                 truth_type = ''
 
-            type_correct = pred_type == truth_type
+            if use_smart_matching:
+                # 使用智能匹配器
+                matcher = ViolationTypeMatcher()
+                match_result = matcher.match(pred_type, truth_type)
+                type_correct = match_result['matched']
+                match_details = match_result
+            else:
+                # 回退到简单匹配
+                type_correct = pred_type == truth_type
+                match_details = {
+                    'matched': type_correct,
+                    'match_type': 'exact' if type_correct else 'none',
+                    'confidence': 1.0 if type_correct else 0.0,
+                    'details': ''
+                }
 
         return {
             'is_correct': is_correct,
-            'type_correct': type_correct
+            'type_correct': type_correct,
+            'match_details': match_details
         }
 
     @staticmethod

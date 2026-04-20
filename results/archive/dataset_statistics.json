@@ -1,0 +1,15 @@
+{
+  "total_input": 787,
+  "total_output": 370,
+  "pilot_mode": false,
+  "tier_distribution": {
+    "1": 286,
+    "3": 267,
+    "4": 150,
+    "2": 84
+  },
+  "qualifying_articles_coverage": "59.2%",
+  "case_description_coverage": "70.4%",
+  "leakage_detected": 27,
+  "leakage_rate": "3.4%"
+}

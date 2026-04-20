@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-04-19 17:28:31",
+  "method": "baseline",
+  "models": [
+    "qwen",
+    "minimax",
+    "qwen-8b"
+  ],
+  "eval_data": "data/eval/eval_dataset_v4_final.jsonl",
+  "eval_cases": 780,
+  "limit": null,
+  "note": "baseline_v4_780_three_models"
+}

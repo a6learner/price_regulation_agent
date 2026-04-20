@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jurisconsult AI - Chat Workspace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error": "#ba1a1a",
+                        "secondary-container": "#9af7af",
+                        "on-background": "#191c1e",
+                        "secondary-fixed": "#9af7af",
+                        "on-secondary-fixed": "#00210c",
+                        "on-secondary-container": "#0b743b",
+                        "outline": "#74777f",
+                        "surface": "#f7f9fc",
+                        "on-primary-fixed": "#001b3d",
+                        "surface-container-highest": "#e0e3e6",
+                        "outline-variant": "#c4c6cf",
+                        "surface-tint": "#465f88",
+                        "on-secondary-fixed-variant": "#005227",
+                        "surface-bright": "#f7f9fc",
+                        "tertiary-container": "#73000b",
+                        "primary-fixed-dim": "#aec7f7",
+                        "on-surface": "#191c1e",
+                        "inverse-surface": "#2d3133",
+                        "on-primary-container": "#87a0cd",
+                        "secondary": "#006d36",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e0e3e6",
+                        "surface-container-low": "#f2f4f7",
+                        "on-tertiary-fixed": "#410003",
+                        "primary": "#002046",
+                        "surface-container-high": "#e6e8eb",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#d8dadd",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#d6e3ff",
+                        "on-primary-fixed-variant": "#2e476f",
+                        "background": "#f7f9fc",
+                        "tertiary-fixed-dim": "#ffb3ad",
+                        "primary-container": "#1b365d",
+                        "on-surface-variant": "#44474e",
+                        "inverse-on-surface": "#eff1f4",
+                        "surface-container": "#eceef1",
+                        "on-tertiary-fixed-variant": "#920212",
+                        "inverse-primary": "#aec7f7",
+                        "tertiary": "#4b0004",
+                        "tertiary-fixed": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#7eda95",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#ff736b"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body h-screen flex flex-col overflow-hidden">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 z-40 bg-slate-50 dark:bg-[#002046] flex justify-between items-center w-full px-6 py-3 shadow-[0_2px_15px_rgba(27,54,93,0.04)] bg-slate-100 dark:bg-[#001835]">
+<div class="flex items-center gap-4">
+<span class="text-xl font-serif font-bold text-[#1B365D] dark:text-white">Jurisconsult AI</span>
+<span class="bg-surface-container-high text-on-surface-variant px-2 py-1 rounded text-xs font-medium">Regulator</span>
+</div>
+<div class="flex-1 max-w-md mx-8 flex justify-end">
+<!-- Search Placeholder -->
+</div>
+<div class="flex items-center gap-4 text-[#1B365D] dark:text-slate-100">
+<button class="hover:bg-slate-200/50 dark:hover:bg-white/5 transition-all duration-300 p-2 rounded-full scale-100 active:scale-95 transition-transform"><span class="material-symbols-outlined">notifications</span></button>
+<button class="hover:bg-slate-200/50 dark:hover:bg-white/5 transition-all duration-300 p-2 rounded-full scale-100 active:scale-95 transition-transform"><span class="material-symbols-outlined">account_balance</span></button>
+<button class="hover:bg-slate-200/50 dark:hover:bg-white/5 transition-all duration-300 p-2 rounded-full scale-100 active:scale-95 transition-transform"><span class="material-symbols-outlined">help_outline</span></button>
+<img alt="User professional profile avatar" class="w-8 h-8 rounded-full border border-outline-variant/30" data-alt="Professional headshot of a person in business attire against a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGOnj7nkRTVQLXTxt0wMjLGYFNVDIYIZUE0BkWPEugEkDe-AUBBJlBQgf7N85pMeJZLwM_avb0srvuIEKELSN2zff2k1xYwJRocRmwRlsRThf-HpHiGVpeHmt4xtIfbU5CO4D6ig-VzYtBA0QGdoYAiUz7vN3lP_1wMyKg2vnD0vDUJ2kIrW3_5zsuvQ1bFL1bDjgLVbSIqj_K0yoCc_1i6-gEPH-6wkm9abgDFoLeLyAAHNthgGlOBjsCUtDP_0SKPRG64tbBb4Hn"/>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- Left Sidebar: Chat History -->
+<aside class="w-72 bg-surface-container-low border-r border-outline-variant/15 flex flex-col h-full flex-shrink-0">
+<div class="p-4 border-b border-outline-variant/15 flex justify-between items-center">
+<span class="font-headline font-bold text-sm text-primary">Chat History</span>
+<button class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-sm">edit_square</span></button>
+</div>
+<div class="flex-1 overflow-y-auto p-3 space-y-1">
+<button class="w-full text-left px-3 py-2 rounded-md bg-surface-container-highest text-primary-container font-medium text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">chat_bubble_outline</span>
+                    E-commerce pricing check
+                </button>
+<button class="w-full text-left px-3 py-2 rounded-md hover:bg-surface-container-high text-on-surface-variant text-sm flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+                    Regulatory audit #402
+                </button>
+<button class="w-full text-left px-3 py-2 rounded-md hover:bg-surface-container-high text-on-surface-variant text-sm flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">description</span>
+                    Contract review: Vendor A
+                </button>
+</div>
+</aside>
+<!-- Main Center Area: Chat Stream -->
+<main class="flex-1 flex flex-col bg-surface relative">
+<div class="flex-1 overflow-y-auto p-8 space-y-12">
+<!-- User Message -->
+<div class="flex justify-end">
+<div class="bg-surface-container-high text-on-surface p-4 rounded-xl rounded-tr-sm max-w-2xl text-sm leading-relaxed shadow-sm">
+                        Please verify this e-commerce listing for potential pricing violations. They are advertising a "50% off sale" but I suspect the base price was artificially inflated yesterday.
+                    </div>
+</div>
+<!-- AI Response / Processing Area -->
+<div class="flex items-start gap-4 max-w-4xl">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-on-primary text-sm">balance</span>
+</div>
+<div class="flex-1 space-y-6">
+<!-- 6-Node Progress Bar (Timeline of Justice) -->
+<div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant/15 shadow-[0_12px_40px_rgba(27,54,93,0.02)]">
+<div class="relative flex justify-between items-center px-4">
+<!-- Line -->
+<div class="absolute left-4 right-4 top-1/2 -translate-y-1/2 h-[1px] bg-outline-variant/20 z-0"></div>
+<!-- Nodes -->
+<div class="relative z-10 flex flex-col items-center gap-2 group">
+<div class="w-3 h-3 rounded-full bg-secondary shadow-[0_0_8px_rgba(0,109,54,0.3)] border-2 border-surface-container-lowest"></div>
+<span class="text-[10px] font-medium text-on-surface-variant uppercase tracking-wider">Intent</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-secondary shadow-[0_0_8px_rgba(0,109,54,0.3)] border-2 border-surface-container-lowest"></div>
+<span class="text-[10px] font-medium text-on-surface-variant uppercase tracking-wider">Retrieval</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-secondary shadow-[0_0_8px_rgba(0,109,54,0.3)] border-2 border-surface-container-lowest"></div>
+<span class="text-[10px] font-medium text-on-surface-variant uppercase tracking-wider">Grading</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary-container flex items-center justify-center border-2 border-surface-container-lowest shadow-[0_0_0_4px_rgba(27,54,93,0.1)]">
+<div class="w-1 h-1 bg-white rounded-full"></div>
+</div>
+<span class="text-[10px] font-bold text-primary uppercase tracking-wider">Reasoning</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2 opacity-40">
+<div class="w-3 h-3 rounded-full bg-outline-variant border-2 border-surface-container-lowest"></div>
+<span class="text-[10px] font-medium text-on-surface-variant uppercase tracking-wider">Reflection</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2 opacity-40">
+<div class="w-3 h-3 rounded-full bg-outline-variant border-2 border-surface-container-lowest"></div>
+<span class="text-[10px] font-medium text-on-surface-variant uppercase tracking-wider">Advice</span>
+</div>
+</div>
+</div>
+<!-- Document-Style Evidence Card -->
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant/15 shadow-[0_12px_40px_rgba(27,54,93,0.06)] overflow-hidden">
+<!-- Header Bar -->
+<div class="bg-surface-container-high h-2 w-full"></div>
+<div class="p-6 space-y-6">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-bold text-xl text-primary mb-2">Analysis Complete</h3>
+<div class="flex gap-2">
+<span class="bg-error-container text-on-error-container text-xs font-medium px-2 py-1 rounded-sm border border-error/20 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> Violation Detected
+                                            </span>
+<span class="bg-surface-container text-on-surface-variant text-xs font-medium px-2 py-1 rounded-sm border border-outline-variant/30">
+                                                Conf: 92%
+                                            </span>
+</div>
+</div>
+<div class="text-right">
+<div class="text-xs text-on-surface-variant mb-1">Violation Type</div>
+<div class="font-bold text-error">Unfair Price Marking</div>
+</div>
+</div>
+<div class="space-y-4">
+<div>
+<div class="text-xs text-on-surface-variant mb-1 font-medium">Relevant Statute</div>
+<button class="bg-surface-container-low border border-outline-variant/20 hover:bg-surface-container-high transition-colors px-3 py-1.5 rounded-md text-sm font-medium text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">gavel</span>
+                                            Art. 7 Price Law (Price Fraud)
+                                        </button>
+</div>
+<div>
+<div class="text-xs text-on-surface-variant mb-1 font-medium">Legal Reasoning</div>
+<p class="text-sm leading-relaxed text-on-surface font-headline bg-surface-container-low/50 p-4 rounded border border-outline-variant/10">
+                                            Evidence suggests the baseline price was artificially raised from ¥200 to ¥400 exactly 24 hours prior to the promotional event. Under Article 7, establishing a false baseline to exaggerate a discount constitutes deceptive pricing conduct.
+                                        </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/15">
+<div class="text-xs text-on-surface-variant mb-2 font-medium uppercase tracking-wider">Remediation Advice</div>
+<ul class="list-disc list-inside text-sm text-on-surface space-y-1">
+<li>Issue an immediate takedown notice for the listing.</li>
+<li>Request historical pricing logs from the merchant for the past 30 days.</li>
+<li>Prepare a formal warning letter citing Art. 7.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Input Box -->
+<div class="p-6 bg-surface border-t border-outline-variant/10">
+<div class="max-w-4xl mx-auto relative bg-surface-container-highest rounded-xl group transition-all duration-300 focus-within:ring-2 focus-within:ring-primary/30 focus-within:bg-surface-container-lowest focus-within:shadow-[0_0_15px_rgba(70,95,136,0.1)]">
+<textarea class="w-full bg-transparent border-none focus:ring-0 resize-none p-4 pb-12 text-sm text-on-surface placeholder-on-surface-variant" placeholder="Enter your query or provide additional context..." rows="2"></textarea>
+<div class="absolute bottom-3 left-3 flex gap-2">
+<button class="p-1.5 text-on-surface-variant hover:text-primary rounded-md hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[20px]">attach_file</span>
+</button>
+</div>
+<button class="absolute bottom-3 right-3 bg-primary-container text-on-primary px-4 py-1.5 rounded-lg text-sm font-medium hover:bg-primary transition-colors flex items-center gap-2">
+                        Send <span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+<div class="text-center mt-2">
+<span class="text-[10px] text-on-surface-variant">Jurisconsult AI can make mistakes. Verify critical legal reasoning.</span>
+</div>
+</div>
+</main>
+<!-- Right Side: Traceability Drawer (Placeholder) -->
+<aside class="w-80 bg-surface-container-low border-l border-outline-variant/15 flex flex-col flex-shrink-0 shadow-[-8px_0_24px_rgba(27,54,93,0.03)] z-10">
+<div class="p-4 border-b border-outline-variant/15 flex justify-between items-center bg-surface-container-low">
+<span class="font-headline font-bold text-sm text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">library_books</span> Source Traceability
+                </span>
+<button class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-sm">close</span></button>
+</div>
+<div class="flex-1 overflow-y-auto p-4 space-y-4">
+<div class="bg-surface-container-lowest p-3 rounded-md border border-outline-variant/20">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold text-primary">Art. 7 Price Law</span>
+<span class="text-[10px] bg-secondary-container text-on-secondary-container px-1.5 py-0.5 rounded-sm">Rel: 0.98</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed font-headline">
+                        "Operators shall not use false or misleading price representations to trick consumers..."
+                    </p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-md border border-outline-variant/20 opacity-70">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold text-primary">E-comm Guideline 2023</span>
+<span class="text-[10px] bg-surface-container-highest text-on-surface-variant px-1.5 py-0.5 rounded-sm">Rel: 0.85</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed font-headline line-clamp-3">
+                        "Promotional prices must refer to a genuine baseline established over the prior 7 days..."
+                    </p>
+</div>
+</div>
+</aside>
+</div>
+</body></html>

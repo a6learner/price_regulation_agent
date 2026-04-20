@@ -248,6 +248,9 @@ class BaselineEvaluator:
             output_dir = Path(self.output_config.get('results_dir', 'results/baseline'))
             output_dir.mkdir(parents=True, exist_ok=True)
             output_path = output_dir / f"{model_key}_results.json"
+        else:
+            # 用户指定了路径，确保父目录存在
+            Path(output_path).parent.mkdir(parents=True, exist_ok=True)
 
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(results, f, ensure_ascii=False, indent=2)
@@ -342,6 +345,17 @@ class BaselineEvaluator:
         avg_legal_score = avg_legal_score / total if total > 0 else 0
         avg_reasoning_score = avg_reasoning_score / total if total > 0 else 0
 
+        # 新增指标：过度判违率和风险标记统计
+        over_enforcement_rate = fp / (fp + tn) if (fp + tn) > 0 else 0
+        risk_flag_count = sum(
+            1 for r in success_results
+            if r.get('prediction', {}).get('has_risk_flag', False)
+        )
+        risk_flag_in_compliance = sum(
+            1 for r in compliance_cases
+            if r.get('prediction', {}).get('has_risk_flag', False)
+        )
+
         metrics = {
             'total_cases': len(results),
             'success_cases': total,
@@ -351,6 +365,9 @@ class BaselineEvaluator:
             'recall': round(recall, 4),
             'f1_score': round(f1_score, 4),
             'type_accuracy': round(type_correct_count / total, 4) if total > 0 else 0,
+            'over_enforcement_rate': round(over_enforcement_rate, 4),
+            'risk_flag_count': risk_flag_count,
+            'risk_flag_in_compliance': risk_flag_in_compliance,
             'confusion_matrix': {
                 'TP': tp,
                 'FP': fp,
@@ -387,10 +404,14 @@ class BaselineEvaluator:
         print(f"  Recall:          {metrics['recall']:.2%}")
         print(f"  F1-Score:        {metrics['f1_score']:.2%}")
         print(f"  Type Accuracy:   {metrics['type_accuracy']:.2%}")
+        print(f"  Over-enforcement: {metrics.get('over_enforcement_rate', 0):.2%}")
         print(f"\n混淆矩阵:")
         cm = metrics['confusion_matrix']
         print(f"  TP: {cm['TP']}  FP: {cm['FP']}")
         print(f"  FN: {cm['FN']}  TN: {cm['TN']}")
+        print(f"\n风险标记:")
+        print(f"  Risk Flag 总数:      {metrics.get('risk_flag_count', 0)}")
+        print(f"  合规样本中 Risk Flag: {metrics.get('risk_flag_in_compliance', 0)}")
 
         # 打印质量指标
         if 'quality_metrics' in metrics:

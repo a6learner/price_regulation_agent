@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三方法对比看板</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部导航栏 -->
+        <header class="header">
+            <div class="nav-controls">
+                <select id="caseSelect" class="case-select">
+                    <option value="">加载中...</option>
+                </select>
+                <button id="prevBtn" class="nav-btn" title="上一个 (←)">&lt; 上一个</button>
+                <span id="caseCounter" class="case-counter">0 / 0</span>
+                <button id="nextBtn" class="nav-btn" title="下一个 (→)">下一个 &gt;</button>
+            </div>
+            <div class="filter-controls">
+                <select id="errorFilter" class="filter-select">
+                    <option value="all">全部</option>
+                </select>
+                <select id="typeFilter" class="filter-select">
+                    <option value="all">全部违规类型</option>
+                </select>
+            </div>
+        </header>
+
+        <!-- 案例信息栏 -->
+        <section class="case-info">
+            <div class="info-row">
+                <span class="info-item"><strong>案例ID:</strong> <span id="caseId">-</span></span>
+                <span class="info-item"><strong>真实标签:</strong> <span id="groundTruth">-</span></span>
+                <span class="info-item"><strong>平台:</strong> <span id="platform">-</span></span>
+                <span class="info-item"><strong>复杂度:</strong> <span id="complexity">-</span></span>
+            </div>
+        </section>
+
+        <!-- 原始案例描述 -->
+        <section class="case-description">
+            <h3>原始案例描述</h3>
+            <div id="description" class="description-content">-</div>
+        </section>
+
+        <!-- 三列对比区域 -->
+        <main class="comparison-grid">
+            <!-- Baseline列 -->
+            <div class="method-column" id="baselineCol">
+                <div class="column-header">
+                    <h2>Baseline</h2>
+                    <span id="baselineStatus" class="status-badge">-</span>
+                </div>
+                <div class="column-content">
+                    <div class="section">
+                        <h4>LLM原始回答</h4>
+                        <pre id="baselineResponse" class="response-box">-</pre>
+                    </div>
+                    <div class="section">
+                        <h4>解析结果</h4>
+                        <div id="baselineParsed" class="parsed-result">-</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RAG列 -->
+            <div class="method-column" id="ragCol">
+                <div class="column-header">
+                    <h2>RAG</h2>
+                    <span id="ragStatus" class="status-badge">-</span>
+                </div>
+                <div class="column-content">
+                    <div class="section">
+                        <h4>LLM原始回答</h4>
+                        <pre id="ragResponse" class="response-box">-</pre>
+                    </div>
+                    <div class="section">
+                        <h4>解析结果</h4>
+                        <div id="ragParsed" class="parsed-result">-</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agent列 -->
+            <div class="method-column" id="agentCol">
+                <div class="column-header">
+                    <h2>Agent</h2>
+                    <span id="agentStatus" class="status-badge">-</span>
+                </div>
+                <div class="column-content">
+                    <div class="section">
+                        <h4>5步推理链</h4>
+                        <div id="agentChain" class="reasoning-chain">-</div>
+                    </div>
+                    <div class="section">
+                        <h4>结构化结果</h4>
+                        <div id="agentParsed" class="parsed-result">-</div>
+                    </div>
+                    <div class="section">
+                        <h4>整改建议</h4>
+                        <div id="agentRemediation" class="remediation-box">-</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

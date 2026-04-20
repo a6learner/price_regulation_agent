@@ -1,0 +1,53 @@
+{
+  "dataset_name": "电商价格合规评估数据集",
+  "version": "2.0",
+  "created_date": "2026-03-10",
+  "updated_date": "2026-04-05",
+  "total_count": 753,
+  "distribution": {
+    "violation": 494,
+    "compliant": 259
+  },
+  "violation_ratio": "65.6%",
+  "violation_types": {
+    "要素缺失": 173,
+    "其他": 145,
+    "价格误导": 88,
+    "虚假折扣": 49,
+    "虚构原价": 39
+  },
+  "platforms": {
+    "淘宝": 112,
+    "抖音": 110,
+    "美团": 98,
+    "拼多多": 97,
+    "京东": 95,
+    "天猫": 84,
+    "小红书": 75,
+    "快手": 59,
+    "其他": 19,
+    "携程": 4
+  },
+  "complexity": {
+    "simple": 91,
+    "medium": 463,
+    "complex": 199
+  },
+  "files": {
+    "main_dataset": "eval_754.jsonl",
+    "metadata": "eval_meta.json",
+    "report": "eval_754_report.md"
+  },
+  "data_sources": [
+    "eval_159.jsonl",
+    "violations_new_395.jsonl",
+    "compliance_new_200.jsonl"
+  ],
+  "expansion_info": {
+    "original_count": 159,
+    "expansion_date": "2026-04-05",
+    "expansion_method": "质量筛选(791→395) + LLM生成合规案例(200)",
+    "quality_threshold": "≥3分",
+    "deduplication": true
+  }
+}

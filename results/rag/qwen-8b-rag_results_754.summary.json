@@ -1,0 +1,11 @@
+{
+  "advanced_metrics_summary": {
+    "evidence_chain_avg": 0.314,
+    "legal_citation_avg": 0.371,
+    "remediation_avg": 0.0,
+    "explainability_avg": 0.253,
+    "structured_output_avg": 0.305,
+    "overall_avg": 0.249
+  },
+  "total_cases": 753
+}

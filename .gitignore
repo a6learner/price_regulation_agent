@@ -41,3 +41,7 @@ nul
 # 训练输出文件（大文件）
 src/sft/train_output.zip
 *.zip
+
+# 本地 sentence-transformers 权重（自下载，勿提交）
+models/*
+!models/.gitkeep

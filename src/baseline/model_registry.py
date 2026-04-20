@@ -104,19 +104,34 @@ class ModelRegistry:
 
         return Path(results_dir) / model['result_file']
 
-    def has_result(self, model_key: str, results_dir: str = "results/baseline") -> bool:
+    def find_latest_result(self, model_key: str, results_dir: str = "results/baseline") -> Optional[Path]:
         """
-        检查模型是否有已保存的评估结果
+        查找某模型最近一次运行的结果文件
 
-        Args:
-            model_key: 模型键名
-            results_dir: 结果目录
+        优先从新格式子文件夹中查找（按文件夹名倒序=最新时间戳优先），
+        fallback 到旧格式的平铺文件。
 
         Returns:
-            是否存在结果文件
+            结果文件路径，不存在则返回 None
         """
-        result_path = self.get_result_path(model_key, results_dir)
-        return result_path.exists()
+        base = Path(results_dir)
+        result_filename = f"{model_key}_results.json"
+
+        # 新格式：results_dir/*/{ model_key}_results.json
+        matches = sorted(base.glob(f"*/{result_filename}"), reverse=True)
+        if matches:
+            return matches[0]
+
+        # 旧格式 fallback：results_dir/{model_key}_results.json
+        old_path = base / result_filename
+        if old_path.exists():
+            return old_path
+
+        return None
+
+    def has_result(self, model_key: str, results_dir: str = "results/baseline") -> bool:
+        """检查模型是否有已保存的评估结果"""
+        return self.find_latest_result(model_key, results_dir) is not None
 
     def add_model(
         self,

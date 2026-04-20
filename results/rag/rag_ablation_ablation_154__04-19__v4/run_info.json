@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-04-19 17:18:54",
+  "method": "rag_ablation",
+  "eval_data": "data/eval/eval_dataset_v4_final.jsonl",
+  "limit": 154,
+  "eval_cases": 154,
+  "dataset_stats_full_file": {
+    "total": 780,
+    "violations": 489,
+    "compliants": 291,
+    "violation_type_distribution": {
+      "不明码标价": 221,
+      "政府定价违规": 117,
+      "标价外加价": 73,
+      "误导性价格标示": 49,
+      "未识别": 14,
+      "变相提高价格": 6,
+      "虚假价格比较": 5,
+      "虚假折扣": 2,
+      "不履行价格承诺": 1,
+      "哄抬价格": 1
+    },
+    "avg_qualifying_articles": 1.3824130879345604,
+    "violations_with_qualifying_articles": 440
+  },
+  "model": "qwen-8b",
+  "variants": [
+    "bm25_only",
+    "semantic_only",
+    "rrf",
+    "rrf_rerank"
+  ],
+  "note": "ablation_154"
+}

@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-04-18 18:50:37",
+  "method": "rag",
+  "mode": "compare_only",
+  "models": [
+    "qwen-8b"
+  ],
+  "rag_result_source": "results\\rag\\20260418_021628\\results.json",
+  "eval_data": "data/eval/eval_dataset_v4_final.jsonl",
+  "limit": null,
+  "note": "ab test: v1 / prompt"
+}

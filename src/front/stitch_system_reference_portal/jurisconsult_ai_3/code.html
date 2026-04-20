@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jurisconsult AI - Batch Audit</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffdad6",
+                    "on-surface-variant": "#44474e",
+                    "inverse-on-surface": "#eff1f4",
+                    "surface-container": "#eceef1",
+                    "inverse-primary": "#aec7f7",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#73000b",
+                    "surface-container-high": "#e6e8eb",
+                    "surface-container-low": "#f2f4f7",
+                    "surface-tint": "#465f88",
+                    "secondary": "#006d36",
+                    "primary": "#002046",
+                    "primary-fixed-dim": "#aec7f7",
+                    "on-tertiary-fixed-variant": "#920212",
+                    "on-primary-fixed-variant": "#2e476f",
+                    "on-tertiary-fixed": "#410003",
+                    "surface-variant": "#e0e3e6",
+                    "surface-dim": "#d8dadd",
+                    "primary-container": "#1b365d",
+                    "on-secondary-fixed": "#00210c",
+                    "on-primary-fixed": "#001b3d",
+                    "background": "#f7f9fc",
+                    "on-primary-container": "#87a0cd",
+                    "surface-container-highest": "#e0e3e6",
+                    "tertiary": "#4b0004",
+                    "primary-fixed": "#d6e3ff",
+                    "outline": "#74777f",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#c4c6cf",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#9af7af",
+                    "on-secondary-fixed-variant": "#005227",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#7eda95",
+                    "tertiary-fixed-dim": "#ffb3ad",
+                    "inverse-surface": "#2d3133",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#9af7af",
+                    "on-tertiary-container": "#ff736b",
+                    "surface-bright": "#f7f9fc",
+                    "surface": "#f7f9fc",
+                    "on-secondary-container": "#0b743b",
+                    "on-background": "#191c1e",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-surface": "#191c1e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": ["Noto Serif", "serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .glass-panel {
+                @apply bg-surface-container-lowest/80 backdrop-blur-[20px] shadow-[0_12px_40px_rgba(27,54,93,0.06)];
+            }
+            .ghost-border {
+                @apply border border-outline-variant/15;
+            }
+            .text-display {
+                @apply font-headline font-bold text-on-surface;
+            }
+            .text-body-ui {
+                @apply font-body text-on-surface-variant;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background min-h-screen flex flex-col md:flex-row antialiased">
+<!-- SideNavBar (Desktop Only) -->
+<nav class="hidden md:flex bg-white dark:bg-[#002046] h-screen w-72 border-r-0 bg-[#F1F5F9] dark:bg-slate-900/50 shadow-[4px_0_24px_rgba(27,54,93,0.04)] fixed left-0 top-0 flex flex-col p-6 space-y-8 z-50">
+<!-- Header -->
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" data-icon="shield_person">shield_person</span>
+</div>
+<div>
+<h2 class="font-headline font-bold text-primary dark:text-slate-100 text-lg">Audit Terminal</h2>
+<p class="font-body text-xs text-on-surface-variant dark:text-slate-400">Jurisconsult v4.0</p>
+</div>
+</div>
+<!-- Main Navigation -->
+<div class="flex-1 space-y-2">
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg hover:translate-x-1 transition-transform duration-200 font-['Inter'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="fact_check">fact_check</span>
+<span>Current Audit</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 bg-[#1B365D] text-white rounded-lg shadow-lg shadow-blue-900/20 hover:translate-x-1 transition-transform duration-200 font-['Inter'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span>Evidence Locker</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg hover:translate-x-1 transition-transform duration-200 font-['Inter'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+<span>Compliance Maps</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg hover:translate-x-1 transition-transform duration-200 font-['Inter'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="shield_with_heart">shield_with_heart</span>
+<span>Risk Assessment</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg hover:translate-x-1 transition-transform duration-200 font-['Inter'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</div>
+<!-- CTA -->
+<button class="w-full py-3 px-4 bg-primary-container text-white rounded-xl shadow-sm hover:opacity-90 transition-opacity font-body text-sm font-medium flex items-center justify-center space-x-2">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span>New Batch Audit</span>
+</button>
+<!-- Footer Navigation -->
+<div class="pt-6 border-t border-outline-variant/15 space-y-2">
+<a class="flex items-center space-x-3 px-4 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors font-['Inter'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+<span>Support</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors font-['Inter'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span>Documentation</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 md:ml-72 flex flex-col min-h-screen w-full">
+<!-- TopNavBar -->
+<header class="bg-[#F8FAFC] dark:bg-[#002046] docked full-width top-0 border-b-0 bg-slate-100 dark:bg-slate-800/50 shadow-[0_1px_0_0_rgba(27,54,93,0.05)] shadow-sm sticky z-40">
+<div class="flex justify-between items-center w-full px-12 py-4 max-w-[1920px] mx-auto">
+<div class="flex items-center space-x-8">
+<span class="font-['Noto_Serif'] text-2xl font-black text-[#002046] dark:text-white tracking-tighter">JurisAudit</span>
+<nav class="hidden lg:flex space-x-6">
+<a class="font-['Noto_Serif'] font-bold text-lg tracking-tight text-slate-500 dark:text-slate-400 hover:text-[#1B365D] transition-colors hover:bg-slate-200/50 dark:hover:bg-white/10 rounded-md transition-all px-3 py-2" href="#">Dashboard</a>
+<a class="font-['Noto_Serif'] font-bold text-lg tracking-tight text-[#002046] dark:text-white border-b-2 border-[#002046] dark:border-white pb-1 px-3 py-2" href="#">Batch History</a>
+<a class="font-['Noto_Serif'] font-bold text-lg tracking-tight text-slate-500 dark:text-slate-400 hover:text-[#1B365D] transition-colors hover:bg-slate-200/50 dark:hover:bg-white/10 rounded-md transition-all px-3 py-2" href="#">Regulatory Library</a>
+<a class="font-['Noto_Serif'] font-bold text-lg tracking-tight text-slate-500 dark:text-slate-400 hover:text-[#1B365D] transition-colors hover:bg-slate-200/50 dark:hover:bg-white/10 rounded-md transition-all px-3 py-2" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex items-center space-x-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-highest border-0 rounded-lg text-sm focus:ring-2 focus:ring-primary/30 w-64 text-on-surface" placeholder="Search records..." type="text"/>
+</div>
+<div class="flex items-center space-x-2 border-l border-outline-variant/20 pl-4">
+<button class="p-2 text-slate-500 hover:bg-slate-200/50 rounded-md transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-200/50 rounded-md transition-all">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<img alt="Chief Auditor Avatar" class="w-9 h-9 rounded-full border-2 border-surface" data-alt="Professional headshot of a man in a business suit, suitable for an auditor avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6RnCAymtbqAsTJRbiehpvm28KWWp9ImWOoaHIajptcadtaizWJhwFcVfi6bUItUPu5ajWMhWCYGNTl-D2LWJ6lt6Z-9iR2lg07Rtq7EkNdMjXd7IVydsjYqprKkKINNdyz9T33zJFPi54dFdqW5W_tNR7cx9VVN2niBuldvicfxhMo2ZDvzUa3aLDslqGS8Wn5ZPbaWRbqvDg2aZEZcqaXCFwCDROYZJVM6BhgRhCrwKD3eJKypAmOIYWPAvR29tNt-1LYjozXPYR"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 p-8 lg:px-12 max-w-[1600px] mx-auto w-full space-y-12">
+<!-- Page Header -->
+<div class="flex justify-between items-end">
+<div>
+<h1 class="text-display text-4xl mb-2 text-primary">Batch Processing Center</h1>
+<p class="text-body-ui text-lg">Upload, process, and review bulk evidentiary documents.</p>
+</div>
+<button class="bg-primary-container text-on-primary px-6 py-3 rounded-xl font-label text-sm flex items-center space-x-2 shadow-sm hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[20px]" data-icon="download">download</span>
+<span>Export All Results</span>
+</button>
+</div>
+<!-- Quick Stats -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-low rounded-lg p-6 ghost-border flex flex-col justify-between h-32 relative overflow-hidden">
+<div class="flex justify-between items-start">
+<span class="text-body-ui text-sm uppercase tracking-wider font-semibold">Total Audited (30d)</span>
+<span class="material-symbols-outlined text-outline" data-icon="dataset">dataset</span>
+</div>
+<div class="text-3xl font-headline font-bold text-primary">14,289</div>
+<!-- Decorative background element -->
+<div class="absolute -right-4 -bottom-4 opacity-5 text-primary">
+<span class="material-symbols-outlined text-[100px]" data-icon="dataset">dataset</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-6 ghost-border flex flex-col justify-between h-32 relative overflow-hidden">
+<div class="flex justify-between items-start">
+<span class="text-body-ui text-sm uppercase tracking-wider font-semibold text-tertiary">Total Violations</span>
+<span class="material-symbols-outlined text-tertiary" data-icon="warning">warning</span>
+</div>
+<div class="flex items-baseline space-x-2">
+<span class="text-3xl font-headline font-bold text-tertiary">412</span>
+<span class="text-sm font-body text-tertiary bg-tertiary-fixed px-2 py-0.5 rounded">+12%</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-6 ghost-border flex flex-col justify-between h-32 relative overflow-hidden">
+<div class="flex justify-between items-start">
+<span class="text-body-ui text-sm uppercase tracking-wider font-semibold text-secondary">Average Confidence</span>
+<span class="material-symbols-outlined text-secondary" data-icon="verified">verified</span>
+</div>
+<div class="text-3xl font-headline font-bold text-secondary">98.4%</div>
+</div>
+</div>
+<!-- Active Audit Progress (Bento Style) -->
+<div class="glass-panel rounded-xl p-8 ghost-border">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h2 class="font-headline text-xl text-primary font-bold flex items-center space-x-2">
+<span class="material-symbols-outlined animate-spin" data-icon="sync">sync</span>
+<span>Active Processing</span>
+</h2>
+<p class="text-sm text-on-surface-variant mt-1">Batch ID: #BA-2023-11A</p>
+</div>
+<div class="text-right">
+<div class="text-sm text-on-surface-variant mb-1">Estimated Time Remaining</div>
+<div class="font-headline font-bold text-lg text-primary">04:12</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between text-sm font-medium">
+<span class="text-primary-container">Processing Items</span>
+<span class="text-on-surface">742 / 1000</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container-high rounded-full h-3 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full w-[74%]" style="transition: width 1s ease-in-out;"></div>
+</div>
+<!-- 6-Node Process Indicator -->
+<div class="mt-8 pt-6 border-t border-outline-variant/15">
+<div class="relative flex justify-between items-center w-full max-w-3xl mx-auto">
+<!-- Background Line -->
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-[2px] bg-outline-variant/20 z-0"></div>
+<!-- Nodes -->
+<div class="relative z-10 flex flex-col items-center space-y-2 group">
+<div class="w-4 h-4 rounded-full bg-secondary shadow-[0_0_10px_rgba(0,109,54,0.3)] flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-white" data-icon="check">check</span>
+</div>
+<span class="text-[11px] font-semibold text-on-surface-variant uppercase tracking-wide">Intake</span>
+</div>
+<div class="relative z-10 flex flex-col items-center space-y-2 group">
+<div class="w-4 h-4 rounded-full bg-secondary shadow-[0_0_10px_rgba(0,109,54,0.3)] flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-white" data-icon="check">check</span>
+</div>
+<span class="text-[11px] font-semibold text-on-surface-variant uppercase tracking-wide">Parsing</span>
+</div>
+<div class="relative z-10 flex flex-col items-center space-y-2 group">
+<div class="w-4 h-4 rounded-full bg-primary-container flex items-center justify-center ring-4 ring-primary-fixed">
+<div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+</div>
+<span class="text-[11px] font-bold text-primary uppercase tracking-wide">Analysis</span>
+</div>
+<div class="relative z-10 flex flex-col items-center space-y-2 group">
+<div class="w-4 h-4 rounded-full bg-surface-container-high border-2 border-outline-variant/30"></div>
+<span class="text-[11px] font-medium text-outline uppercase tracking-wide">Verification</span>
+</div>
+<div class="relative z-10 flex flex-col items-center space-y-2 group">
+<div class="w-4 h-4 rounded-full bg-surface-container-high border-2 border-outline-variant/30"></div>
+<span class="text-[11px] font-medium text-outline uppercase tracking-wide">Reporting</span>
+</div>
+<div class="relative z-10 flex flex-col items-center space-y-2 group">
+<div class="w-4 h-4 rounded-full bg-surface-container-high border-2 border-outline-variant/30"></div>
+<span class="text-[11px] font-medium text-outline uppercase tracking-wide">Complete</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Upload & History Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+<!-- Upload Center -->
+<div class="xl:col-span-1 bg-surface-container-low rounded-lg p-6 ghost-border flex flex-col">
+<h3 class="font-headline text-lg font-bold text-primary mb-4">Upload Center</h3>
+<div class="flex-1 border-2 border-dashed border-outline-variant/40 rounded-xl bg-surface flex flex-col items-center justify-center p-8 text-center hover:bg-surface-container transition-colors cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-primary-fixed/50 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<p class="font-headline font-bold text-primary mb-1">Drag &amp; Drop Files Here</p>
+<p class="text-sm text-on-surface-variant mb-6">Supports .xlsx, .csv, and .pdf (Max 50MB)</p>
+<button class="bg-surface-container-highest text-primary px-4 py-2 rounded-lg font-label text-sm font-medium border border-outline-variant/20 hover:bg-surface-variant transition-colors">
+                            Browse Files
+                        </button>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/15 flex justify-between items-center">
+<span class="text-sm text-on-surface-variant">Need the standard format?</span>
+<a class="text-sm font-medium text-primary-container hover:underline flex items-center space-x-1" href="#">
+<span class="material-symbols-outlined text-[16px]" data-icon="file_download">file_download</span>
+<span>Template Download</span>
+</a>
+</div>
+</div>
+<!-- Batch History Table -->
+<div class="xl:col-span-2 bg-white rounded-lg p-6 ghost-border shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline text-lg font-bold text-primary">Batch History &amp; Results</h3>
+<div class="flex space-x-2">
+<button class="p-1.5 text-outline hover:text-primary transition-colors rounded hover:bg-surface-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="filter_list">filter_list</span>
+</button>
+<button class="p-1.5 text-outline hover:text-primary transition-colors rounded hover:bg-surface-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant/20">
+<th class="py-3 px-4 text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Batch ID</th>
+<th class="py-3 px-4 text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Date</th>
+<th class="py-3 px-4 text-xs font-semibold text-on-surface-variant uppercase tracking-wider">File Name</th>
+<th class="py-3 px-4 text-xs font-semibold text-on-surface-variant uppercase tracking-wider text-right">Total Items</th>
+<th class="py-3 px-4 text-xs font-semibold text-on-surface-variant uppercase tracking-wider text-right">Violations</th>
+<th class="py-3 px-4 text-xs font-semibold text-on-surface-variant uppercase tracking-wider text-center">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<!-- Row 1 (Running) -->
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="py-4 px-4 font-headline text-sm font-semibold text-primary">BA-2023-11A</td>
+<td class="py-4 px-4 text-sm text-on-surface-variant">Today, 09:41 AM</td>
+<td class="py-4 px-4 text-sm text-on-surface flex items-center space-x-2">
+<span class="material-symbols-outlined text-[16px] text-outline" data-icon="description">description</span>
+<span>Q3_Compliance_Raw.xlsx</span>
+</td>
+<td class="py-4 px-4 text-sm font-headline text-right">1,000</td>
+<td class="py-4 px-4 text-sm font-headline text-right text-on-surface-variant">-</td>
+<td class="py-4 px-4 text-center">
+<span class="inline-flex items-center space-x-1 px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed-variant text-xs font-medium">
+<span class="material-symbols-outlined text-[12px] animate-spin" data-icon="sync">sync</span>
+<span>Running</span>
+</span>
+</td>
+</tr>
+<!-- Row 2 (Complete - Issues) -->
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="py-4 px-4 font-headline text-sm font-semibold text-primary">BA-2023-10C</td>
+<td class="py-4 px-4 text-sm text-on-surface-variant">Oct 24, 2023</td>
+<td class="py-4 px-4 text-sm text-on-surface flex items-center space-x-2">
+<span class="material-symbols-outlined text-[16px] text-outline" data-icon="description">description</span>
+<span>Vendor_Contracts_FY23.pdf</span>
+</td>
+<td class="py-4 px-4 text-sm font-headline text-right">450</td>
+<td class="py-4 px-4 text-sm font-headline text-right text-tertiary font-bold">12</td>
+<td class="py-4 px-4 text-center">
+<span class="inline-flex items-center space-x-1 px-2.5 py-1 rounded bg-error-container text-on-error-container text-xs font-medium">
+<span class="material-symbols-outlined text-[12px]" data-icon="warning">warning</span>
+<span>Review Required</span>
+</span>
+</td>
+</tr>
+<!-- Row 3 (Complete - Clean) -->
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="py-4 px-4 font-headline text-sm font-semibold text-primary">BA-2023-10B</td>
+<td class="py-4 px-4 text-sm text-on-surface-variant">Oct 20, 2023</td>
+<td class="py-4 px-4 text-sm text-on-surface flex items-center space-x-2">
+<span class="material-symbols-outlined text-[16px] text-outline" data-icon="description">description</span>
+<span>Employee_Handbook_Acks.csv</span>
+</td>
+<td class="py-4 px-4 text-sm font-headline text-right">2,104</td>
+<td class="py-4 px-4 text-sm font-headline text-right text-secondary">0</td>
+<td class="py-4 px-4 text-center">
+<span class="inline-flex items-center space-x-1 px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container text-xs font-medium">
+<span class="material-symbols-outlined text-[12px]" data-icon="check_circle">check_circle</span>
+<span>Compliant</span>
+</span>
+</td>
+</tr>
+<!-- Row 4 (Failed) -->
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="py-4 px-4 font-headline text-sm font-semibold text-primary">BA-2023-10A</td>
+<td class="py-4 px-4 text-sm text-on-surface-variant">Oct 19, 2023</td>
+<td class="py-4 px-4 text-sm text-on-surface flex items-center space-x-2">
+<span class="material-symbols-outlined text-[16px] text-outline" data-icon="description">description</span>
+<span>Corrupted_Archive_Data.xlsx</span>
+</td>
+<td class="py-4 px-4 text-sm font-headline text-right text-outline-variant">-</td>
+<td class="py-4 px-4 text-sm font-headline text-right text-outline-variant">-</td>
+<td class="py-4 px-4 text-center">
+<span class="inline-flex items-center space-x-1 px-2.5 py-1 rounded bg-surface-variant text-on-surface-variant text-xs font-medium">
+<span class="material-symbols-outlined text-[12px]" data-icon="error">error</span>
+<span>Failed</span>
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/10 text-center">
+<button class="text-sm font-medium text-primary-container hover:underline">View All History</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

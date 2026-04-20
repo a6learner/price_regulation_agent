@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jurisconsult AI - Role Entry</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Serif:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#465f88",
+                    "on-tertiary-fixed": "#410003",
+                    "tertiary-container": "#73000b",
+                    "surface-variant": "#e0e3e6",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#f7f9fc",
+                    "on-primary-container": "#87a0cd",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#9af7af",
+                    "surface-container-low": "#f2f4f7",
+                    "secondary-fixed": "#9af7af",
+                    "outline": "#74777f",
+                    "on-error": "#ffffff",
+                    "on-secondary-container": "#0b743b",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#d8dadd",
+                    "primary-container": "#1b365d",
+                    "primary-fixed-dim": "#aec7f7",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#002046",
+                    "secondary-fixed-dim": "#7eda95",
+                    "secondary": "#006d36",
+                    "inverse-surface": "#2d3133",
+                    "surface": "#f7f9fc",
+                    "background": "#f7f9fc",
+                    "on-secondary-fixed-variant": "#005227",
+                    "inverse-primary": "#aec7f7",
+                    "on-surface-variant": "#44474e",
+                    "on-tertiary-container": "#ff736b",
+                    "on-background": "#191c1e",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#ffb3ad",
+                    "on-primary-fixed": "#001b3d",
+                    "inverse-on-surface": "#eff1f4",
+                    "on-surface": "#191c1e",
+                    "surface-container-highest": "#e0e3e6",
+                    "on-tertiary-fixed-variant": "#920212",
+                    "tertiary-fixed": "#ffdad6",
+                    "outline-variant": "#c4c6cf",
+                    "tertiary": "#4b0004",
+                    "surface-container": "#eceef1",
+                    "surface-container-high": "#e6e8eb",
+                    "primary-fixed": "#d6e3ff",
+                    "on-primary-fixed-variant": "#2e476f",
+                    "on-secondary-fixed": "#00210c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": [
+                            "Noto Serif"
+                    ],
+                    "body": [
+                            "Inter"
+                    ],
+                    "label": [
+                            "Inter"
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-watermark {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.03" viewBox="0 0 24 24"><path fill="%23002046" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l7 3.12v4.7c0 4.67-3.13 8.98-7 10.08-3.87-1.1-7-5.41-7-10.08V6.3l7-3.12zM12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"/></svg>');
+            background-repeat: repeat;
+        }
+        .shadow-ambient {
+            box-shadow: 0 12px 40px rgba(27, 54, 93, 0.06);
+        }
+        .btn-gradient {
+            background: linear-gradient(to right, #1b365d, #002046);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex flex-col relative overflow-hidden bg-watermark">
+<!-- Top Navigation Anchor (Suppressed nav links for linear flow) -->
+<header class="w-full bg-surface-container-lowest px-8 py-6 shadow-ambient flex justify-center items-center z-50 absolute top-0">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined icon-fill text-primary text-3xl">account_balance</span>
+<h1 class="font-headline font-black text-2xl text-primary tracking-tight">Jurisconsult AI</h1>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center px-6 py-24 sm:px-12 mt-16 z-10">
+<!-- Header Section -->
+<div class="text-center max-w-3xl mb-16 space-y-6">
+<h2 class="font-headline font-bold text-4xl sm:text-5xl text-primary leading-tight">
+                Select Your Regulatory Perspective
+            </h2>
+<p class="font-body text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+                Welcome to the digital compliance ecosystem. Please identify your primary role to access tailored analytical tools, precedent databases, and oversight capabilities.
+            </p>
+</div>
+<!-- Role Selection Grid (Editorial Asymmetry & Tonal Depth) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full">
+<!-- Consumer Card -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col shadow-ambient hover:-translate-y-2 transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] group relative">
+<div class="absolute inset-0 bg-outline-variant opacity-15 pointer-events-none border border-transparent rounded-lg"></div>
+<!-- Document Header -->
+<div class="h-2 w-full bg-surface-container-high"></div>
+<div class="p-8 flex-grow flex flex-col items-center text-center space-y-6 relative">
+<div class="w-20 h-20 rounded-full bg-surface-container-low flex items-center justify-center mb-2 group-hover:bg-primary-fixed transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-primary">shopping_bag</span>
+</div>
+<div class="space-y-3">
+<h3 class="font-headline font-bold text-2xl text-primary">Consumer</h3>
+<div class="inline-flex items-center justify-center px-3 py-1 rounded-sm bg-surface-container-high text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
+                            消费者
+                        </div>
+</div>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed flex-grow">
+                        Access price transparency reports, file formal complaints regarding unfair pricing, and review historical market data for informed purchasing decisions.
+                    </p>
+<button class="w-full mt-6 py-3 px-6 rounded-xl bg-surface-container-highest text-primary font-semibold text-sm hover:btn-gradient hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                        Enter Workspace
+                    </button>
+</div>
+</div>
+<!-- Regulator Card (Elevated Focus) -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col shadow-[0_20px_50px_rgba(27,54,93,0.12)] -mt-4 md:-mt-8 hover:-translate-y-2 transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] group relative z-10 border-t-4 border-primary">
+<!-- Document Header -->
+<div class="p-8 flex-grow flex flex-col items-center text-center space-y-6 relative">
+<div class="w-24 h-24 rounded-full bg-primary-container flex items-center justify-center mb-2 shadow-inner">
+<span class="material-symbols-outlined icon-fill text-5xl text-white">gavel</span>
+</div>
+<div class="space-y-3">
+<h3 class="font-headline font-bold text-2xl text-primary">Regulator</h3>
+<div class="inline-flex items-center justify-center px-3 py-1 rounded-sm bg-primary-fixed-dim text-xs font-bold uppercase tracking-wider text-primary">
+                            政府监管
+                        </div>
+</div>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed flex-grow">
+                        Utilize AI-driven market analysis, issue compliance mandates, monitor regional price fluctuations, and manage active case folders with full statutory traceability.
+                    </p>
+<button class="w-full mt-6 py-4 px-6 rounded-xl btn-gradient text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                        Enter Workspace
+                    </button>
+</div>
+</div>
+<!-- Merchant Card -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col shadow-ambient hover:-translate-y-2 transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] group relative">
+<div class="absolute inset-0 bg-outline-variant opacity-15 pointer-events-none border border-transparent rounded-lg"></div>
+<!-- Document Header -->
+<div class="h-2 w-full bg-surface-container-high"></div>
+<div class="p-8 flex-grow flex flex-col items-center text-center space-y-6 relative">
+<div class="w-20 h-20 rounded-full bg-surface-container-low flex items-center justify-center mb-2 group-hover:bg-primary-fixed transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-primary">storefront</span>
+</div>
+<div class="space-y-3">
+<h3 class="font-headline font-bold text-2xl text-primary">Merchant</h3>
+<div class="inline-flex items-center justify-center px-3 py-1 rounded-sm bg-surface-container-high text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
+                            网店商家
+                        </div>
+</div>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed flex-grow">
+                        Audit pricing strategies against current regulations, submit compliance documentation, and review market guidance alerts to maintain exemplary operational standing.
+                    </p>
+<button class="w-full mt-6 py-3 px-6 rounded-xl bg-surface-container-highest text-primary font-semibold text-sm hover:btn-gradient hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                        Enter Workspace
+                    </button>
+</div>
+</div>
+</div>
+<!-- Footer / Legal Compliance Note -->
+<div class="mt-24 text-center max-w-xl">
+<div class="flex items-center justify-center gap-2 text-outline mb-2">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span class="font-body text-xs font-medium uppercase tracking-widest">Secure Access Gateway</span>
+</div>
+<p class="font-body text-xs text-outline leading-relaxed">
+                Authentication bound by State Regulatory Data Protection frameworks. Unauthorized access or attempt to access regulatory workspaces is strictly prohibited and subject to legal prosecution.
+            </p>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-04-18 23:09:38",
+  "method": "rag",
+  "models": [
+    "qwen-8b"
+  ],
+  "eval_data": "data/eval/eval_dataset_v4_final.jsonl",
+  "eval_cases": 780,
+  "limit": null,
+  "note": "improved rag full eval-780"
+}

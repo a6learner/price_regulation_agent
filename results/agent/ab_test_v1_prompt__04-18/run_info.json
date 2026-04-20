@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-04-18 18:50:37",
+  "method": "agent",
+  "mode": "compare_only",
+  "models": [
+    "agent"
+  ],
+  "latest_result_source": "results\\agent\\20260418_113740\\results.json",
+  "eval_data": "data/eval/eval_dataset_v4_final.jsonl",
+  "limit": null,
+  "note": "ab test: v1 / prompt"
+}
